@@ -1,7 +1,7 @@
 import { type Post } from '@/interfaces/post'
 import PostPreview from './post-preview'
 
-type Props = {
+type AllPostsProps = {
   posts: Post[]
 }
 
@@ -38,7 +38,7 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
   </>
 )
 
-const AllPosts = ({ posts }: Props) => {
+const AllPosts = ({ posts }: AllPostsProps) => {
   const postsByMonth = posts.reduce((acc, post) => {
     const date = new Date(post.date)
 
