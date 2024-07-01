@@ -17,7 +17,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-    <html lang='fi' className='bg-background'>
+    <html lang='en' className='bg-background'>
       <head>
         <link
           rel='apple-touch-icon'
