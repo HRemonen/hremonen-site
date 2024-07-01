@@ -5,6 +5,7 @@ excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 date: '2024-03-01'
 author:
   name: John Doe
+featured: false
 categories: 
     - 'amet'
 keywords:

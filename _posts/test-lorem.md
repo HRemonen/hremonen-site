@@ -5,6 +5,7 @@ excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 date: '2024-02-28'
 author:
   name: Hene
+featured: true
 categories: 
     - 'lorem'
 keywords:

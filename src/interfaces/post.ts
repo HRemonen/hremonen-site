@@ -14,5 +14,6 @@ export type Post = {
   categories: string[]
   keywords: string[]
   content: string
+  featured: boolean
   preview?: boolean
 }
