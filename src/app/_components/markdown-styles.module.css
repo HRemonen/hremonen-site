@@ -1,0 +1,37 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6 ;
+}
+
+.markdown h2 {
+  @apply mb-4 mt-12 text-3xl font-display leading-snug;
+}
+
+.markdown h3 {
+  @apply mb-4 mt-8 text-2xl font-display leading-snug;
+}
+
+.markdown blockquote {
+  @apply font-body border-l-4 border-info bg-gray-100 p-2 pl-8;
+}
+
+.markdown ul,
+.markdown ol {
+  @apply ml-8 list-disc;
+}
+
+.markdown p > a {
+  @apply text-link underline visited:text-visited;
+}
+
+.markdown h2 > a {
+  @apply font-medium text-primary hover:underline focus:underline;
+}
+
+
