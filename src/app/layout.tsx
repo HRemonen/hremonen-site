@@ -60,7 +60,7 @@ const RootLayout = ({
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet"/>
       </head>
       <body className={inter.className}>
-        <div className='min-h-screen'>{children}</div>
+        <main id="main-content" className='min-h-screen'>{children}</main>
         <Analytics />
       </body>
     </html>

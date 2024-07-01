@@ -7,12 +7,10 @@ const Index = () => {
   const allPosts = getAllPosts();
 
   return (
-    <main id="main-content">
-      <PageContainer>
-        <FeaturedSection />
-        {allPosts.length > 0 && <AllPosts posts={allPosts} />}
-      </PageContainer>
-    </main>
+    <PageContainer>
+      <FeaturedSection />
+      {allPosts.length > 0 && <AllPosts posts={allPosts} />}
+    </PageContainer>
   );
 }
 

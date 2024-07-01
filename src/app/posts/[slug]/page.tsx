@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '../../../lib/api'
 import { BLOG_NAME, BLOG_URL, BLOG_POST_TYPE, BLOG_LOCALE } from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
-import Container from '../../_components/common/page-container'
+import PageContainer from '../../_components/common/page-container'
 import Header from '../../_components/header'
 import PostBody from '../../_components/post/post-body'
 import PostHeader from '../../_components/post/post-header'
@@ -18,18 +18,16 @@ export default async function Post({ params }: Params) {
   const content = await markdownToHtml(post.content || '')
 
   return (
-    <main>
-      <Container>
-        <Header />
-        <article className='mb-32'>
-          <PostHeader
-            title={post.title}
-            date={post.date}
-          />
-          <PostBody content={content} />
-        </article>
-      </Container>
-    </main>
+    <PageContainer>
+      <Header />
+      <article className='mb-32'>
+        <PostHeader
+          title={post.title}
+          date={post.date}
+        />
+        <PostBody content={content} />
+      </article>
+    </PageContainer>
   )
 }
 
