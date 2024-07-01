@@ -1,6 +1,6 @@
 import Container from "@/app/_components/common/container";
 import FeaturedSection from "@/app/_components/featured";
-import Stories from "@/app/_components/stories/stories";
+import AllPosts from "@/app/_components/post/posts";
 import { getAllPosts } from "../lib/api";
 
 const Index = () => {
@@ -10,7 +10,7 @@ const Index = () => {
     <main>
       <Container>
         <FeaturedSection />
-        {allPosts.length > 0 && <Stories posts={allPosts} />}
+        {allPosts.length > 0 && <AllPosts posts={allPosts} />}
       </Container>
     </main>
   );
