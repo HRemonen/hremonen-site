@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
-import { BLOG_NAME } from '@/lib/constants'
+import { BLOG_NAME, BLOG_DESCRIPTION} from '@/lib/constants'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: `${BLOG_NAME}`,
-  description: `Logi ei elämää ihmeellisemmistä asioista.`,
+  description: `${BLOG_DESCRIPTION}`,
 }
 
 const RootLayout = ({

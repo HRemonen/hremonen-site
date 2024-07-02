@@ -26,7 +26,6 @@ const FeaturedSection = ({posts}: FeaturedPostsProps) => (
               alt="" // As the image is decorative, an empty alt attribute is appropriate
               width={800}
               height={400}
-              layout='responsive'
               className='rounded-lg'
             />
               <h3 className='mb-3 text-3xl font-normal font-display leading-snug text-gray-900'>
