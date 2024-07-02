@@ -1,13 +1,14 @@
-import { type Post } from '@/interfaces/post'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getFeaturedPosts } from '@/lib/api'
 import DateFormatter from './formatters/date-formatter'
 
-type FeaturedPostsProps = {
-  posts: Post[]
-}
+const FeaturedSection = () => {
+  const posts = getFeaturedPosts()
 
-const FeaturedSection = ({posts}: FeaturedPostsProps) => (
+  if (!posts) return null
+  
+  return (
   <section className='max-w-3xl mx-auto'>
     <h2 className='mb-4 text-4xl font-normal font-display leading-tight tracking-tighter md:text-6xl'>
       Featured posts.
@@ -39,6 +40,6 @@ const FeaturedSection = ({posts}: FeaturedPostsProps) => (
         ))}
     </div>
   </section>
-)
+)}
 
 export default FeaturedSection
