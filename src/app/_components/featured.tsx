@@ -16,7 +16,7 @@ const FeaturedSection = () => {
 
     <div className="mb-16 md:grid md:grid-cols-2 md:gap-4">
       {posts.map(({title, coverImage, slug, date}) => (
-        <article key={`featured-post-${title}`} className='relative first:col-span-2'>
+        <article key={`featured-post-${title}`} className='first:col-span-2'>
           <Link
             as={`/posts/${slug}`}
             href='/posts/[slug]'
@@ -29,8 +29,8 @@ const FeaturedSection = () => {
               height={480}
               className='rounded-lg'
             />
-            <div className='absolute left-4 bottom-2'>
-              <h3 className='mb-3 text-3xl font-normal font-display leading-snug dark:text-white text-gray-900 group-focus:text-link group-focus:underline'>
+            <div className=''>
+              <h3 className='mb-3 text-3xl font-normal font-display leading-snug group-focus:text-link group-focus:underline'>
                 {title}
               </h3>
               <div className='mb-4 text-md dark:text-gray-200 text-gray-500'>
