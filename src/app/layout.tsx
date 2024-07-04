@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import './globals.css'
+import Navbar from './_components/navbar/navbar'
+import DarkModeProvider from './_components/theme/dark-mode-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,7 +19,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-    <html lang='en' className='bg-background'>
+    <html lang='en' className='bg-background' suppressHydrationWarning>
       <head>
         <link
           rel='apple-touch-icon'
@@ -60,8 +62,11 @@ const RootLayout = ({
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet"/>
       </head>
       <body className={inter.className}>
-        <main id="main-content" className='min-h-screen'>{children}</main>
-        <Analytics />
+        <DarkModeProvider>
+          <Navbar />
+          <main id="main-content" className='min-h-screen'>{children}</main>
+          <Analytics />
+        </DarkModeProvider>
       </body>
     </html>
   )
