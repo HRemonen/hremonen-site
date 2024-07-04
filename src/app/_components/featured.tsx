@@ -9,32 +9,34 @@ const FeaturedSection = () => {
   if (!posts) return null
   
   return (
-  <section className='max-w-3xl mx-auto'>
+  <section className='mx-auto'>
     <h2 className='mb-4 text-4xl font-normal font-display leading-tight tracking-tighter md:text-6xl'>
       Featured posts.
     </h2>
 
-    <div className="mb-16">
+    <div className="mb-16 md:grid md:grid-cols-2 md:gap-4">
       {posts.map(({title, coverImage, slug, date}) => (
-        <article key={`featured-post-${title}`}>
+        <article key={`featured-post-${title}`} className='relative first:col-span-2'>
           <Link
             as={`/posts/${slug}`}
             href='/posts/[slug]'
-            className='hover:underline hover:text-link focus:text-link focus:underline visited:text-visited'
+            className='group'
           >
             <Image
               src={coverImage}
               alt="" // As the image is decorative, an empty alt attribute is appropriate
-              width={800}
-              height={400}
+              width={1024}
+              height={480}
               className='rounded-lg'
             />
-              <h3 className='mb-3 text-3xl font-normal font-display leading-snug text-gray-900'>
+            <div className='absolute left-4 bottom-2'>
+              <h3 className='mb-3 text-3xl font-normal font-display leading-snug dark:text-white text-gray-900 group-focus:text-link group-focus:underline'>
                 {title}
               </h3>
-              <div className='mb-4 text-md text-gray-500'>
+              <div className='mb-4 text-md dark:text-gray-200 text-gray-500'>
                 <DateFormatter dateString={date} />
               </div>
+            </div>
             </Link>
           </article>
         ))}

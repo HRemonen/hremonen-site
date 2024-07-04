@@ -6,7 +6,7 @@ const HeroSection = () => (
     <h1 className='text-4xl font-bold leading-tight tracking-tighter md:pr-8 md:text-6xl'>
       {BLOG_NAME}.
     </h1>
-    <Image src='/misc/logo.svg' alt='Logo' width={300} height={150}/>
+    <Image src='/misc/logo.svg' alt='hremonen logo' width={300} height={150}/>
   </section>
 )
 
