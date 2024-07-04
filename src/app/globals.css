@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Light Mode */
+  .light {
+    --text-color: black;
+    --foreground-color: #fcfcfc;
+    --background-style: radial-gradient(#e6e6e6 0.8px, transparent 0),
+      radial-gradient(#e6e6e6 0.8px, #fcfcfc 0);
+  }
+  
+  /* Dark Mode */
+  .dark {
+    --text-color: white;
+    --foreground-color: #1f2028;
+    --background-style: radial-gradient(#2e3039 0.8px, transparent 0),
+      radial-gradient(#2e3039 0.8px, #1f2028 0);
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  background-image: var(--background-style);
+  background-position:
+    0 0,
+    16px 16px;
+  background-size: 32px 32px;
+  opacity: 1;
+}
+
 .hover-underline-animation {
   @apply inline-block relative;
 }
