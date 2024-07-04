@@ -4,7 +4,7 @@ const MoonIcon = () => (
   <svg
     aria-hidden='true'
     tabIndex={-1}
-    className='group h-10 w-10 fill-current transition duration-500 ease-in-out hover:rotate-12'
+    className='group h-8 w-8 fill-current transition duration-500 ease-in-out hover:rotate-12'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 16 16'
   >
