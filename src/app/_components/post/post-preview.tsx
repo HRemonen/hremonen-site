@@ -20,17 +20,17 @@ const PostPreview = ({
   <li>
     <article>
       <CategoryFormatter categories={categories} />
-      <h3 className='mb-3 text-3xl font-normal font-display leading-snug text-gray-900'>
+      <h3 className='mb-3 text-3xl font-normal font-display leading-snug'>
         <Link
           as={`/posts/${slug}`}
           href='/posts/[slug]'
-          className='hover:underline hover:text-link focus:text-link focus:underline visited:text-visited'
+          className='hover:underline hover:text-link dark:hover:text-link-dark focus:underline focus:text-link dark:focus:text-link-dark focus:visited:text-link dark:focus:visited:text-link-dark visited:text-visited dark:visited:text-visited-dark'
         >
           {title}
         </Link>
       </h3>
-      <blockquote className='mb-4 text-md font-light font-body leading-relaxed text-gray-700'>{excerpt}</blockquote>
-      <div className='mb-4 text-md text-gray-500'>
+      <blockquote className='mb-4 text-md font-light font-body leading-relaxed text-text dark:text-text-dark'>{excerpt}</blockquote>
+      <div className='mb-4 text-md text-accent-text dark:text-accent-text-dark'>
         <DateFormatter dateString={date} />
       </div>
     </article>

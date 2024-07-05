@@ -10,7 +10,7 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
   <>
     {Object.entries(posts).map(([monthYear, posts]) => (
       <section key={monthYear} className='mb-16'>
-        <dl className='flex gap-2 mb-12 text-primary-accent-2 text-lg'>
+        <dl className='flex gap-2 mb-4 dark:text-secondary text-lg'>
           <dt className='capitalize'>
             {monthYear} ・
           </dt>
@@ -18,7 +18,7 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
             {posts.length} {posts.length > 1 ? 'posts' : 'post'}
           </dd>
         </dl>
-        <ol className='grid grid-cols-1 gap-y-10 md:gap-y-20'>
+        <ol className='grid grid-cols-1 gap-y-4 md:gap-y-8'>
           {posts.map((post) => (
             <PostPreview
               key={post.slug}
