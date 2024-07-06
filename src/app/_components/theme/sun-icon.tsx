@@ -6,7 +6,7 @@ const SunIcon = () => (
   <svg
     aria-hidden='true'
     tabIndex={-1}
-    className='group h-8 w-8 transition-colors duration-300 ease-in-out hover:text-yellow-400 hover:fill-yellow-300'
+    className='group transition-colors ease-in-out hover:text-yellow-400 hover:fill-yellow-300'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
     strokeWidth="1.5"

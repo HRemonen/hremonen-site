@@ -13,10 +13,17 @@ const DarkModeToggle = () => {
     <button
       type='button'
       aria-label={theme === 'light' ? 'Toggle dark mode' : 'Toggle light mode'}
-      className='ml-3 flex flex-col justify-center'
+      className='rounded-full p-4 flex-col justify-center overflow-hidden'
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
-      {theme === 'light' ? <SunIcon /> : <MoonIcon />}
+      <div className='relative w-8 h-8'>
+        <span style={{ transformOrigin: '50% 100px'}} className={`absolute inset-0 transform transition-transform duration-700 motion-reduce:duration-[0s] ${theme === 'dark' ? 'rotate-0' : 'rotate-90'}`} >
+          <MoonIcon />
+        </span>
+        <span style={{ transformOrigin: '50% 100px'}} className={`absolute inset-0 transform transition-transform duration-700 motion-reduce:duration-[0s] ${theme === 'light' ? 'rotate-0' : '-rotate-90'}`} >
+          <SunIcon />
+        </span>
+      </div>
     </button>
   )
 }
