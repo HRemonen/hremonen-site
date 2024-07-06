@@ -10,7 +10,7 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
   <>
     {Object.entries(posts).map(([monthYear, posts]) => (
       <section key={monthYear} className='mb-16'>
-        <dl className='flex gap-2 mb-4 dark:text-secondary text-lg'>
+        <dl className='flex gap-2 mb-4 text-primary dark:text-secondary text-lg'>
           <dt className='capitalize'>
             {monthYear} ・
           </dt>
