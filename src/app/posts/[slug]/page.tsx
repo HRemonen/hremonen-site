@@ -4,11 +4,10 @@ import { getAllPosts, getPostBySlug } from '../../../lib/api'
 import { BLOG_NAME, BLOG_URL, BLOG_POST_TYPE, BLOG_LOCALE } from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import PageContainer from '../../_components/common/page-container'
-import Header from '../../_components/header'
 import PostBody from '../../_components/post/post-body'
 import PostHeader from '../../_components/post/post-header'
 
-export default async function Post({ params }: Params) {
+const Post = async ({ params }: Params) => {
   const post = getPostBySlug(params.slug)
 
   if (!post) {
@@ -19,7 +18,6 @@ export default async function Post({ params }: Params) {
 
   return (
     <PageContainer>
-      <Header />
       <article className='mb-32'>
         <PostHeader
           title={post.title}
@@ -72,3 +70,5 @@ export async function generateStaticParams() {
     slug: post.slug,
   }))
 }
+
+export default Post
