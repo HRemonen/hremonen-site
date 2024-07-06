@@ -19,7 +19,7 @@ const config: Config = {
         'secondary': '#AABD8C',
         'accent-1': '#f7f8f9',
         'ring': '#E9E3B4',
-        'text': '#4b5563',
+        'text': '#171614',
         'text-dark': '#dedede',
         'accent-text': '#6b7280',
         'accent-text-dark': '#a8ad9f',
@@ -54,6 +54,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // eslint-disable-next-line global-require, import/no-extraneous-dependencies
+  plugins: [require('@tailwindcss/typography'),],
 }
 export default config
