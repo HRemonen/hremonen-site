@@ -43,7 +43,7 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 
   const title = `${post.title} | ${BLOG_NAME}`
-  const {description} = post
+  const {excerpt} = post
   const type = BLOG_POST_TYPE
   const locale = BLOG_LOCALE
   const url = `${BLOG_URL}/posts/${post.slug}`
@@ -51,11 +51,11 @@ export function generateMetadata({ params }: Params): Metadata {
 
   return {
     title,
-    description,
+    description: excerpt,
     keywords,
     openGraph: {
       title,
-      description,
+      description: excerpt,
       type,
       locale,
       url,

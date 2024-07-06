@@ -5,12 +5,12 @@ export type Post = {
   title: string
   date: string
   coverImage: string
+  coverImageAttribute: string
   author: Author
   excerpt: string
   ogImage: {
     url: string
   }
-  description: string
   categories: string[]
   keywords: string[]
   content: string

@@ -1,6 +1,5 @@
 ---
 title: 'Migrating from WordPress to Next.js'
-description: ''
 coverImage: ''
 excerpt: 'Since I started blogging about half a year ago, I have wondered should I have just done my own blog website rather than using a WordPress to deliver content. Now I have finally made my choice and set my eyes about migrating from WordPress to Next.js. If you would be interested on knowing more I will explain some non-technical and more technical stuff in this post!'
 date: '2024-07-14'
