@@ -6,14 +6,12 @@ type PostsByMonth = {
   [monthYear: string]: Post[]
 }
 
-const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
+const MonthlyPosts = ({ posts }: { posts: PostsByMonth }) => (
   <>
     {Object.entries(posts).map(([monthYear, posts]) => (
       <section key={monthYear} className='mb-16'>
-        <dl className='flex gap-2 mb-4 text-primary dark:text-secondary text-lg'>
-          <dt className='capitalize'>
-            {monthYear} ・
-          </dt>
+        <dl className='mb-4 flex gap-2 text-lg text-primary dark:text-secondary'>
+          <dt className='capitalize'>{monthYear} ・</dt>
           <dd>
             {posts.length} {posts.length > 1 ? 'posts' : 'post'}
           </dd>
@@ -25,7 +23,7 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
               title={post.title}
               date={post.date}
               slug={post.slug}
-              excerpt={post.excerpt} 
+              excerpt={post.excerpt}
               categories={post.categories}
             />
           ))}
@@ -38,11 +36,11 @@ const MonthlyPosts = ({posts}: {posts: PostsByMonth}) => (
 const AllPosts = () => {
   const posts = getAllPosts()
   if (!posts) return null
-  
+
   const postsByMonth = posts.reduce((acc, post) => {
     const date = new Date(post.date)
 
-    const month = date.toLocaleString("en", { month: 'long' })
+    const month = date.toLocaleString('en', { month: 'long' })
     const year = date.getFullYear()
     const key = `${month} ${year}`
 
@@ -53,16 +51,16 @@ const AllPosts = () => {
     acc[key].push(post)
 
     return acc
-  }
-  , {} as PostsByMonth)
+  }, {} as PostsByMonth)
 
   return (
-    <section className='max-w-3xl mx-auto'>
-      <h2 className='mb-4 text-4xl font-normal font-display leading-tight tracking-tighter md:text-6xl'>
+    <section className='mx-auto max-w-3xl'>
+      <h2 className='mb-4 font-display text-4xl font-normal leading-tight tracking-tighter md:text-6xl'>
         All posts.
       </h2>
       <MonthlyPosts posts={postsByMonth} />
     </section>
-)}
+  )
+}
 
 export default AllPosts

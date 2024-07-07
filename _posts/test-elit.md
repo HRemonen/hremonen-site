@@ -8,8 +8,8 @@ author:
 featured: true
 ogImage:
   url: ''
-categories: 
-    - 'dolor'
+categories:
+  - 'dolor'
 keywords:
   - 'sed'
   - 'do'

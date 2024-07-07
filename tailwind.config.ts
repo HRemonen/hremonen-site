@@ -15,21 +15,21 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'primary': '#8D6F64',
-        'secondary': '#AABD8C',
+        primary: '#8D6F64',
+        secondary: '#AABD8C',
         'accent-1': '#f7f8f9',
-        'ring': '#E9E3B4',
-        'text': '#171614',
+        ring: '#E9E3B4',
+        text: '#171614',
         'text-dark': '#dedede',
         'accent-text': '#6b7280',
         'accent-text-dark': '#a8ad9f',
-        'visited': '#551A8B',
+        visited: '#551A8B',
         'visited-dark': '#cb94ff',
-        'link': '#0068ff',
+        link: '#0068ff',
         'link-dark': '#75acff',
-        'info': '#41b6e6',
-        'warning': '#ffc845',
-        'error': '#d3273e',
+        info: '#41b6e6',
+        warning: '#ffc845',
+        error: '#d3273e',
       },
       spacing: {
         28: '7rem',
@@ -40,7 +40,7 @@ const config: Config = {
       fontFamily: {
         sans: ['Inter'],
         display: ['Alegreya Sans'],
-        body: ['Literata']
+        body: ['Literata'],
       },
       fontSize: {
         '5xl': '2.5rem',
@@ -55,6 +55,6 @@ const config: Config = {
     },
   },
   // eslint-disable-next-line global-require, import/no-extraneous-dependencies
-  plugins: [require('@tailwindcss/typography'),],
+  plugins: [require('@tailwindcss/typography')],
 }
 export default config

@@ -8,8 +8,8 @@ author:
 featured: true
 ogImage:
   url: ''
-categories: 
-    - 'amet'
+categories:
+  - 'amet'
 keywords:
   - 'consectetur'
   - 'elit'

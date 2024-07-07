@@ -14,7 +14,7 @@ const Navbar = () => (
     <SkipLink href='#main-content' />
 
     <div id='logo' className='flex justify-center gap-4 align-middle'>
-      <Image src='/misc/logo.svg' alt='hremonen logo' width={100} height={50}/>
+      <Image src='/misc/logo.svg' alt='hremonen logo' width={100} height={50} />
     </div>
 
     <div className='flex items-center justify-center'>

@@ -1,7 +1,12 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getAllPosts, getPostBySlug } from '../../../lib/api'
-import { BLOG_NAME, BLOG_URL, BLOG_POST_TYPE, BLOG_LOCALE } from '../../../lib/constants'
+import {
+  BLOG_NAME,
+  BLOG_URL,
+  BLOG_POST_TYPE,
+  BLOG_LOCALE,
+} from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
 import PageContainer from '../../_components/common/page-container'
 import PostBody from '../../_components/post/post-body'
@@ -19,10 +24,7 @@ const Post = async ({ params }: Params) => {
   return (
     <PageContainer>
       <article className='mb-32'>
-        <PostHeader
-          title={post.title}
-          date={post.date}
-        />
+        <PostHeader title={post.title} date={post.date} />
         <PostBody content={content} />
       </article>
     </PageContainer>
@@ -43,7 +45,7 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 
   const title = `${post.title} | ${BLOG_NAME}`
-  const {excerpt} = post
+  const { excerpt } = post
   const type = BLOG_POST_TYPE
   const locale = BLOG_LOCALE
   const url = `${BLOG_URL}/posts/${post.slug}`

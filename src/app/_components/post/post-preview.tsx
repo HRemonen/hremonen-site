@@ -10,26 +10,22 @@ type Props = {
   categories: string[]
 }
 
-const PostPreview = ({
-  title,
-  date,
-  excerpt,
-  slug,
-  categories
-}: Props) => (
+const PostPreview = ({ title, date, excerpt, slug, categories }: Props) => (
   <li>
     <article>
       <CategoryFormatter categories={categories} />
-      <h3 className='mb-3 text-4xl font-normal font-display leading-snug'>
+      <h3 className='mb-3 font-display text-4xl font-normal leading-snug'>
         <Link
           as={`/posts/${slug}`}
           href='/posts/[slug]'
-          className='hover:underline hover:text-link dark:hover:text-link-dark focus:underline focus:text-link dark:focus:text-link-dark focus:visited:text-link dark:focus:visited:text-link-dark visited:text-visited dark:visited:text-visited-dark'
+          className='visited:text-visited hover:text-link hover:underline focus:text-link focus:underline focus:visited:text-link dark:visited:text-visited-dark dark:hover:text-link-dark dark:focus:text-link-dark dark:focus:visited:text-link-dark'
         >
           {title}
         </Link>
       </h3>
-      <blockquote className='mb-4 prose prose-lg prose-stone dark:prose-invert'>{excerpt}</blockquote>
+      <blockquote className='prose prose-lg prose-stone mb-4 dark:prose-invert'>
+        {excerpt}
+      </blockquote>
       <div className='mb-4 text-accent-text dark:text-accent-text-dark'>
         <DateFormatter dateString={date} />
       </div>

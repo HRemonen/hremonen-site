@@ -10,7 +10,7 @@
     --background-style: radial-gradient(#e6e6e6 0.8px, transparent 0),
       radial-gradient(#e6e6e6 0.8px, #fcfcfc 0);
   }
-  
+
   /* Dark Mode */
   .dark {
     --text-color: white;
@@ -32,11 +32,11 @@ body {
 }
 
 .hover-underline-animation {
-  @apply inline-block relative;
+  @apply relative inline-block;
 }
 
 .hover-underline-animation::after {
-  @apply bg-black content-[''] absolute w-full scale-x-0 h-[2px] bottom-0 left-0 origin-left transition-all ease-in-out;
+  @apply absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-black transition-all ease-in-out content-[''];
 }
 
 .hover-underline-animation:hover::after {
