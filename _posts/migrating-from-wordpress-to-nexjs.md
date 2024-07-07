@@ -1,13 +1,14 @@
 ---
 title: 'Migrating from WordPress to Next.js'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/v1720347301/anton-sobotyak-K3JRcF1aIhw-unsplash_llwhxj.jpg'
+coverImageAttribute: 'Photo by [Anto Sobotyak](https://unsplash.com/@a_sobotyak)'
 excerpt: 'Since I started blogging about half a year ago, I have wondered should I have just done my own blog website rather than using a WordPress to deliver content. Now I have finally made my choice and set my eyes about migrating from WordPress to Next.js. If you would be interested on knowing more I will explain some non-technical and more technical stuff in this post!'
 date: '2024-07-14'
 author:
   name: Henri Remonen
 featured: true
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1720347301/anton-sobotyak-K3JRcF1aIhw-unsplash_llwhxj.jpg'
 categories: 
     - 'Next.js'
     - 'Tech talk'
