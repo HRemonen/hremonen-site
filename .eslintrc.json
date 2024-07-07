@@ -23,22 +23,36 @@
     "project": ["./tsconfig.json"]
   },
   "rules": {
-    "import/prefer-default-export": "warn",
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
     "react/require-default-props": "off",
     "react/prop-types": 0,
     "react/react-in-jsx-scope": 0,
-    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/no-unstable-nested-components": "error",
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
     "react/function-component-definition": [
       2,
       {
         "namedComponents": "arrow-function",
         "unnamedComponents": "arrow-function"
       }
-    ]
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "import/no-cycle": "error",
+    "import/extensions": "off"
   }
 }
