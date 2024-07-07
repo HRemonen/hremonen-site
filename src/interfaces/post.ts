@@ -5,7 +5,7 @@ export type Post = {
   title: string
   date: string
   coverImage: string
-  coverImageAttribute: string
+  coverImageAttribute?: string
   author: Author
   excerpt: string
   ogImage: {
