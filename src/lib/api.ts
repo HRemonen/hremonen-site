@@ -27,6 +27,8 @@ export function getAllPosts(): Post[] {
   return posts
 }
 
-export function getFeaturedPosts(): Post[] {
-  return getAllPosts().filter((post) => post.featured)
+export function getFeaturedPost(): Post | undefined {
+  const featuredPost = getAllPosts().find((post) => post.featured)
+
+  return featuredPost
 }

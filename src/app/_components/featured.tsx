@@ -1,47 +1,42 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { getFeaturedPosts } from '@/lib/api'
-import DateFormatter from './formatters/date-formatter'
+import { getFeaturedPost } from '@/lib/api'
 
 const FeaturedSection = () => {
-  const posts = getFeaturedPosts()
+  const featured = getFeaturedPost()
 
-  if (!posts) return null
+  if (!featured) return null
+  
+  const { title, slug, coverImage } = featured
   
   return (
-  <section className='mx-auto'>
-    <h2 className='mb-4 text-4xl font-normal font-display leading-tight tracking-tighter md:text-6xl'>
-      Featured posts.
-    </h2>
+<section className='max-w-5xl mx-auto mb-16'>
+  <article key={`featured-post-${title}`} className='group relative flex flex-row mx-auto overflow-hidden'>
+    <Link
+      as={`/posts/${slug}`}
+      href='/posts/[slug]'
+      className='w-3/5 rounded-md transition-all duration-300 ease-in-out group-hover:w-full'
+    >
+      <Image
+        src={coverImage}
+        alt="" // As the image is decorative, an empty alt attribute is appropriate
+        width={1024}
+        height={420}
+        className='rounded-lg max-h-[420px] max-w-3/5 object-cover transition-all duration-500 ease-in-out group-hover:scale-150'
+      />
+      <div className='z-10 flex flex-col absolute left-[380px] bottom-0'>
+        <h2 className='relative h-[420px] flex items-center justify-center text-6xl transition-all duration-500 ease-in-out transform translate-y-0 group-hover:-translate-y-full'>
+          {title}
+        </h2>
+        <h2 className='absolute top-0 h-[420px] flex items-center justify-center text-6xl transition-all duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0'>
+          {title}
+        </h2>
+      </div>
+    </Link>
+  </article>
+</section>
 
-    <div className="mb-16 md:grid md:grid-cols-2 md:gap-4">
-      {posts.map(({title, coverImage, slug, date}) => (
-        <article key={`featured-post-${title}`} className='first:col-span-2'>
-          <Link
-            as={`/posts/${slug}`}
-            href='/posts/[slug]'
-            className='group'
-          >
-            <Image
-              src={coverImage}
-              alt="" // As the image is decorative, an empty alt attribute is appropriate
-              width={1024}
-              height={480}
-              className='rounded-lg'
-            />
-            <div className=''>
-              <h3 className='mb-3 text-3xl font-normal font-display leading-snug group-focus:text-link group-focus:underline'>
-                {title}
-              </h3>
-              <div className='mb-4 text-md dark:text-gray-200 text-gray-500'>
-                <DateFormatter dateString={date} />
-              </div>
-            </div>
-            </Link>
-          </article>
-        ))}
-    </div>
-  </section>
+
 )}
 
 export default FeaturedSection
