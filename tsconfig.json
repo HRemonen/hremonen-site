@@ -29,6 +29,7 @@
     "src/app/sitemap.js",
     "./eslintrc.json",
     "./postcss.config.js",
+    "./next.config.js",
   ],
   "exclude": [
     "node_modules",
