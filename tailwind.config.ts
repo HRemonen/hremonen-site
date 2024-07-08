@@ -51,6 +51,8 @@ const config: Config = {
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
         md: '0 8px 30px rgba(0, 0, 0, 0.12)',
+        'custom-light': '4px 0px 0px -4px #fcfcfc, -4px 0px 0px 4px #fcfcfc',
+        'custom-dark': '4px 0px 0px -4px #1f2028, -4px 0px 0px 4px #1f2028',
       },
     },
   },
