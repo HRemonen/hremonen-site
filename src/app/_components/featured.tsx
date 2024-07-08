@@ -30,7 +30,7 @@ const FeaturedSection = () => {
           <div className='absolute bottom-0 left-[380px] z-10 flex flex-col font-semibold'>
             <div className='duration-600 relative flex h-[420px] translate-y-0 transform items-center justify-center text-7xl transition-all ease-in-out group-hover:-translate-y-full'>
               <h2 className='text-right leading-tight'>
-                <span className='rounded-2xl bg-[#fcfcfc] box-decoration-clone shadow-custom-light dark:bg-[#1f2028] dark:shadow-custom-dark'>
+                <span className='rounded-bl-2xl bg-[#fcfcfc] box-decoration-clone shadow-custom-light dark:bg-[#1f2028] dark:shadow-custom-dark'>
                   {title}
                 </span>
               </h2>
