@@ -2,9 +2,7 @@
 
 import React from 'react'
 import { useTheme } from 'next-themes'
-
-import SunIcon from './sun-icon'
-import MoonIcon from './moon-icon'
+import { MoonIcon, SunIcon } from '@/app/_components/ui/icons'
 
 const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme()
