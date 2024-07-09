@@ -9,8 +9,8 @@ import {
 } from '@/lib/constants'
 import markdownToHtml from '@/lib/markdownToHtml'
 import PageContainer from '@/app/_components/ui/page-container'
-import PostBody from '@/app/_components/post/post-body'
-import PostHeader from '@/app/_components/post/post-header'
+import PostBody from '@/app/_pages/post/post-body'
+import PostHeader from '@/app/_pages/post/post-header'
 
 const Post = async ({ params }: Params) => {
   const post = getPostBySlug(params.slug)

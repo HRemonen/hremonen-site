@@ -1,5 +1,5 @@
-import PostTitle from '@/app/_components/post/post-title'
-import DateFormatter from '../formatters/date-formatter'
+import PostTitle from '@/app/_pages/post/post-title'
+import DateFormatter from '@/app/_components/formatters/date-formatter'
 
 type Props = {
   title: string

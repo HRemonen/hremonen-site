@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import DateFormatter from '../formatters/date-formatter'
-import CategoryFormatter from '../formatters/category-formatter'
+import DateFormatter from '@/app/_components/formatters/date-formatter'
+import CategoryFormatter from '@/app/_components/formatters/category-formatter'
 
 type Props = {
   title: string

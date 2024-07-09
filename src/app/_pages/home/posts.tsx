@@ -1,6 +1,6 @@
 import { type Post } from '@/interfaces/post'
 import { getAllPosts } from '@/lib/api'
-import PostPreview from '@/app/_components/post/post-preview'
+import PostPreview from '@/app/_pages/home/post-preview'
 
 type PostsByMonth = {
   [monthYear: string]: Post[]
