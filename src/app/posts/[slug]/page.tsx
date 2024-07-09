@@ -1,16 +1,16 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllPosts, getPostBySlug } from '../../../lib/api'
+import { getAllPosts, getPostBySlug } from '@/lib/api'
 import {
   BLOG_NAME,
   BLOG_URL,
   BLOG_POST_TYPE,
   BLOG_LOCALE,
-} from '../../../lib/constants'
-import markdownToHtml from '../../../lib/markdownToHtml'
-import PageContainer from '../../_components/ui/page-container'
-import PostBody from '../../_components/post/post-body'
-import PostHeader from '../../_components/post/post-header'
+} from '@/lib/constants'
+import markdownToHtml from '@/lib/markdownToHtml'
+import PageContainer from '@/app/_components/ui/page-container'
+import PostBody from '@/app/_components/post/post-body'
+import PostHeader from '@/app/_components/post/post-header'
 
 const Post = async ({ params }: Params) => {
   const post = getPostBySlug(params.slug)

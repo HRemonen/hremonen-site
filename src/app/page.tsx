@@ -1,11 +1,11 @@
 import PageContainer from '@/app/_components/ui/page-container'
-import FeaturedSection from '@/app/_components/featured'
-import AllPosts from '@/app/_components/post/posts'
+import FeaturedSection from '@/app/_pages/home/featured'
+import PostSection from '@/app/_pages/home/posts'
 
 const Index = () => (
   <PageContainer>
     <FeaturedSection />
-    <AllPosts />
+    <PostSection />
   </PageContainer>
 )
 

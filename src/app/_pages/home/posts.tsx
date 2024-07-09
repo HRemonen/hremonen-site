@@ -1,6 +1,6 @@
 import { type Post } from '@/interfaces/post'
 import { getAllPosts } from '@/lib/api'
-import PostPreview from './post-preview'
+import PostPreview from '@/app/_components/post/post-preview'
 
 type PostsByMonth = {
   [monthYear: string]: Post[]
@@ -33,7 +33,7 @@ const MonthlyPosts = ({ posts }: { posts: PostsByMonth }) => (
   </>
 )
 
-const AllPosts = () => {
+const PostSection = () => {
   const posts = getAllPosts()
   if (!posts) return null
 
@@ -63,4 +63,4 @@ const AllPosts = () => {
   )
 }
 
-export default AllPosts
+export default PostSection
