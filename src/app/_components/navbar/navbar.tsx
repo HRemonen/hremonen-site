@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import SkipLink from '../common/skip-link'
+import SkipLink from '../ui/skip-link'
 
 const DarkModeToggle = dynamic(() => import('../theme/dark-mode-toggle'), {
   ssr: false,

@@ -8,7 +8,7 @@ import {
   BLOG_LOCALE,
 } from '../../../lib/constants'
 import markdownToHtml from '../../../lib/markdownToHtml'
-import PageContainer from '../../_components/common/page-container'
+import PageContainer from '../../_components/ui/page-container'
 import PostBody from '../../_components/post/post-body'
 import PostHeader from '../../_components/post/post-header'
 
