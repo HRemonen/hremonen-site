@@ -13,7 +13,7 @@ const FeaturedSection = () => {
     <section className='mx-auto mb-16 max-w-5xl'>
       <article
         key={`featured-post-${title}`}
-        className='group relative mx-auto flex flex-row'
+        className='group relative flex flex-row sm:mx-auto'
       >
         <Link
           as={`/posts/${slug}`}
@@ -27,9 +27,9 @@ const FeaturedSection = () => {
             height={420}
             className='md:max-w-4/5 lg:max-w-4/6 max-h-[420px] rounded-lg border-4 border-transparent object-cover group-hover:border-primary dark:group-hover:border-secondary'
           />
-          <div className='right-0 top-0 flex flex-col items-end sm:absolute sm:left-[30%] lg:left-[380px]'>
-            <div className='relative flex h-auto justify-end text-2xl sm:text-6xl lg:text-7xl'>
-              <h2 className='w-full font-light leading-tight sm:text-right sm:font-semibold'>
+          <div className='right-0 top-0 px-8 sm:absolute sm:left-[30%] sm:flex sm:flex-col sm:items-end sm:px-0 lg:left-[380px]'>
+            <div className='relative flex h-auto justify-end text-4xl sm:text-6xl lg:text-7xl'>
+              <h2 className='mt-2 w-full font-light leading-tight sm:mt-0 sm:text-right sm:font-semibold'>
                 <span className='sm:rounded-bl-2xl sm:bg-[#fcfcfc] sm:box-decoration-clone sm:shadow-custom-light sm:dark:bg-[#1f2028] sm:dark:shadow-custom-dark'>
                   {title}
                 </span>

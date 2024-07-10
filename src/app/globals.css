@@ -31,6 +31,10 @@ body {
   opacity: 1;
 }
 
+.full-bleed {
+  @apply w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw];
+}
+
 .hover-underline-animation {
   @apply relative inline-block;
 }

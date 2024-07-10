@@ -54,7 +54,7 @@ const PostSection = () => {
   }, {} as PostsByMonth)
 
   return (
-    <section className='mx-auto max-w-3xl'>
+    <section className='mx-auto max-w-3xl px-8 sm:px-0'>
       <h2 className='mb-4 font-display text-4xl font-normal leading-tight tracking-tighter md:text-6xl'>
         All posts.
       </h2>

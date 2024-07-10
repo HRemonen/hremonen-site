@@ -3,7 +3,7 @@ type Props = {
 }
 
 const PageContainer = ({ children }: Props) => (
-  <div className='container mx-auto px-5'>{children}</div>
+  <div className='mx-auto sm:container md:px-5'>{children}</div>
 )
 
 export default PageContainer

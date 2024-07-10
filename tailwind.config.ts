@@ -56,7 +56,7 @@ const config: Config = {
         md: '0 8px 30px rgba(0, 0, 0, 0.12)',
         'custom-light': '4px 0px 0px -4px #fcfcfc, -4px 0px 0px 4px #fcfcfc',
         'custom-dark': '4px 0px 0px -4px #1f2028, -4px 0px 0px 4px #1f2028',
-        'custom-light-sm': '2px 0px 0px -2px #fcfcfc, -2px 0px 0px 2px #fcfcfc',
+        'custom-light-sm': '4px 0px 0px 4px #fcfcfc, 4px 0px 0px 4px #fcfcfc',
         'custom-dark-sm': '2px 0px 0px -2px #1f2028, -2px 0px 0px 2px #1f2028',
       },
     },
