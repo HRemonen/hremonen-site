@@ -22,25 +22,25 @@ const FeaturedSection = () => {
           className='max-h-[780px] rounded-2xl object-cover'
         />
         <div className='absolute left-0 top-0 z-10 h-20 w-20 bg-[#fcfcfc] dark:bg-[#1f2028] lg:w-44' />
-        <div className='absolute -left-3 top-0 z-20 flex w-auto flex-col items-start px-2 pb-8 lg:left-20 lg:px-3 xl:left-40 xl:px-4'>
+        <div className='absolute -left-3 top-0 z-20 w-auto px-2 pb-8 lg:left-20 lg:px-3 xl:left-40 xl:px-4'>
           <div className='w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
-            <h1 className='relative z-20 mb-3 mt-px inline-flex items-center space-x-2 px-3 lg:px-6'>
+            <h1 className='relative mb-4 inline-flex space-x-2 px-3 lg:px-6'>
               Featured
             </h1>
           </div>
           <div className='relative w-auto'>
             <div className='relative w-auto overflow-hidden rounded-bl-none rounded-br-2xl lg:rounded-br-3xl'>
               <div className='relative'>
-                <h2 className='gooey-content bg-[#fcfcfc] pb-3 pt-16 text-2xl text-gray-600 dark:bg-[#1f2028] dark:text-gray-300 sm:text-4xl md:text-5xl lg:pt-4 lg:text-6xl 2xl:text-7xl'>
-                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                <h2 className='4xl:text-8xl gooey-content bg-[#fcfcfc] pb-3 pt-16 text-2xl leading-none tracking-tight text-gray-600 dark:bg-[#1f2028] dark:text-gray-300 sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl'>
+                  <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
                     Migrating from&nbsp;&nbsp;
                     <br />
                   </span>
-                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                  <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
                     Wordpress to&nbsp;&nbsp;
                     <br />
                   </span>
-                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                  <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
                     Next.js&nbsp;&nbsp;
                     <br />
                   </span>
