@@ -18,6 +18,20 @@
     --background-style: radial-gradient(#2e3039 0.8px, transparent 0),
       radial-gradient(#2e3039 0.8px, #1f2028 0);
   }
+
+  .gooey-content {
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    -moz-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    filter: url(#goo);
+    -webkit-filter: url(#goo);
+    -moz-filter: url(#goo);
+    -ms-filter: url(#goo);
+    -o-filter: url(#goo)
+}
 }
 
 body {

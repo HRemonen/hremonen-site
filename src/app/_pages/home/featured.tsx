@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import { getFeaturedPost } from '@/lib/api'
 
@@ -7,7 +6,7 @@ const FeaturedSection = () => {
 
   if (!featured) return null
 
-  const { title, slug, coverImage } = featured
+  const { title, coverImage } = featured
 
   return (
     <section className='mx-auto mb-16 max-w-5xl'>
@@ -15,28 +14,68 @@ const FeaturedSection = () => {
         key={`featured-post-${title}`}
         className='group relative flex flex-row sm:mx-auto'
       >
-        <Link
-          as={`/posts/${slug}`}
-          href='/posts/[slug]'
-          className='rounded-md md:w-4/5 lg:w-4/5'
-        >
-          <Image
-            src={coverImage}
-            alt='' // As the image is decorative, an empty alt attribute is appropriate
-            width={1024}
-            height={420}
-            className='md:max-w-4/5 lg:max-w-4/6 max-h-[420px] rounded-lg border-4 border-transparent object-cover group-hover:border-primary dark:group-hover:border-secondary'
-          />
-          <div className='right-0 top-0 px-8 sm:absolute sm:left-[30%] sm:flex sm:flex-col sm:items-end sm:px-0 lg:left-[380px]'>
-            <div className='relative flex h-auto justify-end text-4xl sm:text-6xl lg:text-7xl'>
-              <h2 className='mt-2 w-full font-light leading-tight sm:mt-0 sm:text-right sm:font-semibold'>
-                <span className='sm:rounded-bl-2xl sm:bg-[#fcfcfc] sm:box-decoration-clone sm:shadow-custom-light sm:dark:bg-[#1f2028] sm:dark:shadow-custom-dark'>
-                  {title}
-                </span>
-              </h2>
+        <Image
+          src={coverImage}
+          alt='' // As the image is decorative, an empty alt attribute is appropriate
+          width={1280}
+          height={780}
+          className='max-h-[780px] rounded-2xl object-cover'
+        />
+        <div className='absolute left-0 top-0 z-10 h-20 w-20 bg-[#fcfcfc] dark:bg-[#1f2028] lg:w-44' />
+        <div className='absolute -left-3 top-0 z-20 flex w-auto flex-col items-start px-2 pb-8 lg:left-20 lg:px-3 xl:left-40 xl:px-4'>
+          <div className='w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
+            <h1 className='relative z-20 mb-3 mt-px inline-flex items-center space-x-2 px-3 lg:px-6'>
+              Featured
+            </h1>
+          </div>
+          <div className='relative w-auto'>
+            <div className='relative w-auto overflow-hidden rounded-bl-none rounded-br-2xl lg:rounded-br-3xl'>
+              <div className='relative'>
+                <h2 className='gooey-content bg-[#fcfcfc] pb-3 pt-16 text-2xl text-gray-600 dark:bg-[#1f2028] dark:text-gray-300 sm:text-4xl md:text-5xl lg:pt-4 lg:text-6xl 2xl:text-7xl'>
+                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                    Migrating from&nbsp;&nbsp;
+                    <br />
+                  </span>
+                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                    Wordpress to&nbsp;&nbsp;
+                    <br />
+                  </span>
+                  <span className='relative z-[2] inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                    Next.js&nbsp;&nbsp;
+                    <br />
+                  </span>
+                </h2>
+                <svg
+                  width='0'
+                  height='0'
+                  className='absolute hidden'
+                  colorInterpolationFilters='sRGB'
+                >
+                  <defs>
+                    <filter id='goo'>
+                      <feGaussianBlur
+                        in='SourceGraphic'
+                        stdDeviation='6'
+                        result='blur'
+                      />
+                      <feColorMatrix
+                        in='blur'
+                        mode='matrix'
+                        values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9'
+                        result='goo'
+                      />
+                      <feComposite
+                        in='SourceGraphic'
+                        in2='goo'
+                        operator='atop'
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
             </div>
           </div>
-        </Link>
+        </div>
       </article>
     </section>
   )
