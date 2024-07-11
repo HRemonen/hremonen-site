@@ -46,10 +46,12 @@ const config: Config = {
         body: ['Literata'],
       },
       fontSize: {
-        '5xl': '2.75rem',
-        '6xl': '4rem',
-        '7xl': '4.5rem',
-        '8xl': '5.5rem',
+        '2xl': '2.25rem',
+        '3xl': '2.5rem',
+        '4xl': '3rem',
+        '5xl': '3.75rem',
+        '6xl': '4.5rem',
+        '7xl': '5rem',
       },
       boxShadow: {
         sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
