@@ -20,7 +20,7 @@ const config: Config = {
       colors: {
         primary: '#8D6F64',
         secondary: '#AABD8C',
-        ring: '#E9E3B4',
+        cta: '#6ae255',
         text: '#171614',
         'text-dark': '#dedede',
         'accent-text': '#53574c',
