@@ -44,19 +44,3 @@ body {
   background-size: 32px 32px;
   opacity: 1;
 }
-
-.full-bleed {
-  @apply w-[100vw] relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw];
-}
-
-.hover-underline-animation {
-  @apply relative inline-block;
-}
-
-.hover-underline-animation::after {
-  @apply absolute bottom-0 left-0 h-[2px] w-full origin-left scale-x-0 bg-black transition-all ease-in-out content-[''];
-}
-
-.hover-underline-animation:hover::after {
-  @apply scale-x-100;
-}

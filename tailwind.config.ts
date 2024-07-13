@@ -20,11 +20,10 @@ const config: Config = {
       colors: {
         primary: '#8D6F64',
         secondary: '#AABD8C',
-        'accent-1': '#f7f8f9',
         ring: '#E9E3B4',
         text: '#171614',
         'text-dark': '#dedede',
-        'accent-text': '#6b7280',
+        'accent-text': '#53574c',
         'accent-text-dark': '#a8ad9f',
         visited: '#551A8B',
         'visited-dark': '#cb94ff',
