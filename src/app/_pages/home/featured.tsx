@@ -1,18 +1,19 @@
 import Image from 'next/image'
 import { getFeaturedPost } from '@/lib/api'
+import ButtonLink from '@/app/_components/ui/button-link'
 
 const FeaturedSection = () => {
   const featured = getFeaturedPost()
 
   if (!featured) return null
 
-  const { title, coverImage } = featured
+  const { title, slug, coverImage } = featured
 
   return (
     <section className='mx-auto mb-16 max-w-5xl'>
       <article
         key={`featured-post-${title}`}
-        className='group relative flex flex-row px-4 sm:mx-auto sm:px-0'
+        className='relative flex flex-col px-4 sm:mx-auto sm:px-0'
       >
         <Image
           src={coverImage}
@@ -23,7 +24,7 @@ const FeaturedSection = () => {
         />
         <div className='absolute left-0 top-0 z-10 h-20 w-20 bg-[#fcfcfc] dark:bg-[#1f2028] lg:w-44' />
         <div className='absolute left-0 top-20 h-20 w-20 overflow-hidden'>
-          <div className='h-20 w-20 translate-y-1/2 transform rounded-full shadow-[0_0_0_500px_#fcfcfc]' />
+          <div className='h-20 w-20 translate-y-1/2 transform rounded-full shadow-[0_0_0_500px_#fcfcfc] dark:shadow-[0_0_0_500px_#1f2028]' />
         </div>
         <div className='absolute left-0 top-0 z-20 w-auto pb-8 sm:-left-4 lg:left-20 xl:left-40 xl:px-4'>
           <div className='w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
@@ -38,7 +39,7 @@ const FeaturedSection = () => {
                 <br />
               </span>
               <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
-                Wordpress to&nbsp;&nbsp;
+                WordPress to&nbsp;&nbsp;
                 <br />
               </span>
               <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
@@ -71,6 +72,9 @@ const FeaturedSection = () => {
               </defs>
             </svg>
           </div>
+        </div>
+        <div className='mx-auto bg-[#fcfcfc] px-2 pt-4 dark:bg-[#1f2028] sm:absolute sm:bottom-0 sm:right-0 sm:rounded-tl-2xl sm:pt-2'>
+          <ButtonLink linkText='Read featured article' href={`posts/${slug}`} />
         </div>
       </article>
     </section>
