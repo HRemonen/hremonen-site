@@ -34,9 +34,9 @@ const ButtonLink = ({ linkText, href }: ButtonLinkProps) => (
       <div className='relative inline-flex w-auto items-center justify-center overflow-hidden rounded-full bg-cta px-5 py-2 leading-tight text-text'>
         <p className='relative top-px inline-flex flex-shrink-0'>{linkText}</p>
       </div>
-      <div className='-ml-1 flex h-9 w-9 flex-shrink-0 transform items-center justify-center overflow-hidden rounded-full bg-cta transition-transform lg:group-hover:translate-x-3 lg:group-hover:rotate-45' />
+      <div className='-ml-1 flex h-9 w-9 flex-shrink-0 transform items-center justify-center overflow-hidden rounded-full bg-cta transition-transform group-hover:translate-x-3 group-hover:rotate-45 group-focus:translate-x-3 group-focus:rotate-45' />
     </a>
-    <div className='absolute right-0 top-0 flex h-9 w-9 transform items-center justify-center transition-transform lg:group-hover:translate-x-3 lg:group-hover:rotate-45'>
+    <div className='absolute right-0 top-0 flex h-9 w-9 transform items-center justify-center transition-transform group-hover:translate-x-3 group-hover:rotate-45 group-focus:translate-x-3 group-focus:rotate-45'>
       <div className='relative overflow-hidden text-text'>
         <div className='relative left-0 top-0 transform transition-transform'>
           <svg
