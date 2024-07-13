@@ -12,7 +12,7 @@ const FeaturedSection = () => {
     <section className='mx-auto mb-16 max-w-5xl'>
       <article
         key={`featured-post-${title}`}
-        className='group relative flex flex-row sm:mx-auto'
+        className='group relative flex flex-row px-4 sm:mx-auto sm:px-0'
       >
         <Image
           src={coverImage}
@@ -25,8 +25,8 @@ const FeaturedSection = () => {
         <div className='absolute left-0 top-20 h-20 w-20 overflow-hidden'>
           <div className='h-20 w-20 translate-y-1/2 transform rounded-full shadow-[0_0_0_500px_#fcfcfc]' />
         </div>
-        <div className='absolute top-0 z-20 w-auto pb-8 lg:left-20 xl:left-40 xl:px-4'>
-          <div className='bg-im w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
+        <div className='absolute left-0 top-0 z-20 w-auto pb-8 sm:-left-4 lg:left-20 xl:left-40 xl:px-4'>
+          <div className='w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
             <h2 className='relative mb-2 inline-flex space-x-2 px-3 font-display text-xl font-light text-accent-text dark:text-accent-text-dark xs:mb-4 xs:text-[2rem] sm:text-2xl lg:px-6'>
               Featured
             </h2>
@@ -45,6 +45,7 @@ const FeaturedSection = () => {
                 Next.js&nbsp;&nbsp;
                 <br />
               </span>
+              <div className='relative inline-flex w-auto bg-[#fcfcfc] dark:bg-[#1f2028]' />
             </h3>
             <svg
               width='0'
