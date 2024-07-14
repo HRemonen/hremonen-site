@@ -7,12 +7,14 @@ import { MoonIcon, SunIcon } from '@/app/_components/ui/icons'
 const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme()
 
+  const handleThemeToggle = () => setTheme(theme === 'light' ? 'dark' : 'light')
+
   return (
     <button
       type='button'
       aria-label={theme === 'light' ? 'Toggle dark mode' : 'Toggle light mode'}
       className='flex-col justify-center overflow-hidden rounded-full p-4'
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      onClick={handleThemeToggle}
     >
       <div className='relative h-8 w-8'>
         <span

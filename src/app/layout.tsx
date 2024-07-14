@@ -4,8 +4,8 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import './globals.css'
-import Navbar from './_components/navbar/navbar'
-import DarkModeProvider from './_components/theme/dark-mode-provider'
+import DarkModeProvider from '@/app/_components/theme/dark-mode-provider'
+import Navbar from '@/app/_components/navbar/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
