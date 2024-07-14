@@ -7,7 +7,7 @@ const CategoryFormatter = ({ categories }: CategoryFormatterProps) => (
     {categories.map((category) => (
       <li
         key={category}
-        className='text-sm uppercase text-gray-500 dark:text-ring'
+        className='dark:text-ring text-sm uppercase text-gray-500'
       >
         {category}
       </li>
