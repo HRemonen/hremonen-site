@@ -29,7 +29,7 @@ const ButtonLink = ({ linkText, href }: ButtonLinkProps) => (
     <a
       href={href}
       className='group relative inline-flex'
-      style={{ filter: 'url(#buttonFilter);' }}
+      style={{ filter: 'url(#buttonFilter)' }}
     >
       <div className='relative inline-flex w-auto items-center justify-center overflow-hidden rounded-full bg-cta px-5 py-2 leading-tight text-text'>
         <p className='relative top-px inline-flex flex-shrink-0'>{linkText}</p>
