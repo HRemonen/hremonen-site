@@ -1,8 +1,27 @@
 'use client'
 
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 
+const NAV_ITEMS = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'About',
+    href: '/about',
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+  },
+]
+
 const Menu = () => {
+  const pathname = usePathname()
+
   const modalId = useId()
   const modalRef = useRef<HTMLDialogElement>(null)
   const [modalOpen, setModalOpen] = useState(false)
@@ -58,24 +77,24 @@ const Menu = () => {
         aria-modal='true'
       >
         <div
-          className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity'
+          className='fixed inset-0 bg-gray-700 bg-opacity-75 transition-opacity'
           aria-hidden='true'
         />
         <div className='fixed inset-0 z-10 w-screen overflow-y-auto'>
           <div className='flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0'>
-            <div className='relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg'>
+            <div className='relative w-full transform overflow-hidden rounded-lg bg-[#fcfcfc] text-left shadow-xl transition-all dark:bg-[#1f2028] sm:my-8 sm:max-w-lg'>
               {/* Modal header */}
-              <div className='bg-gray-50 px-4 py-3 sm:flex sm:px-6'>
+              <div className='bg-[#fcfcfc] px-4 py-3 dark:bg-[#1f2028] sm:flex'>
                 <h2
-                  className='text-base font-semibold leading-6 text-text'
+                  className='text-base font-semibold leading-6 text-text dark:text-text-dark'
                   id={modalId}
                 >
-                  Navigation
+                  Main navigation
                 </h2>
                 <button
                   onClick={handleMenuToggle}
                   type='button'
-                  className='absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 hover:ring-2 hover:ring-link focus:outline-none focus:ring-2 focus:ring-link disabled:pointer-events-none dark:hover:ring-link-dark dark:focus:ring-link-dark'
+                  className='absolute right-4 top-4 rounded-sm text-text opacity-70 transition-opacity hover:opacity-100 hover:ring-2 hover:ring-link focus:outline-none focus:ring-2 focus:ring-link disabled:pointer-events-none dark:text-text-dark dark:hover:ring-link-dark dark:focus:ring-link-dark'
                   aria-label='Close navigation menu'
                 >
                   <svg
@@ -98,21 +117,40 @@ const Menu = () => {
               </div>
 
               {/* Modal body */}
-              <div className='bg-white px-4 pb-4 sm:px-6'>
+              <nav
+                aria-label='main navigation'
+                className='bg-[#fcfcfc] px-2 pb-4 dark:bg-[#1f2028]'
+              >
                 <div className='sm:flex sm:items-start'>
-                  <div className='mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left'>
-                    <div className='mt-2'>
-                      <p className='text-sm text-gray-500'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed urna nulla, vehicula nec nulla eget, fringilla
-                        tincidunt velit. Nullam nec metus nec purus ultricies
-                        fermentum. Nulla facilisi. Nullam sit amet purus
-                        vestibulum, ultrices nunc sit amet, fermentum purus.
-                      </p>
-                    </div>
+                  <div className='mt-3 w-full text-center sm:mt-0 sm:text-left'>
+                    <ul className='mt-2'>
+                      {NAV_ITEMS.map((item) => {
+                        const isActive = pathname === item.href
+
+                        return (
+                          <li
+                            key={item.name}
+                            className='w-full rounded-lg px-2 py-2 text-base text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-[1rem]'
+                          >
+                            <Link
+                              aria-current={isActive ? 'page' : 'false'}
+                              href={item.href}
+                              className='flex justify-between outline-none'
+                            >
+                              {item.name}{' '}
+                              {isActive && (
+                                <span className='rounded-full bg-cta px-3 py-0.5 text-sm text-text'>
+                                  You`&lsquo;`re here!
+                                </span>
+                              )}
+                            </Link>
+                          </li>
+                        )
+                      })}
+                    </ul>
                   </div>
                 </div>
-              </div>
+              </nav>
             </div>
           </div>
         </div>
