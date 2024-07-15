@@ -89,7 +89,7 @@ const Menu = () => {
                   className='text-base font-semibold leading-6 text-text dark:text-text-dark'
                   id={modalId}
                 >
-                  Main navigation
+                  Navigation
                 </h2>
                 <button
                   onClick={handleMenuToggle}
@@ -117,12 +117,12 @@ const Menu = () => {
               </div>
 
               {/* Modal body */}
-              <nav
-                aria-label='main navigation'
-                className='bg-[#fcfcfc] px-2 pb-4 dark:bg-[#1f2028]'
-              >
+              <nav className='border-t border-gray-200 bg-[#fcfcfc] px-2 py-2 dark:border-gray-700 dark:bg-[#1f2028]'>
                 <div className='sm:flex sm:items-start'>
                   <div className='mt-3 w-full text-center sm:mt-0 sm:text-left'>
+                    <h3 className='px-2 text-xs font-semibold uppercase text-accent-text dark:text-accent-text-dark'>
+                      Main navigation
+                    </h3>
                     <ul className='mt-2'>
                       {NAV_ITEMS.map((item) => {
                         const isActive = pathname === item.href
@@ -130,7 +130,7 @@ const Menu = () => {
                         return (
                           <li
                             key={item.name}
-                            className='w-full rounded-lg px-2 py-2 text-base text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-[1rem]'
+                            className='w-full rounded-lg px-2 py-1.5 text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
                           >
                             <Link
                               aria-current={isActive ? 'page' : 'false'}
@@ -139,7 +139,7 @@ const Menu = () => {
                             >
                               {item.name}{' '}
                               {isActive && (
-                                <span className='rounded-full bg-cta px-3 py-0.5 text-sm text-text'>
+                                <span className='rounded-full bg-cta px-2 py-0.5 text-xs font-semibold tracking-wide text-text'>
                                   You&lsquo;re here!
                                 </span>
                               )}
