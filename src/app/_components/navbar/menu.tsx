@@ -140,7 +140,7 @@ const Menu = () => {
                               {item.name}{' '}
                               {isActive && (
                                 <span className='rounded-full bg-cta px-3 py-0.5 text-sm text-text'>
-                                  You`&lsquo;`re here!
+                                  You&lsquo;re here!
                                 </span>
                               )}
                             </Link>
