@@ -1,14 +1,14 @@
 ---
 title: 'Migrating from WordPress to Next.js'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/v1720347301/anton-sobotyak-K3JRcF1aIhw-unsplash_llwhxj.jpg'
-coverImageAttribute: 'Photo by [Anto Sobotyak](https://unsplash.com/@a_sobotyak)'
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
+coverImageAttribute: 'Photo by [Daniela E.](https://unsplash.com/@daniela_e_photography)'
 excerpt: 'Since I started blogging about half a year ago, I have wondered should I have just done my own blog website rather than using a WordPress to deliver content. Now I have finally made my choice and set my eyes about migrating from WordPress to Next.js. If you would be interested on knowing more I will explain some non-technical and more technical stuff in this post!'
 date: '2024-07-14'
 author:
   name: Henri Remonen
 featured: true
 ogImage:
-  url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1720347301/anton-sobotyak-K3JRcF1aIhw-unsplash_llwhxj.jpg'
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
 categories:
   - 'Next.js'
   - 'Tech talk'
@@ -81,7 +81,7 @@ Since I am planning on hosting on Vercel I will set up Staging and Production pi
 
 The Staging pipeline will run always on push to the master branch and push the newest version to the Vercel staging environment. Production will only run on GitHub releases, which means I get to manually create the production releases.
 
-## Conclussion
+## Conclusion
 
 So yeah, that's that. I think this will be a fun journey. I am also a very visual person and moving to Next.js and React + Tailwind just opens so many design paths for me at least. I was already getting tired of writing CSS onto the tiny tiny custom CSS window inside [GenerateBlock](https://generateblocks.com/), which is the "theme" I am using for WordPress.
 
