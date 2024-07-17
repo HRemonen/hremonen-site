@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 
-const NAV_ITEMS = [
+const NAV_LINKS = [
   {
     name: 'Home',
     href: '/',
@@ -18,6 +18,45 @@ const NAV_ITEMS = [
     href: '/contact',
   },
 ]
+
+const QUICK_LINKS = [
+  {
+    name: 'RSS Feed',
+    href: '/feed.xml',
+  },
+  {
+    name: 'Sitemap',
+    href: '/sitemap.xml',
+  },
+]
+
+interface NavGroupProps {
+  children: React.ReactNode
+  title: string
+}
+
+const NavGroup = ({ children, title }: NavGroupProps) => {
+  const navId = useId()
+
+  return (
+    <nav
+      aria-labelledby={navId}
+      className='border-t border-gray-200 bg-[#fcfcfc] px-2 py-2 dark:border-gray-700 dark:bg-[#1f2028]'
+    >
+      <div className='sm:flex sm:items-start'>
+        <div className='mt-3 w-full text-center sm:mt-0 sm:text-left'>
+          <h3
+            id={navId}
+            className='px-2 text-xs font-semibold uppercase text-accent-text dark:text-accent-text-dark'
+          >
+            {title}
+          </h3>
+          <ul className='mt-2'>{children}</ul>
+        </div>
+      </div>
+    </nav>
+  )
+}
 
 const Menu = () => {
   const pathname = usePathname()
@@ -117,40 +156,49 @@ const Menu = () => {
               </div>
 
               {/* Modal body */}
-              <nav className='border-t border-gray-200 bg-[#fcfcfc] px-2 py-2 dark:border-gray-700 dark:bg-[#1f2028]'>
-                <div className='sm:flex sm:items-start'>
-                  <div className='mt-3 w-full text-center sm:mt-0 sm:text-left'>
-                    <h3 className='px-2 text-xs font-semibold uppercase text-accent-text dark:text-accent-text-dark'>
-                      Main navigation
-                    </h3>
-                    <ul className='mt-2'>
-                      {NAV_ITEMS.map((item) => {
-                        const isActive = pathname === item.href
+              <NavGroup title='Main navigation'>
+                {NAV_LINKS.map((item) => {
+                  const isActive = pathname === item.href
 
-                        return (
-                          <li
-                            key={item.name}
-                            className='w-full rounded-lg px-2 py-1.5 text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
-                          >
-                            <Link
-                              aria-current={isActive ? 'page' : 'false'}
-                              href={item.href}
-                              className='flex justify-between outline-none'
-                            >
-                              {item.name}{' '}
-                              {isActive && (
-                                <span className='rounded-full bg-cta px-2 py-0.5 text-xs font-semibold tracking-wide text-text'>
-                                  You&lsquo;re here!
-                                </span>
-                              )}
-                            </Link>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  </div>
-                </div>
-              </nav>
+                  return (
+                    <li
+                      key={item.name}
+                      className='w-full rounded-lg px-2 py-1.5 text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
+                    >
+                      <Link
+                        aria-current={isActive ? 'page' : 'false'}
+                        href={item.href}
+                        className='flex justify-between outline-none'
+                        onClick={handleMenuToggle}
+                      >
+                        {item.name}{' '}
+                        {isActive && (
+                          <span className='rounded-full bg-cta px-2 py-0.5 text-xs font-semibold tracking-wide text-text'>
+                            You&lsquo;re here!
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  )
+                })}
+              </NavGroup>
+
+              <NavGroup title='Quick links'>
+                {QUICK_LINKS.map((item) => (
+                  <li
+                    key={item.name}
+                    className='w-full rounded-lg px-2 py-1.5 text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
+                  >
+                    <Link
+                      href={item.href}
+                      className='flex justify-between outline-none'
+                      onClick={handleMenuToggle}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </NavGroup>
             </div>
           </div>
         </div>
