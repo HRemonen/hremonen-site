@@ -23,13 +23,17 @@ const RecentSectionTitle = () => (
 
 const RecentSectionPost = ({ post }: { post: Post }) => (
   <div className='mb-8 w-full lg:mb-12'>
-    <Link href={`/blog/${post.slug}`} passHref className='group/recent-post'>
+    <Link
+      href={`/posts/${post.slug}`}
+      passHref
+      className='group/recent-post outline-none'
+    >
       <Image
         src={post.coverImage}
         alt='' // As the image is decorative, an empty alt attribute is appropriate
-        width={380}
-        height={240}
-        className='mb-2 max-h-[240px] rounded-md object-cover md:mb-4 md:rounded-xl'
+        width={580}
+        height={420}
+        className='mb-2 max-h-[420px] rounded-md object-cover outline-none ring-link ring-offset-2 group-hover/recent-post:ring-2 group-focus/recent-post:ring-2 dark:ring-link-dark md:mb-4 md:rounded-3xl'
       />
       <div className='lg:text-md mb-2 flex items-center space-x-3 text-sm'>
         <div className='font-light text-accent-text dark:text-accent-text-dark'>
@@ -53,7 +57,7 @@ const RecentSection = () => {
   if (!posts) return null
 
   return (
-    <section className='mx-auto max-w-3xl px-8 sm:px-0'>
+    <section className='mx-auto mb-16 max-w-5xl'>
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
           <RecentSectionTitle />
