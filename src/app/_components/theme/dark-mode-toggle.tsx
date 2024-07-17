@@ -13,7 +13,7 @@ const DarkModeToggle = () => {
     <button
       type='button'
       aria-label={theme === 'light' ? 'Toggle dark mode' : 'Toggle light mode'}
-      className='flex-col justify-center overflow-hidden rounded-full p-4'
+      className='group/toggle flex-col justify-center overflow-hidden rounded-full p-2 focus:outline-none'
       onClick={handleThemeToggle}
     >
       <div className='relative h-8 w-8'>
