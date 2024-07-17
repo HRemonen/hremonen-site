@@ -32,3 +32,9 @@ export function getFeaturedPost(): Post | undefined {
 
   return featuredPost
 }
+
+export function getRecentPosts(): Post[] {
+  const posts = getAllPosts().filter((post) => !post.featured)
+
+  return posts
+}

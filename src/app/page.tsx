@@ -1,11 +1,11 @@
 import PageContainer from '@/app/_components/ui/page-container'
 import FeaturedSection from '@/app/_pages/home/featured'
-import PostSection from '@/app/_pages/home/posts'
+import RecentSection from '@/app/_pages/home/recent'
 
 const Index = () => (
   <PageContainer>
     <FeaturedSection />
-    <PostSection />
+    <RecentSection />
   </PageContainer>
 )
 
