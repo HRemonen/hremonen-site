@@ -5,12 +5,7 @@ type CategoryFormatterProps = {
 const CategoryFormatter = ({ categories }: CategoryFormatterProps) => (
   <ul className='flex gap-2'>
     {categories.map((category) => (
-      <li
-        key={category}
-        className='dark:text-ring text-sm uppercase text-gray-500'
-      >
-        {category}
-      </li>
+      <li key={category}>{category}</li>
     ))}
   </ul>
 )
