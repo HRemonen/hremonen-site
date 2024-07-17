@@ -5,7 +5,7 @@ excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 date: '2024-03-15'
 author:
   name: Jane Smith
-featured: true
+featured: false
 ogImage:
   url: ''
 categories:
