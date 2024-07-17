@@ -1,7 +1,6 @@
 {
   "tailwindConfig": "./tailwind.config.ts",
   "plugins": ["prettier-plugin-tailwindcss"],
-  "pluginSearchDirs": false,
   "useTabs": false,
   "tabWidth": 2,
   "printWidth": 80,
