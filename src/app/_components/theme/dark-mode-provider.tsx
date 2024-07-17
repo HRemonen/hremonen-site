@@ -8,7 +8,7 @@ type ProviderProps = {
 }
 
 const DarkModeProvider = ({ children }: ProviderProps) => (
-  <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+  <ThemeProvider attribute='class' defaultTheme='light'>
     {children}
   </ThemeProvider>
 )
