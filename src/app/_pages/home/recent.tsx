@@ -33,7 +33,7 @@ const RecentSectionPost = ({ post }: { post: Post }) => (
         alt='' // As the image is decorative, an empty alt attribute is appropriate
         width={580}
         height={420}
-        className='mb-2 max-h-[420px] rounded-md object-cover outline-none ring-link ring-offset-2 group-hover/recent-post:ring-2 group-focus/recent-post:ring-2 dark:ring-link-dark md:mb-4 md:rounded-3xl'
+        className='mb-2 max-h-[420px] rounded-md object-cover outline-none ring-link ring-offset-4 ring-offset-[#fcfcfc] transition duration-700 ease-in-out group-hover/recent-post:ring-2 group-focus/recent-post:ring-2 dark:ring-link-dark dark:ring-offset-[#1f2028] md:mb-4 md:rounded-3xl'
       />
       <div className='lg:text-md mb-2 flex items-center space-x-3 text-sm'>
         <div className='font-light text-accent-text dark:text-accent-text-dark'>
