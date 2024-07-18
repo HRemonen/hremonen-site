@@ -20,7 +20,7 @@ const FeaturedSection = () => {
           alt='' // As the image is decorative, an empty alt attribute is appropriate
           width={1280}
           height={780}
-          className='max-h-[780px] rounded-2xl object-cover'
+          className='aspect-[3/4] max-h-[780px] rounded-2xl object-cover xs:aspect-auto'
         />
         <div className='z-1 absolute left-0 top-0 h-20 w-20 bg-[#fcfcfc] dark:bg-[#1f2028] lg:w-44' />
         <div className='absolute left-0 top-20 h-20 w-20 overflow-hidden'>
