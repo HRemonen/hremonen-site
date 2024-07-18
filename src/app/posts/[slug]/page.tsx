@@ -23,8 +23,13 @@ const Post = async ({ params }: Params) => {
 
   return (
     <PageContainer>
-      <article className='mb-32'>
-        <PostHeader title={post.title} date={post.date} />
+      <article className='mx-auto mb-32 max-w-3xl px-8'>
+        <PostHeader
+          title={post.title}
+          date={post.date}
+          coverImage={post.coverImage}
+          categories={post.categories}
+        />
         <PostBody content={content} />
       </article>
     </PageContainer>

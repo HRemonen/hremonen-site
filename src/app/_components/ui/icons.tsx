@@ -41,3 +41,7 @@ export const SunIcon = () => (
     />
   </svg>
 )
+
+export const Interpunct = () => (
+  <div className='h-1.5 w-1.5 rounded-full bg-accent-text dark:bg-accent-text-dark' />
+)
