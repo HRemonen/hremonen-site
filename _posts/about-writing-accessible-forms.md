@@ -17,9 +17,9 @@ keywords:
   - 'accessibility'
   - 'aria'
   - 'form accessibility'
-  - 'form group-accessibility'
-  - 'form label-accessibility'
-  - 'form screen-reader'
+  - 'form group accessibility'
+  - 'form label accessibility'
+  - 'form screen reader'
   - 'form validation'
   - 'html'
   - 'screen reader'
@@ -57,35 +57,29 @@ Labels assist users in completing the form. To succeed in this the labels must b
 
 There are a few ways to provide a label for an input element. A label is programmatically associated with a certain input element, and it provides the input with something that is called the accessible name. The most prominent way is to use the native <label> element. This is the exact purpose of the whole element and thus it will provide the most features – for example, pointer device users might click on the label element to focus on the input element. This increases the [click target size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) (WCAG 2.5.8) which aids users with tremors or other motor disabilities as well as mobile users.
 
-```
+```html {2}
 <p>
   <label htmlFor="name">Name (First and Last):</label>
   <input type="text" id="name" />
 </p>
 ```
 
-HTML
-
 Other ways to provide an accessible name for an input are:
 
 With an **aria-labelledby** – Using any visible content as the label for input is possible with the aria-labelledby attribute. However, using aria-labelledby does not give the added click target size of the native label element.
 
-```
+```html /aria-labelledby/
 <p>
   <span id="name">Name (First and Last):</span>
   <input type="text" aria-labelledby="name" />
 </p>
 ```
 
-HTML
-
 With an **aria-label** – If for some reason there is no visible content available for the input label, the aria-label attribute might be used. However, the aria-label does not give an added click target size and it is only available for screen reader users.
 
-```
+```html /aria-label/
 <input type="text" aria-label="Name (First and Last)" />
 ```
-
-HTML
 
 With a **title** – The title attribute might be used to give an accessible name, but I would not recommend that. The title is invisible and only provides a tooltip on hover for mouse users undermining usability.
 
@@ -111,7 +105,7 @@ We can group inputs using native HTML or ARIA.
 
 Let’s first look at the native HTML solution, which includes the use of <fieldset> and <legend> elements.
 
-```
+```html /fieldset/ /legend/
 <form>
   <fieldset>
     <legend>Shipping address</legend>
@@ -139,15 +133,13 @@ Let’s first look at the native HTML solution, which includes the use of <field
 </form>
 ```
 
-HTML
-
 The <fieldset> element groups the form elements and adds a visual border around the elements. Applying the <legend> element we manage to programmatically label the group elements. While the <legend> element is not per se enforced by WCAG it’s still needed to provide the accessible name for the <fieldset>. Using an image element inside the legend is possible when provided with sufficient alt attribute.
 
 ### Grouping Form Elements with ARIA
 
-We can also group the form elements using ARIA by using some wrapper element such as <div> and giving it the correct role=”group”. Note that using this method we must give the accessible name for the group using the aria-labelledby attribute.
+We can also group the form elements using ARIA by using some wrapper element such as <div> and giving it the correct `role=”group”`. Note that using this method we must give the accessible name for the group using the aria-labelledby attribute.
 
-```
+```html /role="group"/
 <h2 id="shipping-section-heading">Shipping address</h2>
 <div role="group" aria-labelledby="shipping-section-heading">
   <p>
@@ -173,8 +165,6 @@ We can also group the form elements using ARIA by using some wrapper element suc
 </div>
 ```
 
-HTML
-
 This will not produce visual grouping around the input elements and some screen readers do not support the ARIA role group.
 
 ## Instructing the Users
@@ -187,7 +177,7 @@ Examples of giving instructions correctly:
 
 For grouped input elements the instructions might be added to the <legend> element if the instruction is short.
 
-```
+```html /(Required)/
 <form>
   <fieldset>
     <legend>Shipping address (Required)</legend>
@@ -215,11 +205,9 @@ For grouped input elements the instructions might be added to the <legend> eleme
 </form>
 ```
 
-HTML
-
 Using **aria-describedby** attribute to add the instructions. For grouped input elements giving the aria attribute to the first input element might be sufficient.
 
-```
+```html /aria-describedby/
 <form>
   <fieldset>
     <legend>Registeration</legend>
@@ -230,7 +218,11 @@ Using **aria-describedby** attribute to add the instructions. For grouped input 
     <p id="password-instruction">Password must contain 8 characters</p>
     <p>
       <label htmlFor="password">Password:</label>
-      <input aria-describedby="password-instruction" type="password" id="password" />
+      <input
+        aria-describedby="password-instruction"
+        type="password"
+        id="password"
+      />
     </p>
     <p>
       <label htmlFor="confirm-password">Confirm password:</label>
@@ -240,21 +232,21 @@ Using **aria-describedby** attribute to add the instructions. For grouped input 
 </form>
 ```
 
-HTML
-
 For single input elements, the instruction can be given per input field.
 
-```
+```html {4}
 <form>
   <p>
     <label htmlFor="password">Password:</label>
-    <input aria-describedby="password-instruction" type="password" id="password" />
+    <input
+      aria-describedby="password-instruction"
+      type="password"
+      id="password"
+    />
   </p>
   <p id="password-instruction">Password must contain 8 characters</p>
 </form>
 ```
-
-HTML
 
 When providing instructions remember to take other accessibility requirements into account as usual!
 
@@ -308,16 +300,14 @@ HTML introduces the **autocomplete** attribute for this functionality. Autocompl
 
 For example, we might have a login page where we would like to allow the **email** and **password** fields to be autocompleted:
 
-```
+```html /autoComplete/
 <form method="POST">
   <label htmlFor="email">Email</label>
-  <input id="email" autoComplete="email" />
+  <input id="email" autocomplete="email" />
   <label htmlFor="password">Password</label>
-  <input id="password" type="password" autoComplete="current-password" />
+  <input id="password" type="password" autocomplete="current-password" />
 </form>
 ```
-
-HTML
 
 Which would look something like this for the user:
 

@@ -12,7 +12,7 @@ ogImage:
 categories:
   - 'accessibility'
   - 'wcag'
-tags:
+keywords:
   - 'accessibility'
   - 'skip link'
   - 'skip link a11y'
