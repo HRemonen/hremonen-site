@@ -5,16 +5,18 @@ import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypePrettyCode from 'rehype-pretty-code'
 
 export default async function markdownToHtml(markdown: string) {
-  const result = unified()
+  const result = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
+    .use(rehypePrettyCode, { theme: 'andromeeda' })
     .use(rehypeStringify)
-    .processSync(markdown)
+    .process(markdown)
 
   return result.toString()
 }
