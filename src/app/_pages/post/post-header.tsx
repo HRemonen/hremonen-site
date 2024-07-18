@@ -22,7 +22,7 @@ const PostHeader = ({
   })
 
   return (
-    <div className='mx-2 mb-16'>
+    <div className='mb-16 px-2 xs:px-8'>
       <Image
         src={coverImage}
         alt=''
