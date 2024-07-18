@@ -1,5 +1,6 @@
 import CategoryFormatter from '@/app/_components/formatters/category-formatter'
 import DateFormatter from '@/app/_components/formatters/date-formatter'
+import { Interpunct } from '@/app/_components/ui/icons'
 import { Post } from '@/interfaces/post'
 import { getRecentPosts } from '@/lib/api'
 import Image from 'next/image'
@@ -9,7 +10,7 @@ const RecentSectionTitle = () => (
   <div className='mb-12 w-full justify-center lg:mb-16'>
     <div className='flex flex-col items-start space-y-3 lg:space-y-5'>
       <div className='inline-flex items-center space-x-2'>
-        <div className='h-1.5 w-1.5 rounded-full bg-accent-text dark:bg-accent-text-dark' />
+        <Interpunct />
         <div className='text-sm font-light text-accent-text dark:text-accent-text-dark lg:text-base'>
           Recent blog posts
         </div>
@@ -39,7 +40,7 @@ const RecentSectionPost = ({ post }: { post: Post }) => (
         <div className='font-light text-accent-text dark:text-accent-text-dark'>
           <DateFormatter dateString={post.date} />
         </div>
-        <div className='h-1.5 w-1.5 rounded-full bg-accent-text dark:bg-accent-text-dark' />
+        <Interpunct />
         <div className='font-light uppercase text-accent-text dark:text-accent-text-dark'>
           <CategoryFormatter categories={post.categories} />
         </div>
