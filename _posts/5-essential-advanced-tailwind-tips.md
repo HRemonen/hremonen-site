@@ -41,7 +41,7 @@ Thankfully Tailwind lets to define your custom color palette, fonts, type scale,
 
 Open your **_tailwind.config.js_**, it’ll look something like this:
 
-```
+```js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [],
@@ -51,8 +51,6 @@ export default {
   plugins: [],
 }
 ```
-
-JavaScript
 
 The theme object inside defines the values that are available to be used in the utility-classes. You do not want to overwrite the existing core theme of Tailwind and that is why Tailwind lets you [**extend**](https://tailwindcss.com/docs/theme#extending-the-default-theme) the default theme with **_theme.extend_**.
 
@@ -68,7 +66,7 @@ You were tasked with building a card with a link button. The background color of
 
 Now you define the colors inside the utility functions like a good Tailwind developer would. All Gucci, right?
 
-```
+```jsx
 <div className="… bg-[#F2EFEA] …">
   <h2 className=" … ">Tailwind</h2>
   <p className=" … ">
@@ -85,13 +83,11 @@ Now you define the colors inside the utility functions like a good Tailwind deve
 </div>
 ```
 
-JSX
-
 Now what happens when you have adopted this style into hundreds of components and one day the color palette changes? You must manually go through every single element and change the HEX value to the new one. Expensive and tedious work, right?
 
 However, this could have dodged by defining the primary, secondary, and accent colors into the Tailwind theme:
 
-```
+```js
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [],
@@ -100,7 +96,7 @@ export default {
       colors: {
         primary: '#FAF9F5',
         secondary: '#F2EFEA',
-        accent: '#3E3E41'
+        accent: '#3E3E41',
       },
     },
   },
@@ -108,11 +104,9 @@ export default {
 }
 ```
 
-JavaScript
-
 Now the colors can be accessed in the utility-classes directly with _bg-secondary_, _text-primary_, _border-accent_ etc. Let’s take a quick demonstration:
 
-```
+```js {1,8}
 <div className="… bg-secondary …">
   <h2 className=" … ">Tailwind</h2>
   <p className=" … ">
@@ -129,8 +123,6 @@ Now the colors can be accessed in the utility-classes directly with _bg-secondar
 </div>
 ```
 
-JSX
-
 This also makes it easier to change the color palette later. We only must change the values in the **_tailwind.config.js_** and automatically every element gets updated to the new color palette. Neat!
 
 ## Hiding Elements Visually
@@ -143,18 +135,12 @@ We would want to have a “label” or an explanation of the button’s function
 
 Luckily, Tailwind ships with a class **_sr-only_** that allows to hide element visually without hiding it from screen readers:
 
-```
-<button
-  type='button'
-  className=' … '
-  onClick={handleCopyToClipboard}
->
+```jsx /sr-only/
+<button type='button' className='…' onClick={handleCopyToClipboard}>
   <IoCopyOutline aria-hidden='true' focusable='false' size={24} />
   <span className='sr-only'>Copy text color value</span>
 </button>
 ```
-
-JSX
 
 Now the button has an [accessible name](https://www.incluvate.com/blog/start-fostering-the-accessibility-tree/#accessible-objects-as-the-foundation) “Copy text color value” that is hidden visually, but it is still available to the screen readers.
 
@@ -168,7 +154,7 @@ Tailwind lets you modify the active text selection with the **_selection_** modi
 
 ![Custom text selection highlight colors, lighter pint for the background and darker pink for the text.](images/Custom-highlight-for-text.png)
 
-```
+```jsx
 <div className=" … ">
   <h2 className=" … ">Tailwind</h2>
   <p className="… selection:bg-pink-200 selection:text-pink-600 …">
@@ -185,8 +171,6 @@ Tailwind lets you modify the active text selection with the **_selection_** modi
 </div>
 ```
 
-JSX
-
 Remember to take care of appropriate color contrast!
 
 ## Style Based on the Parent Element
@@ -197,7 +181,7 @@ Let’s revise our example code that we have been using here. Say we wanted to s
 
 To achieve this, we must add the **_group_** class to the `<a>` element and introduce a `<span>` element with **_group-hover:max-w-full_** etc. classes to help us achieve the underline effect. You could also do this same effect without using the **_group_** class and `<span>` element, but I just wanted to show with these (roast me).
 
-```
+```jsx /group-hover/
 <a href="#" className="… group …">
   Read more
   <span className="absolute left-3 right-3 bottom-2 z-10 max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-white "></span>
@@ -206,8 +190,6 @@ To achieve this, we must add the **_group_** class to the `<a>` element and intr
   </svg>
 </a>
 ```
-
-JSX
 
 The `<span>` element has a **_group-hover_** modifier which shows that, when hovering over the element with the **group** class, apply certain styles. It is also possible to [style based on sibling state](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-sibling-state) using the **_peer_** class.
 
@@ -221,30 +203,53 @@ There are many places where this could come in handy. Suppose you wanted to colo
 
 This effect can be achieved using the **_has-\[input:invalid\]:border-red-500_** class, which just checks if there is a descendant input element with the class **_invalid_**.
 
-```
-<div className="… has-[input:invalid]:border-red-500 …">
-  <form className="space-y-6" action="#">
-    <h1 className="text-xl font-medium">Sign in</h1>
+```jsx /has-/
+<div className='… … has-[input:invalid]:border-red-500'>
+  <form className='space-y-6' action='#'>
+    <h1 className='text-xl font-medium'>Sign in</h1>
     <div>
-      <label htmlFor="email" className=" … ">Email</label>
-      <input type="email" name="email" id="email" className="… invalid:text-red-500 invalid:border-red-500 …" placeholder="name@company.com" required />
+      <label htmlFor='email' className='…'>
+        Email
+      </label>
+      <input
+        type='email'
+        name='email'
+        id='email'
+        className='… … invalid:border-red-500 invalid:text-red-500'
+        placeholder='name@company.com'
+        required
+      />
     </div>
     <div>
-      <label htmlFor="password" className=" … ">Password</label>
-      <input type="password" name="password" id="password" placeholder="••••••••" className="… invalid:text-red-500 invalid:border-red-500 …" required />
+      <label htmlFor='password' className='…'>
+        Password
+      </label>
+      <input
+        type='password'
+        name='password'
+        id='password'
+        placeholder='••••••••'
+        className='… … invalid:border-red-500 invalid:text-red-500'
+        required
+      />
     </div>
-    <div className=" … ">
-      <a href="#" className=" … ">Lost Password?</a>
+    <div className='…'>
+      <a href='#' className='…'>
+        Lost Password?
+      </a>
     </div>
-    <button type="submit" className=" … ">Login to your account</button>
-    <div className=" … ">
-      Not registered? <a href="#" className=" … ">Create account</a>
+    <button type='submit' className='…'>
+      Login to your account
+    </button>
+    <div className='…'>
+      Not registered?{' '}
+      <a href='#' className='…'>
+        Create account
+      </a>
     </div>
   </form>
 </div>
 ```
-
-JSX
 
 ## Conclusion
 

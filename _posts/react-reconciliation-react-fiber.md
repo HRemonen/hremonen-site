@@ -101,18 +101,16 @@ React elements are converted into Fiber nodes by calling [createFiberFromTypeAnd
 
 React elements are the building blocks of a tree – so are Fiber nodes. Let’s demonstrate this whole thing here – it’s getting a little messy to explain in words. Suppose we have a `<div>` element with a `<h1>` and `<p>` elements as children.
 
-```
+```html
 <div>
   <h1>Hello Component</h1>
   <p>Sibling stuff</p>
 </div>
 ```
 
-HTML
-
 This structure can also be interpreted by the following React element object:
 
-```
+```json
 {
   type: ”div”,
   key: null,
@@ -140,8 +138,6 @@ This structure can also be interpreted by the following React element object:
   ...
 }
 ```
-
-JavaScript
 
 Which produces the following Fiber node tree in the reconciliation process:
 
