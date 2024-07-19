@@ -1,12 +1,20 @@
-import { parseISO, format } from 'date-fns'
+import { parseISO } from 'date-fns'
 
-type Props = {
+type DateFormatterProps = {
   dateString: string
+  formatOptions?: Intl.DateTimeFormatOptions
 }
 
-const DateFormatter = ({ dateString }: Props) => {
-  const date = parseISO(dateString)
-  return <time dateTime={dateString}>{format(date, 'dd.MM.yyyy')}</time>
+const DateFormatter = ({
+  dateString,
+  formatOptions = {},
+}: DateFormatterProps) => {
+  const dateISO = parseISO(dateString)
+  const dateTimeFormat = new Intl.DateTimeFormat('en-US', formatOptions).format(
+    dateISO
+  )
+
+  return <time dateTime={dateString}>{dateTimeFormat}</time>
 }
 
 export default DateFormatter
