@@ -16,7 +16,7 @@ const PostHeader = ({
   coverImage,
   categories,
 }: PostHeaderProps) => (
-  <div className='mb-16 px-2 xs:px-8'>
+  <header className='mb-16 px-2 xs:px-8'>
     <Image
       src={coverImage}
       alt=''
@@ -25,11 +25,11 @@ const PostHeader = ({
       className='mb-8 h-96 w-full rounded-3xl object-cover object-center'
     />
 
-    <h1 className='4xl:text-8xl mb-4 text-center text-2xl font-[500] leading-tight tracking-tighter text-text dark:text-text-dark xs:text-left sm:text-4xl md:text-5xl md:leading-none xl:text-6xl'>
+    <h1 className='4xl:text-8xl mb-4 text-center text-2xl font-medium leading-tight tracking-tighter text-text dark:text-text-dark xs:text-left sm:text-4xl md:text-5xl md:leading-none xl:text-6xl'>
       {title}
     </h1>
 
-    <div className='flex flex-col items-center space-x-3 space-y-2 text-sm font-[500] text-accent-text dark:text-accent-text-dark xs:flex-row xs:space-y-0 lg:text-base'>
+    <div className='flex flex-col items-center space-x-3 space-y-2 text-sm font-medium text-accent-text dark:text-accent-text-dark xs:flex-row xs:space-y-0 lg:text-base'>
       <DateFormatter
         dateString={date}
         formatOptions={{ day: 'numeric', month: 'long', year: 'numeric' }}
@@ -39,7 +39,7 @@ const PostHeader = ({
         <CategoryFormatter categories={categories} />
       </div>
     </div>
-  </div>
+  </header>
 )
 
 export default PostHeader
