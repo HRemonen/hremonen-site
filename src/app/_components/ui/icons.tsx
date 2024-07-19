@@ -2,8 +2,7 @@ import React from 'react'
 
 export const MoonIcon = () => (
   <svg
-    aria-hidden='true'
-    tabIndex={-1}
+    aria-hidden
     className='fill-current transition duration-500 ease-in-out hover:rotate-12'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 16 16'
@@ -21,8 +20,7 @@ export const MoonIcon = () => (
 
 export const SunIcon = () => (
   <svg
-    aria-hidden='true'
-    tabIndex={-1}
+    aria-hidden
     className='transition-colors ease-in-out group-hover/focus:fill-link group-hover/toggle:fill-yellow-300 group-hover/toggle:text-yellow-400 group-focus/toggle:text-link'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -45,3 +43,26 @@ export const SunIcon = () => (
 export const Interpunct = () => (
   <div className='h-1.5 w-1.5 rounded-full bg-accent-text dark:bg-accent-text-dark' />
 )
+
+export const ArrowIcon = ({ rotation = 90 }: { rotation?: number }) => {
+  const className = `transform rotate-${rotation}`
+
+  return (
+    <svg
+      aria-hidden
+      className={className}
+      width='32'
+      height='32'
+      viewBox='0 0 32 32'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M15.101 5.5V23.1094L9.40108 17.4095L8.14807 18.6619L15.9862 26.5L23.852 18.6342L22.5996 17.3817L16.8725 23.1094V5.5H15.101Z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}
