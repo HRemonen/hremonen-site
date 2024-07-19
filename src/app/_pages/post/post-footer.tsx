@@ -1,4 +1,5 @@
 import { ArrowIcon } from '@/app/_components/ui/icons'
+import SectionTitle from '@/app/_components/ui/section-title'
 import StyledLink from '@/app/_components/ui/styled-link'
 import { GITHUB_POST_URL } from '@/lib/constants'
 
@@ -17,6 +18,13 @@ const PostFooter = ({ slug }: PostFooterProps) => (
         Edit on GitHub
       </StyledLink>
     </div>
+
+    <section>
+      <SectionTitle
+        title='You will love these ones as well.'
+        description='Did you enjoy this article?'
+      />
+    </section>
   </footer>
 )
 

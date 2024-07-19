@@ -1,26 +1,11 @@
 import CategoryFormatter from '@/app/_components/formatters/category-formatter'
 import DateFormatter from '@/app/_components/formatters/date-formatter'
 import { Interpunct } from '@/app/_components/ui/icons'
+import SectionTitle from '@/app/_components/ui/section-title'
 import { Post } from '@/interfaces/post'
 import { getRecentPosts } from '@/lib/api'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const RecentSectionTitle = () => (
-  <div className='mb-12 w-full justify-center lg:mb-16'>
-    <div className='flex flex-col items-start space-y-3 lg:space-y-5'>
-      <div className='inline-flex items-center space-x-2'>
-        <Interpunct />
-        <div className='text-sm font-light text-accent-text dark:text-accent-text-dark lg:text-base'>
-          Recent blog posts
-        </div>
-      </div>
-      <h2 className='4xl:text-7xl 4xl:max-w-lg max-w-sm text-balance font-display text-2xl leading-none tracking-tight text-gray-600 dark:text-gray-100 md:text-3xl lg:text-4xl xl:max-w-md 2xl:text-6xl'>
-        Take a look at the latest posts.
-      </h2>
-    </div>
-  </div>
-)
 
 const RecentSectionPost = ({ post }: { post: Post }) => (
   <div className='mb-8 w-full lg:mb-12'>
@@ -61,7 +46,10 @@ const RecentSection = () => {
     <section className='mx-auto mb-16 max-w-5xl'>
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
-          <RecentSectionTitle />
+          <SectionTitle
+            title='Take a look at the latest posts.'
+            description='Recent blog posts'
+          />
           {posts.slice(0, 2).map((post) => (
             <RecentSectionPost key={post.slug} post={post} />
           ))}
