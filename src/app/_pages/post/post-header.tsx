@@ -16,7 +16,7 @@ const PostHeader = ({
   coverImage,
   categories,
 }: PostHeaderProps) => (
-  <header className='mb-16 px-2 xs:px-8'>
+  <header className='mx-auto mb-16 max-w-3xl px-2 xs:px-8'>
     <Image
       src={coverImage}
       alt=''
