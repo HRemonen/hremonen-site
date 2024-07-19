@@ -45,7 +45,7 @@ These are the topics we are trying to cover here. Before we do I want to give yo
 
 Imagine you have spent hours on a web shop selecting items in your shopping cart from the latest sale. When you are ready to pay up and fill in the shipping information you are redirected to a web page with a form that has no explanation of what which field represents. This makes the shopping experience nearly impossible to finish.
 
-![Billing and delivery information form which has input fields without any labels to identify what's excepted to input.](images/form_without_labels-1.png)
+![Billing and delivery information form which has input fields without any labels to identify what's excepted to input.](https://res.cloudinary.com/daty4gssm/image/upload/w_560,q_auto,f_auto/v1721214205/form_without_labels_ljo4ch.png)
 
 In the real world, you would never see something like this because this means the business is out of business quickly. So why do we allow the same thing to happen for let’s say – screen reader users?
 
@@ -55,7 +55,7 @@ We shouldn't so let's start to look how we can prevent this from happening.
 
 Labels assist users in completing the form. To succeed in this the labels must be clear, informative, and meaningful. Explicitly describe the information that you are expecting the user to input. For example, if we are expecting the user to input a name, we might specify that we want the user to input the first and last name.
 
-There are a few ways to provide a label for an input element. A label is programmatically associated with a certain input element, and it provides the input with something that is called the accessible name. The most prominent way is to use the native <label> element. This is the exact purpose of the whole element and thus it will provide the most features – for example, pointer device users might click on the label element to focus on the input element. This increases the [click target size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) (WCAG 2.5.8) which aids users with tremors or other motor disabilities as well as mobile users.
+There are a few ways to provide a label for an input element. A label is programmatically associated with a certain input element, and it provides the input with something that is called the accessible name. The most prominent way is to use the native `<label>` element. This is the exact purpose of the whole element and thus it will provide the most features – for example, pointer device users might click on the label element to focus on the input element. This increases the [click target size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) (WCAG 2.5.8) which aids users with tremors or other motor disabilities as well as mobile users.
 
 ```html {2}
 <p>
@@ -91,6 +91,12 @@ Keep in mind that aria attributes will override other information when the acces
 
 While tempted to get rid of the labels for a “cleaner” visual representation, hiding the labels will bring issues. A widely used technique is to use placeholder attributes as the substitute for labels, but as previously mentioned this is bad practice. The better alternative would be to style the label element to visually look like the placeholder element for a cleaner look. An example of this can be found in the Material UI TextField element.
 
+<figure>
+
+<video controls muted src="https://res.cloudinary.com/daty4gssm/video/upload/w_400,q_auto,f_auto/v1721214205/persistent_label_uoynli.mov"></video>
+
+</figure>
+
 When styling labels, color contrast and other accessibility requirements apply also. You might even use icons or images as labels in situations where the visual icon or image is self-evident. Using icons or images as labels you must provide alternative text or aria-labels to produce accessible names. Self-evident visual labels might be a search input with an icon of a magnifying glass as the label.
 
 ## Groups of Inputs
@@ -103,7 +109,7 @@ We can group inputs using native HTML or ARIA.
 
 ### Grouping Form Elements with HTML
 
-Let’s first look at the native HTML solution, which includes the use of <fieldset> and <legend> elements.
+Let’s first look at the native HTML solution, which includes the use of `<fieldset>` and `<legend>` elements.
 
 ```html /fieldset/ /legend/
 <form>
@@ -133,11 +139,11 @@ Let’s first look at the native HTML solution, which includes the use of <field
 </form>
 ```
 
-The <fieldset> element groups the form elements and adds a visual border around the elements. Applying the <legend> element we manage to programmatically label the group elements. While the <legend> element is not per se enforced by WCAG it’s still needed to provide the accessible name for the <fieldset>. Using an image element inside the legend is possible when provided with sufficient alt attribute.
+The `<fieldset>` element groups the form elements and adds a visual border around the elements. Applying the `<legend>` element we manage to programmatically label the group elements. While the `<legend>` element is not per se enforced by WCAG it’s still needed to provide the accessible name for the `<fieldset>`. Using an image element inside the legend is possible when provided with sufficient alt attribute.
 
 ### Grouping Form Elements with ARIA
 
-We can also group the form elements using ARIA by using some wrapper element such as <div> and giving it the correct `role=”group”`. Note that using this method we must give the accessible name for the group using the aria-labelledby attribute.
+We can also group the form elements using ARIA by using some wrapper element such as `<div>` and giving it the correct `role=”group”`. Note that using this method we must give the accessible name for the group using the aria-labelledby attribute.
 
 ```html /role="group"/
 <h2 id="shipping-section-heading">Shipping address</h2>
@@ -171,11 +177,11 @@ This will not produce visual grouping around the input elements and some screen 
 
 Instructions meant for the users to fill in the form, information about required fields, or other descriptions MUST be visible, programmatically visible always, and adjacent to the fields or field groups.
 
-Screen reader users probably won’t notice any text that is not programmatically associated with some input or group inside the <form> elements which is why it should be avoided to provide any critical information in such a manner.
+Screen reader users probably won’t notice any text that is not programmatically associated with some input or group inside the `<form>` elements which is why it should be avoided to provide any critical information in such a manner.
 
 Examples of giving instructions correctly:
 
-For grouped input elements the instructions might be added to the <legend> element if the instruction is short.
+For grouped input elements the instructions might be added to the `<legend>` element if the instruction is short.
 
 ```html /(Required)/
 <form>
@@ -264,14 +270,12 @@ There are multiple ways to provide visual cues about required fields:
 
 <figure>
 
-![Login page with instructions about * (asterisk) indicating required fields.](images/required_fields_example.png 'required_fields_example')
+![Login page with instructions about * (asterisk) indicating required fields.](https://res.cloudinary.com/daty4gssm/image/upload/w_560,q_auto,f_auto/v1721214205/required_fields_example_q2m1qo.png 'Required field example')
 
 <figcaption>
-
 Required fields are visually marked with an asterisk and additional instruction is provided about the asterisks role.
 
 </figcaption>
-
 </figure>
 
 Marking the field required programmatically can be done in two ways:
@@ -282,7 +286,7 @@ Marking the field required programmatically can be done in two ways:
 
 <figure>
 
-![Browsers' automatic error message about required fields which says "Please fill out this field."](images/Empty-required-field-error-300x128.png 'Empty-required-field-error')
+![Browsers' automatic error message about required fields which says "Please fill out this field."](https://res.cloudinary.com/daty4gssm/image/upload/h_150,q_auto,f_auto/v1721214204/Empty_required_field_error_crdqcm.png 'Empty required field error')
 
 <figcaption>
 
@@ -296,7 +300,7 @@ Example of default error message for form fields that are required but left empt
 
 Providing autofill features will further aid our users in minimizing the erroneous usage and ambiguity of certain input fields. Browsers and screen readers can distinguish these fields to accept certain types of information (usually personal information such as address, email, name, password, etc.) and to autofill the fields for the user.
 
-HTML introduces the **autocomplete** attribute for this functionality. Autocomplete can be given to input elements such as <input>, <select>, or <textarea> and also to the owning <form> element. The values for autocomplete comes from past values entered by the user, or pre-configured values. The list of valid autocomplete tokens can be found on [MDN autocomplete docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#token-list).
+HTML introduces the **autocomplete** attribute for this functionality. Autocomplete can be given to input elements such as `<input>`, `<select>`, or `<textarea>` and also to the owning `<form>` element. The values for autocomplete comes from past values entered by the user, or pre-configured values. The list of valid autocomplete tokens can be found on [MDN autocomplete docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete#token-list).
 
 For example, we might have a login page where we would like to allow the **email** and **password** fields to be autocompleted:
 
@@ -313,7 +317,7 @@ Which would look something like this for the user:
 
 <figure>
 
-![Login page form with the fields email and password autofilled by the browser.](images/Autocompleted-login-page-300x248.png 'Autocompleted-login-page')
+![Login page form with the fields email and password autofilled by the browser.](https://res.cloudinary.com/daty4gssm/image/upload/w_560,q_auto,f_auto/v1721214204/Autocompleted_login_page_ullfo5.png 'Autocompleted login page')
 
 <figcaption>
 
@@ -349,7 +353,7 @@ The validation summary pattern is a static validation method whereupon the form 
 
 <figure>
 
-![Validation summary on the beginning of a form after submitting invalid field values.](images/Validation-Summary-Pattern-300x259.png 'Validation-Summary-Pattern')
+![Validation summary on the beginning of a form after submitting invalid field values.](https://res.cloudinary.com/daty4gssm/image/upload/w_560,q_auto,f_auto/v1721214206/Validation_Summary_Pattern_bjgv2y.png 'Validation summary pattern')
 
 <figcaption>
 
@@ -387,7 +391,7 @@ Focus on the first error pattern is also a static method whereupon the form subm
 
 <figure>
 
-![First name and Last name form fields where the input value for first name is correct and the input value for the last name field is empty. The last name field is focused and shows error message "Please enter your last name".](images/Focus-on-first-error-pattern-1024x219.png 'Focus-on-first-error-pattern')
+![First name and Last name form fields where the input value for first name is correct and the input value for the last name field is empty. The last name field is focused and shows error message "Please enter your last name".](https://res.cloudinary.com/daty4gssm/image/upload/h_150,q_auto,f_auto/v1721214204/Focus_on_first_error_pattern_jwguvq.png 'Focus on first error pattern')
 
 <figcaption>
 
@@ -416,6 +420,12 @@ Technical implementation is similar to the error summary pattern. Some details m
 In some cases validating the users’ input is possible in real-time. Real-time validation helps communicate with the user if they are filling in the correct information. This can save some trouble and time further down the line.
 
 Examples of where real-time validation can be useful are validating patterns such as password length, does email contains a @ character, or whether the inputted value is of some pre-defined format.
+
+<figure>
+
+<video controls muted src="https://res.cloudinary.com/daty4gssm/video/upload/w_400,q_auto,f_auto/v1721214207/real-time_validation_pattern_zs7m99.mov"></video>
+
+</figure>
 
 In the example video, a vehicle register plate number is validated to match the pattern of three letters followed by a hyphen and one to three numbers. This is easy to validate client side but won’t validate that the register plate exists for real in the vehicle registration database. That could be done by validating further in the backend service as it would take too much time to validate on the frontend.
 
