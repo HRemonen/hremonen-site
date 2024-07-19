@@ -12,6 +12,7 @@ ogImage:
 categories:
   - 'react'
 keywords:
+  - 'react'
   - 'react 19'
   - 'react compiler'
   - 'react forget'

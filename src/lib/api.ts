@@ -2,6 +2,7 @@ import { Post } from '@/interfaces/post'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
+import getRecommendedPosts from './recommendations'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -37,4 +38,11 @@ export function getRecentPosts(): Post[] {
   const posts = getAllPosts().filter((post) => !post.featured)
 
   return posts
+}
+
+export function getRelatedPosts(currentPost: Post): Post[] {
+  const posts = getAllPosts().filter((post) => post.slug !== currentPost.slug)
+  const recommendedPosts = getRecommendedPosts(currentPost, posts)
+
+  return recommendedPosts
 }
