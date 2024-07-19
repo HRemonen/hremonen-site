@@ -11,6 +11,13 @@ import markdownToHtml from '@/lib/markdownToHtml'
 import PageContainer from '@/app/_components/ui/page-container'
 import PostBody from '@/app/_pages/post/post-body'
 import PostHeader from '@/app/_pages/post/post-header'
+import PostFooter from '@/app/_pages/post/post-footer'
+
+type Params = {
+  params: {
+    slug: string
+  }
+}
 
 const Post = async ({ params }: Params) => {
   const post = getPostBySlug(params.slug)
@@ -31,15 +38,10 @@ const Post = async ({ params }: Params) => {
           categories={post.categories}
         />
         <PostBody content={content} />
+        <PostFooter slug={post.slug} />
       </article>
     </PageContainer>
   )
-}
-
-type Params = {
-  params: {
-    slug: string
-  }
 }
 
 export function generateMetadata({ params }: Params): Metadata {
