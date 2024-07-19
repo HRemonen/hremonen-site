@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getAllPosts, getPostBySlug } from '@/lib/api'
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/api'
 import {
   BLOG_NAME,
   BLOG_URL,
@@ -27,6 +27,7 @@ const Post = async ({ params }: Params) => {
   }
 
   const content = await markdownToHtml(post.content || '')
+  const recommendations = getRelatedPosts(post)
 
   return (
     <PageContainer>
@@ -38,7 +39,7 @@ const Post = async ({ params }: Params) => {
           categories={post.categories}
         />
         <PostBody content={content} />
-        <PostFooter slug={post.slug} />
+        <PostFooter slug={post.slug} recommendations={recommendations} />
       </article>
     </PageContainer>
   )
