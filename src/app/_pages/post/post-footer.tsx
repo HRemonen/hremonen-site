@@ -15,7 +15,7 @@ interface PostFooterProps {
 const PostFooter = ({ slug, recommendations }: PostFooterProps) => (
   <footer className='mt-16 px-2'>
     <div className='mb-12 flex justify-between gap-2 border-b border-gray-600 pb-12 text-lg font-medium'>
-      <StyledLink href='/posts'>
+      <StyledLink href='/blog'>
         <ArrowIcon /> Back to all posts
       </StyledLink>
 

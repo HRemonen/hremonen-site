@@ -16,8 +16,8 @@ const PostPreview = ({ title, date, excerpt, slug, categories }: Props) => (
       <CategoryFormatter categories={categories} />
       <h3 className='mb-3 font-display text-4xl font-normal leading-snug'>
         <Link
-          as={`/posts/${slug}`}
-          href='/posts/[slug]'
+          as={`/blog/${slug}`}
+          href='/blog/[slug]'
           className='visited:text-visited hover:text-link hover:underline focus:text-link focus:underline focus:visited:text-link dark:visited:text-visited-dark dark:hover:text-link-dark dark:focus:text-link-dark dark:focus:visited:text-link-dark'
         >
           {title}

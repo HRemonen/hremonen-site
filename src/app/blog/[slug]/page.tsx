@@ -56,7 +56,7 @@ export function generateMetadata({ params }: Params): Metadata {
   const { excerpt } = post
   const type = BLOG_POST_TYPE
   const locale = BLOG_LOCALE
-  const url = `${BLOG_URL}/posts/${post.slug}`
+  const url = `${BLOG_URL}/blog/${post.slug}`
   const keywords = post.keywords.join(', ') || ''
 
   return {

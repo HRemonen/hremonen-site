@@ -12,7 +12,7 @@ interface SectionPostProps {
 const SectionPost = ({ post }: SectionPostProps) => (
   <div className='mb-8 w-full lg:mb-12'>
     <Link
-      href={`/posts/${post.slug}`}
+      href={`/blog/${post.slug}`}
       passHref
       className='group/recent-post outline-none'
     >

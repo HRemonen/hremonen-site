@@ -10,7 +10,7 @@ export default async function sitemap() {
     lastModified: parseISO(date).toISOString(),
   }))
 
-  const routes = ['/posts'].map((route) => ({
+  const routes = ['/blog'].map((route) => ({
     url: `${BLOG_URL}${route}`,
     lastModified: new Date().toISOString(),
   }))
