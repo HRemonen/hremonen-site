@@ -63,12 +63,27 @@ export function generateMetadata({ params }: Params): Metadata {
     title,
     description: excerpt,
     keywords,
+    creator: post.author.name,
+    authors: [
+      {
+        name: post.author.name,
+      },
+    ],
     openGraph: {
       title,
       description: excerpt,
       type,
       locale,
       url,
+      siteName: BLOG_NAME,
+      publishedTime: post.date,
+      modifiedTime: post.date,
+      images: [
+        {
+          url: post.ogImage.url,
+          alt: post.title,
+        },
+      ],
     },
   }
 }
