@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/sitemap.js",
+    "src/app/sitemap.ts",
     "./eslintrc.json",
     "./postcss.config.js",
     "./next.config.js"
