@@ -1,6 +1,13 @@
 import { formatDate } from 'date-fns/format'
 import { getAllPosts } from './api'
-import { BLOG_DESCRIPTION, BLOG_NAME, BLOG_URL } from './constants'
+import {
+  BLOG_AUTHOR,
+  BLOG_AUTHOR_EMAIL,
+  BLOG_DESCRIPTION,
+  BLOG_LOCALE,
+  BLOG_NAME,
+  BLOG_URL,
+} from './constants'
 
 function cdata(markup: string) {
   return `<![CDATA[${markup}]]>`
@@ -17,9 +24,9 @@ export default function generateRssFeed() {
         <title>${BLOG_NAME} Blog</title>
         <link>${blogUrl}</link>
         <description>${BLOG_DESCRIPTION}</description>
-        <language>en-us</language>
-        <generator>Henri Remonen</generator>
-        <webMaster>henri@remonen.fi</webMaster>
+        <language>${BLOG_LOCALE}</language>
+        <generator>${BLOG_AUTHOR}</generator>
+        <webMaster>${BLOG_AUTHOR_EMAIL}</webMaster>
         <pubDate>${formatDate(new Date(), 'yyyy-MMMM-ii')}</pubDate>
         <ttl>40</ttl>
         ${posts

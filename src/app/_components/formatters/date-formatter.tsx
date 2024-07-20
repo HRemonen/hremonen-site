@@ -1,3 +1,4 @@
+import { BLOG_LOCALE } from '@/lib/constants'
 import { parseISO } from 'date-fns'
 
 type DateFormatterProps = {
@@ -10,9 +11,10 @@ const DateFormatter = ({
   formatOptions = {},
 }: DateFormatterProps) => {
   const dateISO = parseISO(dateString)
-  const dateTimeFormat = new Intl.DateTimeFormat('en-US', formatOptions).format(
-    dateISO
-  )
+  const dateTimeFormat = new Intl.DateTimeFormat(
+    BLOG_LOCALE,
+    formatOptions
+  ).format(dateISO)
 
   return <time dateTime={dateString}>{dateTimeFormat}</time>
 }
