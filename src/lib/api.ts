@@ -52,7 +52,17 @@ export function getRecentPosts(): Post[] {
 }
 
 export function getRelatedPosts(currentPost: Post): Post[] {
-  const posts = getAllPosts().filter((post) => post.slug !== currentPost.slug)
+  const slugs = getPostSlugs()
+  const posts: Post[] = []
+
+  slugs.forEach((slug) => {
+    const post = getPostBySlug(slug)
+
+    if (post.slug === currentPost.slug) return
+
+    posts.push(post)
+  })
+
   const recommendedPosts = getRecommendedPosts(currentPost, posts)
 
   return recommendedPosts
