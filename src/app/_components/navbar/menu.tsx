@@ -10,6 +10,10 @@ const NAV_LINKS = [
     href: '/',
   },
   {
+    name: 'Blog',
+    href: '/blog',
+  },
+  {
     name: 'About',
     href: '/about',
   },

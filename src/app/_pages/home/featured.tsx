@@ -74,7 +74,7 @@ const FeaturedSection = () => {
           </div>
         </div>
         <div className='mx-auto bg-[#fcfcfc] px-2 pt-4 dark:bg-[#1f2028] sm:absolute sm:bottom-0 sm:right-0 sm:rounded-tl-2xl sm:pt-2 lg:rounded-tl-3xl'>
-          <ButtonLink linkText='Read featured article' href={`blog/${slug}`} />
+          <ButtonLink linkText='Read featured post' href={`blog/${slug}`} />
         </div>
       </article>
     </section>

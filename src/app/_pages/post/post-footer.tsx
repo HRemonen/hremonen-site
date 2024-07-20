@@ -29,7 +29,7 @@ const PostFooter = ({ slug, recommendations }: PostFooterProps) => (
         <div className='w-full px-4 md:w-1/2'>
           <SectionTitle
             title='You will love these ones as well.'
-            description='Did you enjoy this article?'
+            description='Did you enjoy this post?'
           />
           {recommendations.slice(0, 1).map((post) => (
             <SectionPost key={post.slug} post={post} />
