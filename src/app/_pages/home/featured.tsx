@@ -19,7 +19,7 @@ const FeaturedSection = () => {
         <Image
           src={coverImage}
           alt='' // As the image is decorative, an empty alt attribute is appropriate
-          width={1280}
+          width={1024}
           height={780}
           className='aspect-[3/4] max-h-[780px] rounded-2xl object-cover xs:aspect-auto'
         />
