@@ -34,25 +34,27 @@ const FeaturedSection = () => {
             </h2>
           </div>
           <div className='relative w-auto overflow-hidden rounded-bl-none rounded-br-2xl lg:rounded-br-3xl'>
-            <h3 className='4xl:text-8xl gooey-content bg-[#fcfcfc] pb-3 pt-16 text-2xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl'>
-              <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
-                Migrating from&nbsp;&nbsp;
-                <br />
-              </span>
-              <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
-                WordPress to&nbsp;&nbsp;
-                <br />
-              </span>
-              <span className='relative inline flex-shrink-0 truncate pl-3 lg:pl-5'>
-                Next.js&nbsp;&nbsp;
-                <br />
-              </span>
-              <div className='relative inline-flex w-auto bg-[#fcfcfc] dark:bg-[#1f2028]' />
-            </h3>
+            <div className='gooey-content-filter'>
+              <h3 className='4xl:text-8xl gooey-content bg-[#fcfcfc] pb-3 pt-16 text-2xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl'>
+                <span className='relative z-30 inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                  Migrating from&nbsp;&nbsp;
+                  <br />
+                </span>
+                <span className='relative z-20 inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                  WordPress to&nbsp;&nbsp;
+                  <br />
+                </span>
+                <span className='relative z-10 inline flex-shrink-0 truncate pl-3 lg:pl-5'>
+                  Next.js&nbsp;&nbsp;
+                  <br />
+                </span>
+                <div className='relative inline-flex w-auto bg-[#fcfcfc] dark:bg-[#1f2028]' />
+              </h3>
+            </div>
             <svg
               width='0'
               height='0'
-              className='absolute hidden'
+              className='absolute'
               colorInterpolationFilters='sRGB'
             >
               <defs>

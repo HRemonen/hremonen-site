@@ -19,6 +19,7 @@
       radial-gradient(#2e3039 0.8px, #1f2028 0);
   }
 
+  /* Gooey Effect. Check: https://stackoverflow.com/questions/77176688/issue-with-getting-gooey-css-svg-filter-for-rounded-text-background-to-work-in*/
   .gooey-content {
     display: inline;
     box-decoration-break: clone;
@@ -26,6 +27,9 @@
     -moz-box-decoration-break: clone;
     -ms-box-decoration-break: clone;
     -o-box-decoration-break: clone;
+  }
+
+  .gooey-content-filter {
     filter: url(#goo);
     -webkit-filter: url(#goo);
     -moz-filter: url(#goo);
