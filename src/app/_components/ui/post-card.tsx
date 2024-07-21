@@ -5,11 +5,11 @@ import { Interpunct } from '@/app/_components/ui/icons'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface SectionPostProps {
+interface PostCardProps {
   post: Post
 }
 
-const SectionPost = ({ post }: SectionPostProps) => (
+const PostCard = ({ post }: PostCardProps) => (
   <div className='mb-8 w-full lg:mb-12'>
     <Link
       href={`/blog/${post.slug}`}
@@ -39,4 +39,4 @@ const SectionPost = ({ post }: SectionPostProps) => (
   </div>
 )
 
-export default SectionPost
+export default PostCard

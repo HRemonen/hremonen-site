@@ -1,11 +1,11 @@
 import { Interpunct } from './icons'
 
-interface SectionTitleProps {
+interface SubSectionTitleProps {
   title: string
   description: string
 }
 
-const SectionTitle = ({ title, description }: SectionTitleProps) => (
+const SubSectionTitle = ({ title, description }: SubSectionTitleProps) => (
   <div className='mb-12 w-full justify-center lg:mb-16'>
     <div className='flex flex-col items-start space-y-3 lg:space-y-5'>
       <div className='inline-flex items-center space-x-2'>
@@ -21,4 +21,4 @@ const SectionTitle = ({ title, description }: SectionTitleProps) => (
   </div>
 )
 
-export default SectionTitle
+export default SubSectionTitle

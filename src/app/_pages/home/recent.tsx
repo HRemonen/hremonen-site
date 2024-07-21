@@ -1,5 +1,5 @@
-import PostSectionPost from '@/app/_components/ui/post-section-post'
-import PostSectionTitle from '@/app/_components/ui/post-section-title'
+import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
+import PostCard from '@/app/_components/ui/post-card'
 import { getRecentPosts } from '@/lib/api'
 
 const RecentSection = () => {
@@ -11,17 +11,17 @@ const RecentSection = () => {
     <section className='mx-auto mb-16 max-w-5xl'>
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
-          <PostSectionTitle
+          <SubSectionTitle
             title='Take a look at the latest posts.'
             description='Recent blog posts'
           />
           {posts.slice(0, 2).map((post) => (
-            <PostSectionPost key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
         <div className='w-full px-4 md:w-1/2'>
           {posts.slice(2, 5).map((post) => (
-            <PostSectionPost key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
       </div>

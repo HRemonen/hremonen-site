@@ -1,8 +1,8 @@
 'use client'
 
 import { ArrowIcon } from '@/app/_components/ui/icons'
-import PostSectionPost from '@/app/_components/ui/post-section-post'
-import PostSectionTitle from '@/app/_components/ui/post-section-title'
+import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
+import PostCard from '@/app/_components/ui/post-card'
 import StyledLink from '@/app/_components/ui/styled-link'
 import { Post } from '@/interfaces/post'
 import { GITHUB_POST_URL } from '@/lib/constants'
@@ -27,17 +27,17 @@ const PostFooter = ({ slug, recommendations }: PostFooterProps) => (
     <section className='mx-auto mb-16'>
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
-          <PostSectionTitle
+          <SubSectionTitle
             title='You will love these ones as well.'
             description='Did you enjoy this post?'
           />
           {recommendations.slice(0, 1).map((post) => (
-            <PostSectionPost key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
         <div className='w-full px-4 md:w-1/2'>
           {recommendations.slice(1, 3).map((post) => (
-            <PostSectionPost key={post.slug} post={post} />
+            <PostCard key={post.slug} post={post} />
           ))}
         </div>
       </div>
