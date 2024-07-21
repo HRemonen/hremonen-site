@@ -1,3 +1,4 @@
+import PageSection from '@/app/_components/ui/page-section'
 import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
 import PostCard from '@/app/_components/ui/post-card'
 import { getRecentPosts } from '@/lib/api'
@@ -8,7 +9,7 @@ const RecentSection = () => {
   if (!posts) return null
 
   return (
-    <section className='mx-auto mb-16 max-w-5xl'>
+    <PageSection>
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
           <SubSectionTitle
@@ -25,7 +26,7 @@ const RecentSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </PageSection>
   )
 }
 

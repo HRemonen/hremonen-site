@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { getFeaturedPost } from '@/lib/api'
 import ButtonLink from '@/app/_components/ui/button-link'
+import PageSection from '@/app/_components/ui/page-section'
 
 const FeaturedSection = () => {
   const featured = getFeaturedPost()
@@ -10,7 +11,7 @@ const FeaturedSection = () => {
   const { title, slug, coverImage } = featured
 
   return (
-    <section className='mx-auto mb-16 max-w-5xl'>
+    <PageSection>
       <article
         key={`featured-post-${title}`}
         className='relative flex flex-col px-4 sm:mx-auto sm:px-0'
@@ -77,7 +78,7 @@ const FeaturedSection = () => {
           <ButtonLink linkText='Read featured post' href={`blog/${slug}`} />
         </div>
       </article>
-    </section>
+    </PageSection>
   )
 }
 
