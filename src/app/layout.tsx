@@ -1,7 +1,10 @@
 import { Analytics } from '@vercel/analytics/react'
 import { BLOG_NAME, BLOG_DESCRIPTION } from '@/lib/constants'
+
 import type { Metadata } from 'next'
+
 import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 
 import './globals.css'
 import DarkModeProvider from '@/app/_components/theme/dark-mode-provider'
@@ -19,7 +22,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-  <html lang='en' suppressHydrationWarning>
+  <html lang='en' suppressHydrationWarning className={`${GeistSans.variable}`}>
     <head>
       <link
         rel='apple-touch-icon'

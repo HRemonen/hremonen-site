@@ -40,9 +40,8 @@ const config: Config = {
         tighter: '-.04em',
       },
       fontFamily: {
-        sans: ['Inter'],
+        sans: ['var(--font-geist-sans)'],
         display: ['Alegreya Sans'],
-        body: ['Literata'],
       },
       fontSize: {
         '2xl': '2.25rem',
