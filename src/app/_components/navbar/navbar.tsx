@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import SkipLink from '@/app/_components/ui/skip-link'
+import Link from 'next/link'
 
 const DarkModeToggle = dynamic(() => import('../theme/dark-mode-toggle'), {
   ssr: false,
@@ -14,9 +15,9 @@ const Navbar = () => (
   >
     <SkipLink href='#main-content' />
 
-    <div id='logo' className='flex justify-center gap-4 align-middle'>
-      <Image src='/misc/logo.svg' alt='hremonen logo' width={100} height={50} />
-    </div>
+    <Link href='/'>
+      <Image src='/misc/logo.svg' alt='Go to home' width={100} height={50} />
+    </Link>
 
     <div className='flex items-center justify-center'>
       <DarkModeToggle />
