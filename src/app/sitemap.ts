@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly',
   })) as unknown as MetadataRoute.Sitemap
 
-  const siteRoutes = ['/blog'].map((route) => ({
+  const siteRoutes = ['/blog', '/about'].map((route) => ({
     url: `${BLOG_URL}${route}`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'monthly',
