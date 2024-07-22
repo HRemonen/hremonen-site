@@ -11,7 +11,7 @@ ogImage:
   url: ''
 categories:
   - 'accessibility'
-  - 'design'
+  - 'wcag'
 keywords:
   - 'accessibility'
   - 'accessibility-first'

@@ -11,7 +11,7 @@ ogImage:
   url: ''
 categories:
   - 'accessibility'
-  - 'semantic html'
+  - 'html'
   - 'wcag'
 keywords:
   - 'accessibility'
@@ -108,89 +108,65 @@ Testing keyboard control flow is not rocket science, it just requires manual and
 | -------------------------------- | ----------------------- | ----- |
 | Navigate to interactive elements | Tab – navigate forward. |
 
-  
 Shift + Tab – navigate backward. | Check that keyboard focus indicators are present.
 
-  
 Navigation order should be logical and intuitive |
 | Links | Enter – activate the link | |
 | Buttons | Enter – activate the button.
 
-  
 Spacebar – activate the button. | Ensure elements with ARIA `role=”button”` can be activated with both key commands |
 | Checkboxes | Spacebar – check and uncheck a single checkbox item. | Users can typically select zero, one, multiple options. |
 | Radio buttons | Spacebar – select the focused option.
 
-  
 ↑ ↓ → ← – navigate between options.
 
-  
 Tab – leave the group of radio buttons. | Users can select only one options from a group of radio buttons. |
 | Select (dropdown menu) | ↑ ↓ – navigate between options.
 
-  
 Spacebar – expand dropdown menu.
 
-  
 Enter and Esc – select option and collapse. | You can also filter or jump to options in the menu as you type letters. |
 | Autocomplete | Type to begin filtering.
 
-  
 ↑ ↓ – navigate between options.
 
-  
 Enter – select an option. | |
 | Dialog | Esc – close dialog. | Modal dialogs should maintain keyboard focus.
 
-  
 Non-modal dialogs should close automatically when they lose focus.
 
-  
 When a dialog closes, focus should usually return to the element that opened the dialog. |
 | Slider | ↑ ↓ → ← – increase or decrease slider values.
 
-  
 Home – beginning of slider.
 
-  
 End – end of slider. | Tab and Shift + Tab should toggle each end for double-headed (range sliders) sliders.
 
-  
 In some sliders PageUp and PageDown can move by a larger increment. |
 | Menu bar | ↑– previous menu option.
 
-  
 ↓ – next menu option.
 
-  
 Enter – expand the menu and select and option.
 
-  
 `←` – expand submenu.
 
-  
 → – collapse submenu. | A menu bar dynamically changes content within an application. Links that utilize Tab and Enter are not menu bars. |
 | Tab panel | “Arrow keys” – choose and activate previous and next tab.
 
-  
 Tab – once to navigate into the group of tabs and once to navigate out of the group of tabs.  
   | This is for 'application' tabs that dynamically change content within the tab panel. If a menu looks like a group of tabs but is actually a group of links to different pages, Tab and Enter are more appropriate. |
 | Tree menu | ↑– previous menu option.
 
-  
 ↓ – next menu option.
 
-  
 ← – expand submenu.
 
-  
 → – collapse submenu. | |
 | Scroll | ↑ ↓ – scroll vertically.
 
-  
 ← → – scroll horizontally.
 
-  
 Spacebar and Spacebar + Shift – scroll by page | The Spacebar will, by default, scroll the page, but only if an interactive control that allows space bar input is not focused. Horizontal scrolling within the page should be minimized. |
 
 <figcaption>

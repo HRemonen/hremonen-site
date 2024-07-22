@@ -10,9 +10,8 @@ featured: true
 ogImage:
   url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
 categories:
-  - 'Next.js'
-  - 'Tech talk'
-  - 'Thinkering'
+  - 'react'
+  - 'personal'
 keywords:
   - 'nextjs blog'
   - 'nextjs rss'

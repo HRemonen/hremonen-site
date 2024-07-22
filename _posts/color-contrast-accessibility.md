@@ -11,7 +11,6 @@ ogImage:
   url: ''
 categories:
   - 'accessibility'
-  - 'color contrast'
   - 'wcag'
 keywords:
   - 'accessibility'

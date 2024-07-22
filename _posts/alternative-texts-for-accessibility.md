@@ -11,8 +11,8 @@ ogImage:
   url: ''
 categories:
   - 'accessibility'
-  - 'getting-accessibility-just-right'
   - 'html'
+  - 'wcag'
 keywords:
   - 'accessibility'
   - 'accessible-links-alt-text'

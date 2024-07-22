@@ -12,7 +12,7 @@ ogImage:
 categories:
   - 'accessibility'
   - 'html'
-  - 'semantic html'
+  - 'seo'
 keywords:
   - 'accessibility'
   - 'aria'
