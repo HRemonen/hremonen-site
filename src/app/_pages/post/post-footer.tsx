@@ -28,8 +28,8 @@ const PostFooter = ({ slug, recommendations }: PostFooterProps) => (
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
           <SubSectionTitle
-            title='You will love these ones as well.'
-            description='Did you enjoy this post?'
+            title='Did you enjoy this post?'
+            subtitle='You will love these ones as well.'
           />
           {recommendations.slice(0, 1).map((post) => (
             <PostCard key={post.slug} post={post} />

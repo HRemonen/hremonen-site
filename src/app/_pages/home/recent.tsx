@@ -13,8 +13,8 @@ const RecentSection = () => {
       <div className='flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
           <SubSectionTitle
-            title='Take a look at the latest posts.'
-            description='Recent blog posts'
+            title='Recent blog posts'
+            subtitle='Take a look at the latest posts.'
           />
           {posts.slice(0, 2).map((post) => (
             <PostCard key={post.slug} post={post} />

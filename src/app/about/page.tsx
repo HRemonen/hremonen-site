@@ -51,8 +51,8 @@ const About = async () => (
       <div className='mt-16 flex flex-col md:flex-row'>
         <div className='w-full px-4 md:w-1/2'>
           <SubSectionTitle
-            title='Who am I exactly?'
-            description='A little bit about me'
+            title='A little bit about me'
+            subtitle='Who am I exactly?'
           />
           <p className='xl:text-md mb-6 text-pretty text-base font-light leading-7 text-text dark:text-text-dark'>
             Great question! Lately, I&lsquo;ve been wearing many hats, including
