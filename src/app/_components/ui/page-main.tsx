@@ -10,6 +10,7 @@ interface PageMainTitleProps {
 
 interface PageSubtitleProps {
   children: React.ReactNode
+  type?: 'default' | 'custom'
 }
 
 interface PageMainSectionProps {
@@ -22,11 +23,18 @@ export const PageMainTitle = ({ title }: PageMainTitleProps) => (
   </h1>
 )
 
-export const PageSubtitle = ({ children }: PageSubtitleProps) => (
-  <h2 className='bg-[#fcfcfc] pb-3 font-sans text-4xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
-    {children}
-  </h2>
-)
+export const PageSubtitle = ({
+  type = 'default',
+  children,
+}: PageSubtitleProps) => {
+  if (type === 'custom') return children
+
+  return (
+    <h2 className='bg-[#fcfcfc] pb-3 font-sans text-4xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+      {children}
+    </h2>
+  )
+}
 
 export const PageMainSection = ({ children }: PageMainSectionProps) => {
   const [mainTitleContent, subTitleContent] = Children.toArray(children)

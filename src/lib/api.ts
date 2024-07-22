@@ -1,7 +1,9 @@
-import { Post } from '@/interfaces/post'
 import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
+
+import { Post } from '@/interfaces/post'
+
 import getRecommendedPosts from './recommendations'
 
 const postsDirectory = join(process.cwd(), '_posts')
@@ -66,4 +68,33 @@ export function getRelatedPosts(currentPost: Post): Post[] {
   const recommendedPosts = getRecommendedPosts(currentPost, posts)
 
   return recommendedPosts
+}
+
+export function getCategories() {
+  const categories: string[] = []
+
+  const slugs = getPostSlugs()
+
+  slugs.forEach((slug) => {
+    const realSlug = slug.replace(/\.md$/, '')
+    const fullPath = join(postsDirectory, `${realSlug}.md`)
+    const fileContents = fs.readFileSync(fullPath, 'utf8')
+
+    const { data } = matter(fileContents)
+
+    const postCategories: string[] = data.categories ?? ['uncategorized']
+    categories.push(...postCategories)
+  })
+
+  const categoriesAndCounts = categories.reduce(
+    (acc, category) => {
+      acc[category] ??= 0
+      acc[category] += 1
+
+      return acc
+    },
+    {} as Record<string, number>
+  )
+
+  return categoriesAndCounts
 }
