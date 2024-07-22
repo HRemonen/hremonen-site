@@ -1,41 +1,33 @@
 import { Metadata } from 'next'
 import { BLOG_NAME, BLOG_URL, BLOG_LOCALE, BLOG_AUTHOR } from '@/lib/constants'
 import PageContainer from '@/app/_components/ui/page-container'
-import { Interpunct } from '../_components/ui/icons'
-import PageSectionSeparator from '../_components/ui/page-section-separator'
-import PageSection from '../_components/ui/page-section'
-import SubSectionTitle from '../_components/ui/page-sub-section-title'
+import PageSection from '@/app/_components/ui/page-section'
+import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
+import {
+  PageMainTitle,
+  PageMainSection,
+  PageSubtitle,
+} from '@/app/_components/ui/page-main'
 
 const About = async () => (
   <PageContainer>
-    <PageSection>
-      <div className='w-auto pb-8 lg:ml-20 xl:ml-40 xl:px-4'>
-        <div className='mb-2 flex w-full items-center space-x-2 bg-[#fcfcfc] px-3 dark:bg-[#1f2028] xs:mb-4 lg:space-x-0'>
-          <Interpunct />
-          <h1 className='font-display text-xl font-light text-accent-text dark:text-accent-text-dark sm:text-2xl lg:px-6'>
-            About me
-          </h1>
-        </div>
-        <div className='w-auto'>
-          <h2 className='bg-[#fcfcfc] pb-3 font-sans text-4xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
-            <span className='pl-3 lg:pl-5'>
-              Nice to meet ya!&nbsp;&nbsp;
-              <br />
-            </span>
-            <span className='pl-3 lg:pl-5'>
-              My name is&nbsp;&nbsp;
-              <br />
-            </span>
-            <span className='pl-3 lg:pl-5'>
-              Hene&nbsp;&nbsp;
-              <br />
-            </span>
-          </h2>
-        </div>
-      </div>
-    </PageSection>
-
-    <PageSectionSeparator />
+    <PageMainSection>
+      <PageMainTitle title='About' />
+      <PageSubtitle>
+        <span className='pl-3 lg:pl-5'>
+          Nice to meet ya!&nbsp;&nbsp;
+          <br />
+        </span>
+        <span className='pl-3 lg:pl-5'>
+          My name is&nbsp;&nbsp;
+          <br />
+        </span>
+        <span className='pl-3 lg:pl-5'>
+          Hene&nbsp;&nbsp;
+          <br />
+        </span>
+      </PageSubtitle>
+    </PageMainSection>
 
     <PageSection>
       <div className='flex flex-col md:flex-row'>
@@ -70,8 +62,8 @@ const About = async () => (
           </p>
           <p className='xl:text-md mb-6 text-pretty text-base font-light leading-7 text-text dark:text-text-dark'>
             While studying electrical engineering from 2015 to 2019, I took a
-            few computer science courses. That’s when I first felt the spark for
-            the field, although I also enjoyed the realm of electrical
+            few computer science courses. That&lsquo;s when I first felt the
+            spark for the field, although I also enjoyed the realm of electrical
             engineering. Fast forward to 2021, I was doing alright in my career,
             working as a project manager for an electrical contracting company.
             However, during the pandemic, I somehow grew fed up with that gig.
