@@ -103,9 +103,9 @@ const Menu = () => {
         onClick={handleMenuToggle}
       >
         <div className='relative flex h-full items-center justify-center'>
-          <span className='absolute left-6 top-[12px] h-[2px] w-4 -translate-x-1/2 rounded-full bg-text transition group-hover/menu:left-1/2 group-hover/menu:top-[11px] group-focus/menu:bg-link dark:bg-text-dark dark:group-focus/menu:bg-link-dark' />
-          <span className='absolute left-1/2 top-1/2 h-[2px] w-6 -translate-x-1/2 -translate-y-1/3 rounded-full bg-text transition group-hover/menu:-rotate-45 group-focus/menu:bg-link dark:bg-text-dark dark:group-focus/menu:bg-link-dark' />
-          <span className='absolute left-4 top-[27px] h-[2px] w-4 -translate-x-1/2 rounded-full bg-text group-hover/menu:left-7 group-hover/menu:top-5 group-hover/menu:rotate-90 group-focus/menu:bg-link dark:bg-text-dark dark:group-focus/menu:bg-link-dark' />
+          <span className='absolute left-6 top-[12px] h-[2px] w-4 -translate-x-1/2 rounded-full bg-text transition group-hover/menu:left-1/2 group-hover/menu:top-[11px] group-focus/menu:left-1/2 group-focus/menu:top-[11px] dark:bg-text-dark' />
+          <span className='absolute left-1/2 top-1/2 h-[2px] w-6 -translate-x-1/2 -translate-y-1/3 rounded-full bg-text transition group-hover/menu:-rotate-45 group-focus/menu:-rotate-45 dark:bg-text-dark' />
+          <span className='absolute left-4 top-[27px] h-[2px] w-4 -translate-x-1/2 rounded-full bg-text group-hover/menu:left-7 group-hover/menu:top-5 group-hover/menu:rotate-90 group-focus/menu:left-7 group-focus/menu:top-5 group-focus/menu:rotate-90 dark:bg-text-dark' />
         </div>
       </button>
 
