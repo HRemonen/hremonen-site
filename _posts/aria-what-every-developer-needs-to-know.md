@@ -1,14 +1,14 @@
 ---
 title: 'ARIA: What Every Developer Needs to Know'
 date: '2024-02-07'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721743198/ARIA_What_Every_Developer_Needs_to_Know_nkanfu.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'We´ve referred to WAI-ARIA or ARIA in our posts before. Perhaps it has been treated like some kind of fairy dust that just magically solves all the problems regarding accessibility. Well, kind of that´s what it´s about, but if used excessively just to boast in your tech meet-ups, you probably do not know ARIA. Stop being the that person who talks about something they do not fully understand and learn when ARIA really is useful.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721743198/ARIA_What_Every_Developer_Needs_to_Know_nkanfu.webp'
 categories:
   - 'accessibility'
   - 'aria'
@@ -71,11 +71,9 @@ The [role attribute](https://developer.mozilla.org/en-US/docs/Web/Accessibility/
 
 [A role is a promise](https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/#principle-1-a-role-is-a-promise). You promise to the user that by specifying a certain role, you also ship it with the corresponding expected functionality. I cannot say “hey this `<div>` is a button” with just adding `role=”button”` to it.
 
-```
+```html
 <div role="button">Do buttony stuff</div>
 ```
-
-HTML
 
 Now you have made the user expect it to do buttony stuff, but it does no such thing.
 
@@ -89,17 +87,16 @@ However, properties such as `aria-labelledby` are less likely to change througho
 
 The example shows how these can create an accessible accordion widget using HTML and ARIA.
 
-```
+```html
 <div id="accordion1" class="accordion">
   <h2>
     <button
       type="button"
       aria-expanded="true"
       aria-controls="accordion1body"
-      id="accordion1title">
-      <span class="accordion-title">
-        How to get started with ARIA
-      </span>
+      id="accordion1title"
+    >
+      <span class="accordion-title"> How to get started with ARIA </span>
     </button>
   </h2>
   <div
@@ -108,14 +105,10 @@ The example shows how these can create an accessible accordion widget using HTML
     aria-labelledby="accordion1title"
     class="accordion-body"
   >
-    <div>
-    	{...}
-    </div>
+    <div>{...}</div>
   </div>
 </div>
 ```
-
-HTML
 
 Here the aria-expanded is the state of the accordion that is true or false depending on whether the accordion body is expanded. This is the state of the accordion. There could also be another state: aria-hidden that would also show if the element were visible, but the aria-expanded does the job.
 
@@ -135,7 +128,7 @@ By providing ARIA, we must also fulfill the expected behavior using JavaScript a
 
 Hiding content from the accessibility tree is also possible with using ARIA. Similar to how we would visually hide information using CSS using [visibility: hidden or display: none](https://www.freecodecamp.org/news/css-display-none-and-visibility-hidden-the-difference/).
 
-```
+```css
 .visibility-hidden {
   visibility: hidden;
 }
@@ -144,8 +137,6 @@ Hiding content from the accessibility tree is also possible with using ARIA. Sim
   display: none;
 }
 ```
-
-CSS
 
 ARIA provides aria-hidden attribute which signals whether the element should be rendered into the accessibility tree.
 
@@ -159,16 +150,14 @@ In these scenarios, aria-hidden is redundant as these also removes the element f
 
 Usually `aria-hidden=”true”` is used when hiding things like decorative, repeated, or offscreen content. For example, if we have an icon button somewhere in our code.
 
-```
+```html
 <button>
-  <svg aria-hidden="true" tabIndex={-1}>
+  <svg aria-hidden="true" tabIndex="{-1}">
     <!-- svg content here -->
   </svg>
   Do buttony stuff
 </button>
 ```
-
-HTML
 
 We might add the `aria-hidden=”true”` because often the icon is decorative. When hiding elements that might receive focus, it is paramount to also block the element from receiving focus using negative tab index. Hidden elements are not announced upon focus which could cause confusion for assistive technology users.
 

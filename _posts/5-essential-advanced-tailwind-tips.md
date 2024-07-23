@@ -179,6 +179,10 @@ Styling elements based on the parent elements state is also very handy. Tailwind
 
 Let’s revise our example code that we have been using here. Say we wanted to style the **Read more** text with underline on hover, but we would like the underline to appear on the button hover rather than hovering the actual `<a>` element.
 
+<figure>
+<video controls muted src="https://res.cloudinary.com/daty4gssm/video/upload/q_auto,f_auto/v1721742876/Styling_based_on_the_parent_element_hxxevp.mov"></video>
+</figure>
+
 To achieve this, we must add the **_group_** class to the `<a>` element and introduce a `<span>` element with **_group-hover:max-w-full_** etc. classes to help us achieve the underline effect. You could also do this same effect without using the **_group_** class and `<span>` element, but I just wanted to show with these (roast me).
 
 ```jsx /group-hover/
@@ -199,7 +203,7 @@ In the case you needed to style a parent element based on the state or elements 
 
 There are many places where this could come in handy. Suppose you wanted to color the form’s border red when there are invalid input fields, like this:
 
-![Sign in form with erroneous email and password fields indicated as red borders.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721739603/form_validation_errors_fxqiw8.webp 'form-validation-errors')
+![Sign in form with erroneous email and password fields indicated as red borders.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,h_420/v1721739603/form_validation_errors_fxqiw8.webp 'form-validation-errors')
 
 This effect can be achieved using the **_has-\[input:invalid\]:border-red-500_** class, which just checks if there is a descendant input element with the class **_invalid_**.
 
