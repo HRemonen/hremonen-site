@@ -26,7 +26,7 @@ const PostSection = ({ posts }: PostSectionProps) => {
             <div className='w-full px-4'>
               <SubSectionTitle
                 title={`Posts from ${year}`}
-                subtitle='These great posts were published this year.'
+                subtitle={`These great posts were published in ${year}.`}
               />
             </div>
             {posts?.map((post) => (
