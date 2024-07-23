@@ -23,9 +23,24 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs()
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  const posts = slugs.map((slug) => getPostBySlug(slug))
+  return posts
+}
+
+interface QueryOptions {
+  offset?: number
+  limit?: number
+}
+
+export function getAllPostSortedByDate(options: QueryOptions = {}): Post[] {
+  const posts = getAllPosts().sort((post1, post2) =>
+    post1.date > post2.date ? -1 : 1
+  )
+
+  if (options.offset && options.limit) {
+    return posts.slice(options.offset, options.offset + options.limit)
+  }
+
   return posts
 }
 
@@ -48,7 +63,7 @@ export function getFeaturedPost(): Post | undefined {
 }
 
 export function getRecentPosts(): Post[] {
-  const posts = getAllPosts().filter((post) => !post.featured)
+  const posts = getAllPostSortedByDate().filter((post) => !post.featured)
 
   return posts
 }
@@ -68,6 +83,24 @@ export function getRelatedPosts(currentPost: Post): Post[] {
   const recommendedPosts = getRecommendedPosts(currentPost, posts)
 
   return recommendedPosts
+}
+
+interface SearchOptions {
+  category?: string
+}
+export function getPostsBySearchOptions(
+  searchOptions: SearchOptions = {}
+): Post[] {
+  const { category } = searchOptions
+  const allPosts = getAllPostSortedByDate()
+
+  if (!category) return allPosts
+
+  const posts = allPosts.filter((post) =>
+    post.categories.includes(category as string)
+  )
+
+  return posts
 }
 
 export function getCategories() {
@@ -96,5 +129,11 @@ export function getCategories() {
     {} as Record<string, number>
   )
 
-  return categoriesAndCounts
+  return {
+    baseCategory: {
+      name: 'explore all',
+      count: slugs.length,
+    },
+    categories: categoriesAndCounts,
+  }
 }

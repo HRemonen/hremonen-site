@@ -3,7 +3,7 @@ import Link from 'next/link'
 import clsx from 'clsx'
 
 import { BLOG_NAME, BLOG_URL, BLOG_LOCALE, BLOG_AUTHOR } from '@/lib/constants'
-import { getCategories } from '@/lib/api'
+import { getCategories, getPostsBySearchOptions } from '@/lib/api'
 
 import PageContainer from '@/app/_components/ui/page-container'
 import {
@@ -11,6 +11,8 @@ import {
   PageMainSection,
   PageSubtitle,
 } from '@/app/_components/ui/page-main'
+import PageSection from '@/app/_components/ui/page-section'
+import PostCard from '@/app/_components/ui/post-card'
 
 interface CategoryLinkProps {
   category: string
@@ -60,7 +62,8 @@ interface PageProps {
 const Blog = ({ searchParams }: PageProps) => {
   const { category: searchCategory } = searchParams
 
-  const postCategories = getCategories()
+  const { baseCategory, categories } = getCategories()
+  const posts = getPostsBySearchOptions({ category: searchCategory })
 
   return (
     <PageContainer>
@@ -71,10 +74,10 @@ const Blog = ({ searchParams }: PageProps) => {
             <CategoryLink
               base
               current={!searchCategory}
-              category='explore all'
-              count={0}
+              category={baseCategory.name}
+              count={baseCategory.count}
             />
-            {Object.entries(postCategories).map(([category, count]) => (
+            {Object.entries(categories).map(([category, count]) => (
               <CategoryLink
                 key={category}
                 current={category === searchCategory}
@@ -85,6 +88,21 @@ const Blog = ({ searchParams }: PageProps) => {
           </ul>
         </PageSubtitle>
       </PageMainSection>
+
+      <PageSection>
+        <div className='flex flex-col md:flex-row'>
+          <div className='w-full px-4 md:w-1/2'>
+            {posts.slice(0, 2).map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
+          </div>
+          <div className='w-full px-4 md:w-1/2'>
+            {posts.slice(2, 5).map((post) => (
+              <PostCard key={post.slug} post={post} />
+            ))}
+          </div>
+        </div>
+      </PageSection>
     </PageContainer>
   )
 }
