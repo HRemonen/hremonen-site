@@ -1,14 +1,14 @@
 ---
 title: 'Effortless Alternative Texts for Accessibility'
 date: '2024-01-10'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721740961/Blind_person_navigating_a_website_layout_wrzwgi.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Ah, the good old alt texts. When I first started my journey as a dev I was like what alt texts? Then a little later on my journey, I was like "Picture of..." until I had come to the conclusion: I don´t know sh*t about alt texts. In this post, I will highlight the why, how, and when of alt texts. Do not be like the earlier version of me, learn how to take the most out of the alt text attribute right now.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721740961/Blind_person_navigating_a_website_layout_wrzwgi.webp'
 categories:
   - 'accessibility'
   - 'html'
@@ -99,7 +99,7 @@ I came across this excellent YouTube video from **Chrome for Developers** where 
 
 <figure>
 
-https://www.youtube.com/watch?v=flf2vS0IoRs&ab\_channel=ChromeforDevelopers
+<iframe width="560" height="315" src="https://www.youtube.com/embed/flf2vS0IoRs?si=rNhr_3mTHScCSXo_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <figcaption>
 
@@ -117,7 +117,7 @@ Along with my list above, I would like to highlight these points taken from the 
 
 - Serve alt text attributes, even if they are empty! Missing alt text attribute is worse than leaving it empty.
 
-## **TL; DR/Recap**
+## Conclusion
 
 Alternative text provides a brief informative description of the information captivated in images on a web page. Alternative texts are displayed when the image cannot be seen or displayed for multiple different reasons.
 
