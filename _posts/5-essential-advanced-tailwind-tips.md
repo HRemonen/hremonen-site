@@ -1,14 +1,14 @@
 ---
 title: '5 Essential Advanced Tailwind Tips'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721739604/5_Essential_Advanced_Tailwind_Tips_b4ptxg.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Tailwind has gained a lot of popularity. Because of its utility-first approach, it is easy and intuitive to get started with. I feel like the main benefit is not having to juggle between separate CSS files speeding up the development process. This is not a tutorial on how to set up Tailwind. Nor will I cover how to center a div. I’ll showcase five Tailwind techniques which helped me on my dev journey and I’ve found out to be the most helpful.'
 date: '2024-02-14'
 author:
   name: 'Henri Remonen'
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721739604/5_Essential_Advanced_Tailwind_Tips_b4ptxg.webp'
 categories:
   - 'html'
   - 'tailwind'
@@ -62,7 +62,7 @@ Adding custom colors into the Tailwind theme is a breeze. Let’s imagine the de
 
 You were tasked with building a card with a link button. The background color of the card must be in the primary color and the color of the link button must be in the accent color.
 
-![Card UI element with the defined color palette.](images/Card-with-custom-color-palette.png)
+![Card UI element with the defined color palette.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721739603/Card_with_custom_color_palette_bsceb3.webp)
 
 Now you define the colors inside the utility functions like a good Tailwind developer would. All Gucci, right?
 
@@ -129,7 +129,7 @@ This also makes it easier to change the color palette later. We only must change
 
 Sometimes you just want a sleek design on a specific element, so you are trying to minimize the information displayed, or perhaps you want to provide information for specific types of users. For example, if we have an input element of some sort and we wanted to allow the user to copy the value to the clipboard with a single click.
 
-![Text color HEX input field, with a copy icon and a small preview window.](images/Text-color-input-field.png)
+![Text color HEX input field, with a copy icon and a small preview window.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,h_150/v1721739603/Text_color_input_field_n3ldod.webp)
 
 We would want to have a “label” or an explanation of the button’s function. However, the icon used is self-explanatory, so we do not want to display the label to every user. The label is there to allow screen reader users to distinguish what the button is for, just like we would identify images using the alt property.
 
@@ -152,7 +152,7 @@ For a nice twist for your users, you can modify the active text selection. This 
 
 Tailwind lets you modify the active text selection with the **_selection_** modifier:
 
-![Custom text selection highlight colors, lighter pint for the background and darker pink for the text.](images/Custom-highlight-for-text.png)
+![Custom text selection highlight colors, lighter pint for the background and darker pink for the text.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721739603/Custom_highlight_for_text_pgsww8.webp)
 
 ```jsx
 <div className=" … ">
@@ -177,7 +177,7 @@ Remember to take care of appropriate color contrast!
 
 Styling elements based on the parent elements state is also very handy. Tailwind lets mark the elements with **_group_** class and use **_group-\*_** modifiers like **_group-hover_** to style the child elements.
 
-Let’s revise our example code that we have been using here. Say we wanted to style the **Read more** text with underline on hover, but we would like the underline to appear on the button hover rather than hovering the actual _<a>_ element.
+Let’s revise our example code that we have been using here. Say we wanted to style the **Read more** text with underline on hover, but we would like the underline to appear on the button hover rather than hovering the actual `<a>` element.
 
 To achieve this, we must add the **_group_** class to the `<a>` element and introduce a `<span>` element with **_group-hover:max-w-full_** etc. classes to help us achieve the underline effect. You could also do this same effect without using the **_group_** class and `<span>` element, but I just wanted to show with these (roast me).
 
@@ -199,11 +199,11 @@ In the case you needed to style a parent element based on the state or elements 
 
 There are many places where this could come in handy. Suppose you wanted to color the form’s border red when there are invalid input fields, like this:
 
-![Sign in form with erroneous email and password fields indicated as red borders.](images/form-validation-errors.png 'form-validation-errors')
+![Sign in form with erroneous email and password fields indicated as red borders.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721739603/form_validation_errors_fxqiw8.webp 'form-validation-errors')
 
 This effect can be achieved using the **_has-\[input:invalid\]:border-red-500_** class, which just checks if there is a descendant input element with the class **_invalid_**.
 
-```jsx /has-/
+```jsx /has-[input:invalid]:border-red-500/
 <div className='… … has-[input:invalid]:border-red-500'>
   <form className='space-y-6' action='#'>
     <h1 className='text-xl font-medium'>Sign in</h1>

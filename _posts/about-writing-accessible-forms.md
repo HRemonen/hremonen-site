@@ -1,6 +1,6 @@
 ---
 title: 'About Writing Accessible Forms'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/v1721216891/photo-1633502401680-e2955cc6aca6_xgr6yn.jpg'
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721216891/photo-1633502401680-e2955cc6aca6_xgr6yn.jpg'
 coverImageAttribute: 'Photo by [Markus Spiske](https://unsplash.com/@markusspiske)'
 excerpt: 'In order for users to know how to fill out a form, it has to be accessible. For the most parts semantic HTML offers everything that is needed to succeed in this. Even thought this is the case, mostly forms are not that accessible after all by design choices or just by bad coding practices. In this article we will cover mostly everything that is needed in order to write accessible forms.'
 date: '2024-06-03'
