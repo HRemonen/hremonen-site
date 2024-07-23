@@ -11,8 +11,7 @@ import {
   PageMainSection,
   PageSubtitle,
 } from '@/app/_components/ui/page-main'
-import PageSection from '@/app/_components/ui/page-section'
-import PostCard from '@/app/_components/ui/post-card'
+import PostSection from '../_pages/blog/posts'
 
 interface CategoryLinkProps {
   category: string
@@ -49,7 +48,8 @@ const CategoryLink = ({
           'mb-2 ml-1 text-sm text-gray-500 dark:text-gray-200'
         )}
       >
-        {count}
+        {' '}
+        {count} <span className='sr-only'>posts</span>
       </span>
     </Link>
   </li>
@@ -70,7 +70,7 @@ const Blog = ({ searchParams }: PageProps) => {
       <PageMainSection>
         <PageMainTitle title='The blog' />
         <PageSubtitle type='custom'>
-          <ul className='flex flex-wrap'>
+          <ul aria-label='Categories' className='flex flex-wrap'>
             <CategoryLink
               base
               current={!searchCategory}
@@ -89,20 +89,7 @@ const Blog = ({ searchParams }: PageProps) => {
         </PageSubtitle>
       </PageMainSection>
 
-      <PageSection>
-        <div className='flex flex-col md:flex-row'>
-          <div className='w-full px-4 md:w-1/2'>
-            {posts.slice(0, 2).map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
-          <div className='w-full px-4 md:w-1/2'>
-            {posts.slice(2, 5).map((post) => (
-              <PostCard key={post.slug} post={post} />
-            ))}
-          </div>
-        </div>
-      </PageSection>
+      <PostSection posts={posts} />
     </PageContainer>
   )
 }
