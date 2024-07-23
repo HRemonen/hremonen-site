@@ -24,43 +24,42 @@ const CategoryLink = ({
   count,
   current = false,
   base = false,
-}: CategoryLinkProps) => {
-  console.log(category, current)
-  return (
-    <li className='mr-4 lg:mr-8'>
-      <Link
-        href={{
-          pathname: '/blog',
-          query: base ? {} : { category },
-        }}
-        className='group inline-flex items-end outline-none duration-200'
+}: CategoryLinkProps) => (
+  <li className='mr-4 lg:mr-8'>
+    <Link
+      href={{
+        pathname: '/blog',
+        query: base ? {} : { category },
+      }}
+      className='group inline-flex items-end outline-none duration-200'
+    >
+      <p
+        className={clsx(
+          current && 'text-text dark:text-text-dark',
+          'leading-tighter text-balance font-sans text-4xl lowercase tracking-tight text-gray-500 transition group-hover:text-text group-focus:text-text dark:text-gray-200 dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
+        )}
       >
-        <p
-          className={clsx(
-            current && 'text-text dark:text-text-dark',
-            'leading-tighter text-balance font-sans text-4xl lowercase tracking-tight text-gray-500 transition group-hover:text-text group-focus:text-text dark:text-gray-200 dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
-          )}
-        >
-          {category}
-        </p>
-        <span
-          className={clsx(
-            current && 'text-text dark:text-text-dark',
-            'mb-2 ml-1 text-sm text-gray-500 dark:text-gray-200'
-          )}
-        >
-          {count}
-        </span>
-      </Link>
-    </li>
-  )
-}
+        {category}
+      </p>
+      <span
+        className={clsx(
+          current && 'text-text dark:text-text-dark',
+          'mb-2 ml-1 text-sm text-gray-500 dark:text-gray-200'
+        )}
+      >
+        {count}
+      </span>
+    </Link>
+  </li>
+)
 
 interface PageProps {
   searchParams: Record<string, string>
 }
 
 const Blog = ({ searchParams }: PageProps) => {
+  const { category: searchCategory } = searchParams
+
   const postCategories = getCategories()
 
   return (
@@ -71,14 +70,14 @@ const Blog = ({ searchParams }: PageProps) => {
           <ul className='flex flex-wrap'>
             <CategoryLink
               base
-              current={!searchParams?.category}
+              current={!searchCategory}
               category='explore all'
               count={0}
             />
             {Object.entries(postCategories).map(([category, count]) => (
               <CategoryLink
                 key={category}
-                current={category === searchParams?.category}
+                current={category === searchCategory}
                 category={category}
                 count={count}
               />
