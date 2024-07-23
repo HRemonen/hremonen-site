@@ -3,29 +3,24 @@ import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
 import PostCard from '@/app/_components/ui/post-card'
 import { type Post } from '@/interfaces/post'
 
-type YearlyPostsProps = {
-  [year: string]: Post[]
-}
-
 interface PostSectionProps {
   posts: Post[]
 }
 
 const PostSection = ({ posts }: PostSectionProps) => {
-  const yearlyPosts = posts.reduce((acc, post) => {
-    const date = new Date(post.date)
-
-    const key = date.getFullYear()
-
-    if (!acc[key]) acc[key] = []
-    acc[key].push(post)
-
-    return acc
-  }, {} as YearlyPostsProps)
+  const yearlyPosts = Object.groupBy(posts, ({ date }) =>
+    new Date(date).getFullYear()
+  )
+  const postsByYear = Object.entries(yearlyPosts)
+    .map(([year, posts]) => ({
+      year,
+      posts,
+    }))
+    .sort((a, b) => (a.year > b.year ? -1 : 1))
 
   return (
     <>
-      {Object.entries(yearlyPosts).map(([year, posts]) => (
+      {postsByYear.map(({ year, posts }) => (
         <PageSection key={year}>
           <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='w-full px-4'>
@@ -34,7 +29,7 @@ const PostSection = ({ posts }: PostSectionProps) => {
                 subtitle='These great posts were published this year.'
               />
             </div>
-            {posts.map((post) => (
+            {posts?.map((post) => (
               <div key={post.slug} className='w-full px-4'>
                 <PostCard post={post} />
               </div>
