@@ -1,14 +1,14 @@
 ---
 title: 'How to Get Color Contrast Accessibility Right'
 date: '2024-01-24'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721896354/What_is_color_contrast_accessibility_lw7gf5.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Have you ever visited a website with a color scheme that seemed really washed out and difficult to read? It´s not just a matter of orange text on a green background - sometimes the colors are so pale that even people with perfect eyesight have to squint to read the text. I´m not sure if these websites are trying to be modern or what, but it´s definitely not user-friendly. Developers and designers need to take these things into consideration to ensure that users can easily read and navigate their sites.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721896354/What_is_color_contrast_accessibility_lw7gf5.webp'
 categories:
   - 'accessibility'
   - 'wcag'
@@ -22,7 +22,7 @@ keywords:
   - 'wcag'
 ---
 
-## **What is Color Contrast?**
+## What is Color Contrast?
 
 [Color contrast](<https://en.wikipedia.org/wiki/Contrast_(vision)>) is defined as the object’s difference in [luminance](https://en.wikipedia.org/wiki/Luminance) or [color](https://en.wikipedia.org/wiki/Color) relative to the background luminance or color.
 
@@ -30,7 +30,7 @@ Huh?
 
 Yeah, this is not a lecture about color theory. In a nutshell, the term color contrast is referred to as the perception of how well a foreground (like text) stands from the background. This determines the readability for most people. Color contrast is measured in contrast ratio.
 
-### **Defining Contrast Ratio**
+### Defining Contrast Ratio
 
 [Contrast ratio](<https://en.wikipedia.org/wiki/Contrast_ratio#:~:text=The%20contrast%20ratio%20(CR)%20is,has%20similarities%20with%20dynamic%20range.>) is a numerical value, which determines the difference in light between the foreground and background.
 
@@ -38,7 +38,7 @@ Yeah, this is not a lecture about color theory. In a nutshell, the term color co
 
 <figure>
 
-![A comparison of different levels of contrast ratios. 21:1 the best, 7:1 sufficient, 3:1 moderate, and 1.45:1 being poor contrast](images/A-comparison-of-different-levels-of-contrast-ratios.-211-the-best-contrast-71-sufficient-contrast-31-moderate-contrast-and-1.451-bad-contrast-683x1024.png 'A-comparison-of-different-levels-of-contrast-ratios.-211-the-best-contrast-71-sufficient-contrast-31-moderate-contrast-and-1.451-bad-contrast')
+![A comparison of different levels of contrast ratios. 21:1 the best, 7:1 sufficient, 3:1 moderate, and 1.45:1 being poor contrast](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721896361/A_comparison_of_different_levels_of_contrast_ratios._211_the_best_contrast_71_sufficient_contrast_31_moderate_contrast_and_1.451_bad_contrast_wnqkrb.webp 'A-comparison-of-different-levels-of-contrast-ratios.-211-the-best-contrast-71-sufficient-contrast-31-moderate-contrast-and-1.451-bad-contrast')
 
 <figcaption>
 
@@ -48,7 +48,7 @@ Different color contrast ratios visualized.
 
 </figure>
 
-### **Why is Color Contrast Important for Accessibility?**
+### Why is Color Contrast Important for Accessibility?
 
 Users should be able to distinguish text or visual components on a web page and interact with it the way it was intended. Poor color contrast will make the experience suboptimal regardless of the user’s visual capabilities. Providing a good and sufficient color contrast will benefit all users. Especially users with color blindness or similar conditions, who have difficulties differentiating between similar colors.
 
@@ -70,7 +70,7 @@ Having color contrast limitations does not mean that the web page should be dull
 
 Anyhow, this is not the case. [Over 80 percent of the web pages had low contrast text](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#the-shortcomings). The findings are insane as the report does not contain every web page in the world. This report was concluded of the top one million home pages. Maybe they were not asked the question.
 
-### **Color Contrast in WCAG 2.2**
+### Color Contrast in WCAG 2.2
 
 Like in everything related to accessibility. The WCAG provides very informative and useful criteria and different conformance levels for color contrast. In the very first blog post, we identified [the four principles of WCAG](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
 
@@ -86,21 +86,21 @@ Like in everything related to accessibility. The WCAG provides very informative 
 
 For more detailed idea and practical examples, I suggest checking out the [WebAIM’s contrast article](https://webaim.org/articles/contrast/).
 
-## **Strategies for Achieving Proper Color Contrast**
+## Strategies for Achieving Proper Color Contrast
 
 As we found out, low-contrast text is a very common issue on web pages. So how do we dodge these nasty issues?
 
-### **Color Contrast Requirements Depends on Font Size**
+### Color Contrast Requirements Depends on Font Size
 
 Normal text, which is defined as smaller than 18pt/24px OR 14pt/18.67px when bolded, should have the minimum contrast ratio of 4.5:1 (AA). Large text which is defined as larger than 18pt/24px OR 14pt/18.67px when bolded, should have the minimum contrast ratio of 3:1 (AA). Note that these are the minimum requirements, and they might still cause issues for certain users. I would suggest aiming higher when possible.
 
-### **Enhance Contrast with Text Effects**
+### Enhance Contrast with Text Effects
 
 Text effects such as borders and outlines might help to achieve a certain contrast level. The color of a text outline or border can be used when measuring contrast.
 
 Keep in mind that text interaction effects are also subject to the requirements. Test the contrast ratio of all interaction indications, such as hover, focus, and active separately.
 
-### **Correctly Identify Links**
+### Correctly Identify Links
 
 It is advisory to keep the visual underline effects for inline links where body text and link text appear. Omitting the link underline in such places, the following must be met besides the 1.4.3 text contrast requirement of 4.5:1.
 
@@ -112,19 +112,19 @@ Some elements, like header and navigational elements, are exempted from this.
 
 The issues only deepen in you are going for AAA level of conformance. If you are going to omit the underline effect from links, I suggest reading [WebAIM’s WCAG 2.0 and Link Colors blog post](https://webaim.org/blog/wcag-2-0-and-link-colors/).
 
-### **Images of Text Need Proper Contrast**
+### Images of Text Need Proper Contrast
 
 Images of text are also subject to the contrast ratio requirements. Decorative images with text are not subject to the requirements. Decorative image could be a picture of books for example.
 
-### **Assure Proper Contrast for Gradients and Other Effects**
+### Assure Proper Contrast for Gradients and Other Effects
 
 WCAG 2.2 does not directly mention how to calculate the contrast ratio of text over gradient, semi-transparent colors, or background images. They are still subject to the contrast requirements. It is advisory to calculate the contrast from the lowest point.
 
-### \***\*Contrast Ratio Does Not Round Up\*\***
+### Contrast Ratio Does Not Round Up
 
 If you have a contrast ratio of 6.99:1, it does not mean it is close enough to satisfy the requirement of a contrast of 7:1.
 
-## **How To Check Color Contrast for Accessibility**
+## How To Check Color Contrast for Accessibility
 
 You can check contrast ratios online with multiple different tools. I have created a [contrast checker tool](https://www.swiftcontrast.com/) for you to use freely.
 
@@ -132,7 +132,7 @@ You can check contrast ratios online with multiple different tools. I have creat
 
 [WebAIM’s Wave](https://wave.webaim.org/) can also be used to analyze contrast ratios for page text elements.
 
-## **TL; DR / Recap**
+## Conclusion
 
 Color contrast means how well a foreground stands out from the background. This determines the readability for most people. Color contrast is measured in contrast ratio.
 

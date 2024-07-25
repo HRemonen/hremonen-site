@@ -3,7 +3,7 @@ title: 'Art of Crafting Descriptive Links'
 date: '2024-01-17'
 coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721896002/A_shocked_person_viewing_a_web_page_with_non-descriptive_links._A_list_of_links_window_is_open_on_the_side._clh7ua.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Have you noticed that some links on the web are not very descriptive and don´t give you a good idea of where they will take you? This can make it harder for users to navigate the web since they rely on the information scent provided by the links to decide where to go next. To make the user experience more accessible and enjoyable, it´s important to use descriptive links that clearly explain where the user will end up if they click on them. If you´re interested in learning more about how to create effective link texts, check out this post!'
 author:
   name: Henri Remonen
 featured: false
