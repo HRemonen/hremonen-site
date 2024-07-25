@@ -1,14 +1,14 @@
 ---
 title: 'A Quick Guide to Digital Accessibility - Navigating the Digital Landscape'
 date: '2023-12-22'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721913644/Navigating_the_Digital_Landscape_yzlaef.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Have you ever wondered what digital accessibility really means? When I first heard the term, I was somewhat unsure of what it entailed. However, as I delved deeper into the subject, I realized that accessibility is all about creating an inclusive experience for everyone, regardless of their abilities. It goes beyond just catering to those with disabilities, ensuring that all users have equal access to the same information and functionality. So why not take a closer look and learn more about how we can make the digital world more accessible for everyone?'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721913644/Navigating_the_Digital_Landscape_yzlaef.webp'
 categories:
   - 'accessibility'
   - 'wcag'
@@ -19,22 +19,22 @@ keywords:
   - 'disability'
   - 'dom'
   - 'html'
-  - 'screen-reader'
+  - 'screen reader'
   - 'w3c'
   - 'wcag'
-  - 'wcag-guidelines'
-  - 'web-content-accessibility-guidelines'
+  - 'wcag guidelines'
+  - 'web content accessibility guidelines'
   - 'webaim'
-  - 'webaim-million'
+  - 'webaim million'
 ---
 
-## **Digital Accessibility: Bridging the Gap for All Users**
+## Digital Accessibility: Bridging the Gap for All Users
 
 Expanding on the idea that accessibility goes beyond catering to mobility-impaired individuals, it’s crucial to recognize that disabilities manifest in diverse forms extending to people without permanent disabilities, encompassing a spectrum of challenges that users may encounter. Digital accessibility ensures inclusive digital design for everyone. Inclusivity means that there are no barriers preventing individuals from accessing functionality, information, or experience on digital platforms.
 
 Digital accessibility should be of high priority for people or organisations that want to develop high-quality and highly adopted web services, and not exclude people from using their product. [United Nations Convention on the Rights of Persons with Disabilities](https://social.desa.un.org/issues/disability/crpd/convention-on-the-rights-of-persons-with-disabilities-crpd) defines access to the web as a basic human right.
 
-## **Identifying Accessible Digital Services: A Dive into WCAG Compliance**
+## Identifying Accessible Digital Services: A Dive into WCAG Compliance
 
 [Many aspects of accessibility is fairly easy to implement](https://www.w3.org/WAI/fundamentals/accessibility-intro/#making). The best way to implement accessible services is to take accessibility into account from the very beginning of the development process, so you don't have to go back and do the same work again.
 
@@ -46,7 +46,7 @@ At the top level of the WCAG are the principles. The WCAG identify four guidelin
 
 <figure>
 
-![Web Content Accessibility Guidelines 2.2 hierarchy.](images/Web-Content-Accessibility-Guidelines-hierarchy-1024x576.png 'Web-Content-Accessibility-Guidelines-hierarchy')
+![Web Content Accessibility Guidelines 2.2 hierarchy.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721913655/Web_Content_Accessibility_Guidelines_hierarchy_sddrbk.webp 'Web-Content-Accessibility-Guidelines-hierarchy')
 
 <figcaption>
 
@@ -60,7 +60,7 @@ The primary goal of WCAG is to provide a comprehensive and universal framework f
 
 The WCAG principles cover the following aspects:
 
-### **[Perceivable](https://www.w3.org/WAI/WCAG22/quickref/#principle1)**
+### [Perceivable](https://www.w3.org/WAI/WCAG22/quickref/#principle1)
 
 The Perceivable principle focuses on making information and user interface components accessible to all users. This involves providing alternatives for non-text content, such as images and multimedia, to ensure that individuals who may not perceive such content visually can still understand and interact with it.
 
@@ -68,25 +68,25 @@ The perceivable principle emphasizes that we should create adaptable content tha
 
 Providing sufficient color contrast, relevant hover and focus actions, ensuring that text is resizable without loss of content or functionality, and avoiding content that could be hard to interact with or receive are key considerations in implementing the Perceivable principle.
 
-### **[Operable](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle2)**
+### [Operable](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle2)
 
 The Operable principle addresses the usability and navigability of web content. It emphasizes that all users, including those with disabilities, should be able to interact with and navigate through the content. This involves making sure that all functionality is available but not limited to a keyboard, allowing users to navigate and interact without time constraints, and avoiding design elements that could cause physical discomfort or seizures.
 
 Keyboard accessibility, consistent navigation, and providing users with enough time to read and complete tasks are key considerations in implementing the Operable principle.
 
-### **[Understandable](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle3)**
+### [Understandable](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle3)
 
 The Understandable principle focuses on ensuring that information and operation of the user interface are clear and comprehensible to all users. This involves making text readable and understandable, providing input assistance to prevent and correct errors, and designing consistent and predictable navigation and functionality. The goal is to create a user experience that is intuitive and straightforward, reducing the likelihood of confusion or misinterpretation.
 
 Techniques include using plain language, offering error prevention and correction mechanisms, providing predictable functionalities, and maintaining a consistent design throughout the website or application.
 
-### **[Robust](<https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle4)>)**
+### [Robust](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=241%2C242#principle4)
 
 The Robust principle addresses the need for web content to be robust and compatible with a wide range of technologies, including current and future assistive technologies. This involves using valid and well-formed code, ensuring compatibility with various browsers and platforms, and designing with an eye toward long-term sustainability.
 
 By adhering to the Robust principle, web developers can future-proof their content and contribute to a more inclusive digital environment, where users can access information using a diverse set of tools and technologies.
 
-## **How is Accessibility Evaluated**
+## How is Accessibility Evaluated
 
 [Accessibility evaluation](https://www.w3.org/WAI/test-evaluate/) aims to ensure that an online service is accessible to all users. Evaluation early in the development process and throughout the development process is important to ensure that accessibility guidelines are properly addressed. With early and ongoing evaluation, accessibility problems can be identified quickly, making them easier to address and problems easier to fix.
 
@@ -100,11 +100,11 @@ Automated evaluation tools provide a repeatable testing environment, however, th
 
 Expert reviews are carried out manually to check whether the online service meets a set of success criteria. Manual verification also includes screening techniques, where a website is used in a way that artificially degrades certain capabilities. The use of manual screening techniques is convenient throughout the design process, as they can be used to identify potential design problems early on.
 
-## **Common Shortcomings in Digital Accessibility: Lessons from the WebAIM Million Report**
+## Common Shortcomings in Digital Accessibility: Lessons from the WebAIM Million Report
 
 [The WebAIM Million](https://webaim.org/projects/million/) project gathers accessibility information from the top million web pages every year and creates statistics about the shortcomings, over 96 percent of the tested web pages have automatically detected WCAG 2 errors.
 
-### **The Shortcomings**
+### The Shortcomings
 
 - Home page complexity has grown over the years, and the more complex the web page, the more WCAG errors it has.
 
@@ -118,7 +118,7 @@ Expert reviews are carried out manually to check whether the online service meet
 
 - Government, social media, education, and health averaged better results. Adult content is the worst and shopping coming in at the 3rd last.
 
-## \***\*The Accessibility Paradox: Breaking a Barrier of Misconceptions\*\***
+## The Accessibility Paradox: Breaking a Barrier of Misconceptions
 
 The study conducted in ["Implementing Recommendations From Web Accessibility Guidelines: Would They Also Provide Benefits to Nondisabled Users"](https://journals.sagepub.com/doi/abs/10.1177/0018720816640962) concluded that WCAG is rarely implemented in practice. This is partly due to the belief that the guidelines are not beneficial for the existing customer base.
 
@@ -126,7 +126,7 @@ How could the existing user base consist of people with disabilities if the serv
 
 This will also be covered in a later to come article about the "side effects" of accessibility.
 
-### **Benefits of Adoption**
+### Benefits of Adoption
 
 The article concluded also that a high level of accessibility led to better performance and improved user ratings, providing benefits to users without disabilities. Implementing accessible design not only makes the website accessible to those with disabilities but also results in better user experience and customer satisfaction for the existing users, making the code more maintainable and readable for future development.
 
