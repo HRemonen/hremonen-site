@@ -1,14 +1,14 @@
 ---
 title: 'Painless Keyboard Accessibility'
 date: '2024-01-03'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721907472/person_in_wheelchair_in_front_of_a_computer_btrfwq.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Have you ever tried to navigate the web using just your keyboard? You perhaps found out that it is not always an easy job to do. Depending on the webpage it may seem like the navigation has been really thought out, but sometimes not so much. Reading this post will equip you with the essential knowledge about this fine craft.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721907472/person_in_wheelchair_in_front_of_a_computer_btrfwq.webp'
 categories:
   - 'accessibility'
   - 'html'
@@ -104,70 +104,21 @@ Testing keyboard control flow is not rocket science, it just requires manual and
 
 <figure>
 
-| Interaction                      | Keystrokes              | Notes |
-| -------------------------------- | ----------------------- | ----- |
-| Navigate to interactive elements | Tab – navigate forward. |
-
-Shift + Tab – navigate backward. | Check that keyboard focus indicators are present.
-
-Navigation order should be logical and intuitive |
-| Links | Enter – activate the link | |
-| Buttons | Enter – activate the button.
-
-Spacebar – activate the button. | Ensure elements with ARIA `role=”button”` can be activated with both key commands |
-| Checkboxes | Spacebar – check and uncheck a single checkbox item. | Users can typically select zero, one, multiple options. |
-| Radio buttons | Spacebar – select the focused option.
-
-↑ ↓ → ← – navigate between options.
-
-Tab – leave the group of radio buttons. | Users can select only one options from a group of radio buttons. |
-| Select (dropdown menu) | ↑ ↓ – navigate between options.
-
-Spacebar – expand dropdown menu.
-
-Enter and Esc – select option and collapse. | You can also filter or jump to options in the menu as you type letters. |
-| Autocomplete | Type to begin filtering.
-
-↑ ↓ – navigate between options.
-
-Enter – select an option. | |
-| Dialog | Esc – close dialog. | Modal dialogs should maintain keyboard focus.
-
-Non-modal dialogs should close automatically when they lose focus.
-
-When a dialog closes, focus should usually return to the element that opened the dialog. |
-| Slider | ↑ ↓ → ← – increase or decrease slider values.
-
-Home – beginning of slider.
-
-End – end of slider. | Tab and Shift + Tab should toggle each end for double-headed (range sliders) sliders.
-
-In some sliders PageUp and PageDown can move by a larger increment. |
-| Menu bar | ↑– previous menu option.
-
-↓ – next menu option.
-
-Enter – expand the menu and select and option.
-
-`←` – expand submenu.
-
-→ – collapse submenu. | A menu bar dynamically changes content within an application. Links that utilize Tab and Enter are not menu bars. |
-| Tab panel | “Arrow keys” – choose and activate previous and next tab.
-
-Tab – once to navigate into the group of tabs and once to navigate out of the group of tabs.  
-  | This is for 'application' tabs that dynamically change content within the tab panel. If a menu looks like a group of tabs but is actually a group of links to different pages, Tab and Enter are more appropriate. |
-| Tree menu | ↑– previous menu option.
-
-↓ – next menu option.
-
-← – expand submenu.
-
-→ – collapse submenu. | |
-| Scroll | ↑ ↓ – scroll vertically.
-
-← → – scroll horizontally.
-
-Spacebar and Spacebar + Shift – scroll by page | The Spacebar will, by default, scroll the page, but only if an interactive control that allows space bar input is not focused. Horizontal scrolling within the page should be minimized. |
+| Interaction                      | Keystrokes                                                                                                                                                                                                                  | Notes                                                                                                                                                                                                                   |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Navigate to interactive elements | <kbd>Tab</kbd> – navigate forward. <br> <br><kbd>Shift</kbd> + <kbd>Tab</kbd> – navigate backward.                                                                                                                          | Check that keyboard focus indicators are present.<br>Navigation order should be logical and intuitive                                                                                                                   |
+| Links                            | <kbd>Enter</kbd> – activate the link                                                                                                                                                                                        |                                                                                                                                                                                                                         |
+| Buttons                          | <kbd>Enter</kbd> – activate the button.<br><br><kbd>Spacebar</kbd> – activate the button.                                                                                                                                   | Ensure elements with ARIA `role=”button”` can be activated with both key commands                                                                                                                                       |
+| Checkboxes                       | <kbd>Spacebar</kbd> – check and uncheck a single checkbox item.                                                                                                                                                             | Users can typically select zero, one, multiple options.                                                                                                                                                                 |
+| Radio buttons                    | <kbd>Spacebar</kbd> – select the focused option.<br><br><kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> <kbd>←</kbd> – navigate between options.<br><br><kbd>Tab</kbd> – leave the group of radio buttons.                           | Users can select only one options from a group of radio buttons.                                                                                                                                                        |
+| Select (dropdown menu)           | <kbd>↑</kbd> <kbd>↓</kbd> – navigate between options.<br><br><kbd>Spacebar</kbd> – expand dropdown menu.<br><br><kbd>Enter</kbd> and <kbd>Esc</kbd> – select option and collapse.                                           | You can also filter or jump to options in the menu as you type letters.                                                                                                                                                 |
+| Autocomplete                     | Type to begin filtering.<br><br><kbd>↑</kbd> <kbd>↓</kbd> – navigate between options. <kbd>Enter</kbd> – select an option.                                                                                                  |                                                                                                                                                                                                                         |
+| Dialog                           | <kbd>Esc</kbd> – close dialog.                                                                                                                                                                                              | Modal dialogs should maintain keyboard focus.<br><br>Non-modal dialogs should close automatically when they lose focus.<br><br>When a dialog closes, focus should usually return to the element that opened the dialog. |
+| Slider                           | <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> <kbd>←</kbd> – increase or decrease slider values.<br><br><kbd>Home</kbd> – beginning of slider.<br><br><kbd>End</kbd> – end of slider.                                              | <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd> should toggle each end for double-headed (range sliders) sliders.<br><br>In some sliders <kbd>PageUp</kbd> and <kbd>PageDown</kbd> can move by a larger increment. |
+| Menu bar                         | <kbd>↑</kbd> – previous menu option.<br><br><kbd>↓</kbd> – next menu option.<br><br><kbd>Enter</kbd> – expand the menu and select and option.<br><br><kbd>←</kbd> – expand submenu.<br><br><kbd>→</kbd> – collapse submenu. | A menu bar dynamically changes content within an application. Links that utilize Tab and Enter are not menu bars.                                                                                                       |
+| Tab panel                        | “Arrow keys” – choose and activate previous and next tab.<br><br><kbd>Tab</kbd> – once to navigate into the group of tabs and once to navigate out of the group of tabs.                                                    | This is for 'application' tabs that dynamically change content within the tab panel. If a menu looks like a group of tabs but is actually a group of links to different pages, Tab and Enter are more appropriate.      |
+| Tree menu                        | <kbd>↑</kbd> – previous menu option.<br><br><kbd>↓</kbd> – next menu option.<br><br><kbd>←</kbd> – expand submenu.<br><br><kbd>→</kbd> – collapse submenu.                                                                  |                                                                                                                                                                                                                         |
+| Scroll                           | <kbd>↑</kbd> <kbd>↓</kbd> – scroll vertically.<br><br><kbd>←</kbd> <kbd>→</kbd> – scroll horizontally.<br><br><kbd>Spacebar</kbd> and <kbd>Spacebar</kbd> + <kbd>Shift</kbd> – scroll by page                               | The <kbd>Spacebar</kbd> will, by default, scroll the page, but only if an interactive control that allows space bar input is not focused. Horizontal scrolling within the page should be minimized.                     |
 
 <figcaption>
 
