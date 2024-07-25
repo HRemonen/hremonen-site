@@ -1,14 +1,14 @@
 ---
 title: 'How to Start Fostering the Accessibility Tree'
 date: '2024-01-31'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721897152/Start_Fostering_the_Accessibility_Tree_ayq0ft.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'When talking about trees you probably think of a forest or something like that, not so much a accessibility tree in your browser. However, if you do not foster your accessibility tree accordingly, it will start rotting and we do not like rot in our trees.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721897152/Start_Fostering_the_Accessibility_Tree_ayq0ft.webp'
 categories:
   - 'accessibility'
   - 'html'
@@ -118,36 +118,34 @@ Accessibility for semantic HTML elements is handled automatically. The browser w
 
 Imagine a web page prompts user the terms of service consent using the following non-semantic markup:
 
-```
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Service</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">Terms of Service</div>
-        <div class="content">
-            <div>Text containing the terms...</div>
-        </div>
-        <div class="button-container">
-            <span class="accept-btn">Accept</span>
-            <span class="decline-btn">Decline</span>
-        </div>
+      <div class="header">Terms of Service</div>
+      <div class="content">
+        <div>Text containing the terms...</div>
+      </div>
+      <div class="button-container">
+        <span class="accept-btn">Accept</span>
+        <span class="decline-btn">Decline</span>
+      </div>
     </div>
-</body>
+  </body>
 </html>
 ```
-
-HTML
 
 The markup produces the following accessibility tree:
 
 <figure>
 
-![Accessibility tree of non-semantic html elements](images/Accessibility-tree-of-non-semantic-elements-1024x286.png 'Accessibility-tree-of-non-semantic-elements')
+![Accessibility tree of non-semantic html elements](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721897264/Accessibility_tree_of_non-semantic_elements_brdzfk.webp 'Accessibility-tree-of-non-semantic-elements')
 
 <figcaption>
 
@@ -161,38 +159,36 @@ It looks like a tree, but it is not a very helpful tree. All the elements are ju
 
 Now, if the same page was to be developed using semantic elements:
 
-```
-<!DOCTYPE html>
+```html
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Terms of Service</title>
-</head>
-<body>
-  <article>
-    <header>
+  </head>
+  <body>
+    <article>
+      <header>
         <h1>Terms of Service</h1>
-    </header>
-    <section>
-      <div>Text containing the terms...</div>
-    </section>
-    <footer>
-      <button>Accept</button>
-      <button>Decline</button>
-    </footer>
-  </article>
-</body>
+      </header>
+      <section>
+        <div>Text containing the terms...</div>
+      </section>
+      <footer>
+        <button>Accept</button>
+        <button>Decline</button>
+      </footer>
+    </article>
+  </body>
 </html>
 ```
-
-HTML
 
 As a result, we get a more healthy-looking accessibility tree:
 
 <figure>
 
-![Accessibility tree of semantic HTML elements.](images/Accessibility-tree-of-semantic-html-elements-1024x393.png 'Accessibility-tree-of-semantic-html-elements')
+![Accessibility tree of semantic HTML elements.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721897265/Accessibility_tree_of_semantic_html_elements_r8ocom.webp 'Accessibility-tree-of-semantic-html-elements')
 
 <figcaption>
 
