@@ -1,14 +1,14 @@
 ---
 title: 'How React Re-renders?'
 date: '2024-02-28'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721905668/How_React_Re-renders_oe0zgo.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'React uses components and elements to build user interfaces. When a component is updated, React re-renders the elements. If you´re not familiar with these concepts, don´t worry. We´ll cover them briefly, and if this struct a chord you´re welcome to learn more as we can explore these concepts further!'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721905668/How_React_Re-renders_oe0zgo.webp'
 categories:
   - 'react'
   - 'tutorials'
@@ -34,7 +34,7 @@ A [component](https://react.dev/learn/your-first-component), as I like to think 
 
 React applications are composed of these components and usually the components are re-usable. Components are just normal JavaScript functions that return an element in a form of [JSX](https://react.dev/learn/writing-markup-with-jsx), which is just React specific syntax for writing the components.
 
-```
+```jsx
 const Component = () => (
   <div>
     <h1>Hello Component</h1>
@@ -44,13 +44,11 @@ const Component = () => (
 export default Component
 ```
 
-JSX
-
 Components also can take arguments just like normal JavaScript functions. These are called [props](https://react.dev/learn/passing-props-to-a-component) in React.
 
 When the following component is called, it creates an element.
 
-```
+```jsx
 const OtherComponent = () => {
   const element = <Component />
 
@@ -60,21 +58,15 @@ const OtherComponent = () => {
 export default OtherComponent
 ```
 
-JSX
-
 It is also possible to create elements using the [createElement](https://react.dev/reference/react/createElement) function.
 
-```
+```jsx
 const AnotherComponent = () => React.createElement(Component, null, null)
 ```
 
-JSX
-
-Elements are just JavaScript objects and cheap to create and they describe a component. `<Component />` is an element of the Component function which translates to `React.createElement(Component, null, null)`, though I would not suggest writing it like that. JSX is just a syntax for this function, but perhaps the industry standard for elements.
-
 Elements have a type which must be a valid React component, props which is an object of the props (arguments) and child nodes. We can even print out the element in our console to check what they are about.
 
-```
+```js
 {
   type: Component,
   key: null,
@@ -84,13 +76,11 @@ Elements have a type which must be a valid React component, props which is an ob
 }
 ```
 
-JavaScript
-
 We can see the type is a function (our component) and the key, ref and props are empty, as there are none. Based on the type React will either render the component if the type is a function or if the type is built-in HTML tag name, it will create a corresponding element and render that.
 
 Note that the components are by convention capitalized, and this makes a difference in the type.
 
-```
+```jsx
 const element = <Component />
 const element2 = <component />
 
@@ -98,11 +88,9 @@ console.log(element.type) // Component - function
 console.log(element2.type) // "component" - string
 ```
 
-JSX
-
 Also, a more accurate representation of react elements would be the following object.
 
-```
+```js
 {
   "$$typeof": Symbol.for("react.element"),
   type: Component(),
@@ -112,8 +100,6 @@ Also, a more accurate representation of react elements would be the following ob
   ...
 }
 ```
-
-JavaScript
 
 Each object must have the `$$typeof: Symbol.for(‘react.element’)` for [security reasons](https://github.com/facebook/react/pull/4832). However, this is not necessary for the scope of these examples. Also, it is not really advised to write elements as plain objects in your production code, use JSX or even the `React.createElement()` instead.
 
@@ -131,7 +117,7 @@ In React elements are immutable. They represent the UI at a certain point in tim
 
 The very first trigger for rendering your application is when the **root** element is rendered. The root element is a HTML element that will be managed by the React DOM to build the rest of the application.
 
-```
+```jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
@@ -143,15 +129,11 @@ root.render(
 )
 ```
 
-JSX
+Boom! So the Root element is just a `<div>` element with the id root.
 
-Boom! So the Root element is just a <div> element with the id root.
-
-```
+```html
 <div id="root"></div>
 ```
-
-HTML
 
 Which is then passed to [ReactDOM.createRoot](https://react.dev/reference/react-dom/client/createRoot) and the elements we want to render are called inside the `root.render()`. `ReactDOM.createRoot()` takes a [DOM element](https://developer.mozilla.org/en-US/docs/Web/API/Element) as argument, which is most likely a [HTMLElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement), like above, a `<div>` element.
 
@@ -173,7 +155,7 @@ After the initial trigger, the rendering will start. In a nutshell, rendering is
 
 Let’s take this example:
 
-```
+```jsx
 root.render(
   <React.StrictMode>
     <OtherComponent />
@@ -181,13 +163,11 @@ root.render(
 )
 ```
 
-JSX
-
 First `ReactDOM.createRoot()` is called for the `<div>` element and the result is placed into memory as the **root** variable. React will move into the next step and `root.render()` is called.
 
 React will call `OtherComponent()`**,** which will return the following JavaScript object.
 
-```
+```js
 {
   type: Component,
   key: null,
@@ -197,11 +177,9 @@ React will call `OtherComponent()`**,** which will return the following JavaScri
 }
 ```
 
-JavaScript
-
 Then React will check that type of the returned object and notice that the type is a component. This leads to React calling `Component(),` which returns an object.
 
-```
+```js
 {
   type: ”div”,
   key: null,
@@ -223,21 +201,17 @@ Then React will check that type of the returned object and notice that the type 
 }
 ```
 
-JavaScript
-
 Now the tree has traversed and no more elements are telling React, “hey, we have something to call further” (meaning more nested components).
 
 ### Commit
 
 The tree traversal will cause a DOM structure of the returned objects. Here, the structure would look like this.
 
-```
+```html
 <div>
   <h1>Hello Component</h1>
 </div>
 ```
-
-HTML
 
 React will call the `appendChild()` DOM API with the resulted DOM structure it has created, which will then result in the UI changing on users’ browser.
 
@@ -267,23 +241,21 @@ The “key” (not the prop) for this is about the type of React elements. When 
 
 If the type of two elements are different, React will destroy the old tree and build the new tree from scratch. Basically, the same way as we already saw in the Rendering section of this article, but rather than starting from the root element, the new “root” is the element that triggered the render.
 
-It does not matter if the element is a DOM element, <div>, <a> etc. or a component – it will still lead to full rebuild as the type has changed. Every child element is also removed, including its state.
+It does not matter if the element is a DOM element, `<div>`, `<a>` etc. or a component – it will still lead to full rebuild as the type has changed. Every child element is also removed, including its state.
 
 #### Elements of the Same Type
 
 If the type of two DOM elements are the same, React will look at the attributes and update only the changed attributes, keeping the underlying DOM node. For example, in the following situation, only the className will get updated in the DOM node.
 
-```
+```html
 <h1 className="before">Comparison</h1>
 
 <h1 className="after">Comparison</h1>
 ```
 
-HTML
-
 The instance of updated components stays the same to maintain the state of re-renders. If the type of two components are the same, React will update the props of the underlying component instance. Ultimately, this means React re-renders the component, taking the existing component and updating it with the new props.
 
-```
+```js
 // Before                // After
 {                        {
   type: Component,         type: Component,
@@ -296,15 +268,13 @@ The instance of updated components stays the same to maintain the state of re-re
 Component === Component // true – re-render
 ```
 
-JavaScript
-
 Re-rendering a component will preserve the DOM node and state, etc.
 
 ### Batching
 
 Possible updates are done in [batches](https://react.dev/learn/queueing-a-series-of-state-updates) as it will prevent multiple re-renders. For example, the following will not increment the count by two.
 
-```
+```jsx
 const Batching = () => {
   const [count, setCount] = React.useState(0)
 
@@ -316,13 +286,13 @@ const Batching = () => {
   return (
     <div>
       <p>Count: {count}</p>
-      <button type="button" onClick={handleClick}>Increment</button>
+      <button type='button' onClick={handleClick}>
+        Increment
+      </button>
     </div>
   )
 }
 ```
-
-JSX
 
 ## What Really Triggers a Re-render?
 
@@ -336,7 +306,7 @@ State can mean so much more in React though, it is not just the `React.useState`
 
 Against some belief that props changing would trigger a re-render is bogus statement. Let’s consider the following example.
 
-```
+```jsx
 const CheckBox = ({isSelected, onChange}: {isSelected: boolean, onChange: () => void}) => (
   <label htmlFor="checkbox">
     <span>I consent that my soul is yours for ever.</span>
@@ -368,15 +338,13 @@ const Form = () => {
 }
 ```
 
-JSX
-
 The `FormDisclaimer` element will be rendered on every single time the checkbox’s state change, even though it does not depend on the checked state. This is a design choice of React, because it’s hard to know whether child components depend on parents’ state.
 
 ### Context Updates
 
 [Context Providers](https://react.dev/learn/passing-data-deeply-with-context) might help passing the same props for multiple child components and to prevent [prop drilling](https://www.geeksforgeeks.org/what-is-prop-drilling-and-how-to-avoid-it/). However, when the context’s value changes, React will update all the components reading from it!
 
-```
+```jsx
 const Form = () => {
   const checked = React.useContext(FormContext)
 
@@ -389,8 +357,6 @@ const Form = () => {
   )
 }
 ```
-
-JSX
 
 If the checked value changes in the `FormContext`, all the components reading it will get updated. Of course also every children of the re-rendered components will get re-rendered.
 
