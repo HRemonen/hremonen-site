@@ -1,14 +1,14 @@
 ---
 title: 'React 19 - What to Expect?'
 date: '2024-03-06'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721915240/React_19_-_What_to_Expect_ht5ryx.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'The latest version of React is just around the corner and we can expect it to be released later this year. Some of the exciting features that we can look forward to are React Forget, server actions, new hooks, and error boundaries. Keep an eye out for the launch and be prepared to take advantage of these new features!'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721915240/React_19_-_What_to_Expect_ht5ryx.webp'
 categories:
   - 'react'
 keywords:
@@ -36,7 +36,7 @@ One of the React maintainers, Andrew Clark, [tweeted](https://twitter.com/acdlit
 
 - throw promise → use(promise)
 
-- <Context.Provider> → <Context>
+- `<Context.Provider>` → `<Context>`
 
 While some of these listed are semantic changes, there is still a lot of exciting stuff going on. This post will not cover every change incoming, but some changes I look forward to.
 
@@ -48,7 +48,7 @@ The old hooks present challenges, such as code clutter, potential errors, and on
 
 <figure>
 
-https://www.youtube.com/watch?v=lGEMwh32soc
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lGEMwh32soc?si=iewjdcS3Es9_13B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <figcaption>
 
@@ -74,33 +74,31 @@ I like to think about the actions of doing at least some of the job that I have 
 
 The new hook `useFormStatus` is used to get the status of the last form submission. It returns status information for a parent `<form>` and not for any `<form>` rendered in the same component calling the hook or child components.
 
-```
+```jsx
 const { pending, data, method, action } = useFormStatus()
 ```
 
-JSX
-
 The hook will return a JavaScript object with the following four properties:
 
-1. **pending**: A boolean value of the submission status of the parent <form> element.
+1. **pending**: A boolean value of the submission status of the parent `<form>` element.
 
-2. **data**:JavaScript object that contains the data the parent <form> is submitting.
+2. **data**:JavaScript object that contains the data the parent `<form>` is submitting.
 
 3. **method**: a string of the used HTTP method. The method can be **‘get’** or **‘post’**, by default it is **‘get’**.
 
-4. **action**: A reference to the action function passed as props to the parent <form>.
+4. **action**: A reference to the action function passed as props to the parent `<form>`.
 
 The component using this hook must be within a `<form>` element.
 
-```
-import { useFormStatus } from "react-dom"
+```jsx {14-16}
+import { useFormStatus } from 'react-dom'
 
 const Submit = () => {
   const { pending } = useFormStatus()
 
   return (
-    <button type="submit" disabled={pending}>
-      {pending ? "Submitting" : "Submit"}
+    <button type='submit' disabled={pending}>
+      {pending ? 'Submitting' : 'Submit'}
     </button>
   )
 }
@@ -112,11 +110,9 @@ const Form = ({ action }) => (
 )
 ```
 
-JSX
-
 The following will not work.
 
-```
+```jsx /<Submit />/
 const Form = ({ action }) => (
   <form action={action}>
     ...
@@ -126,17 +122,13 @@ const Form = ({ action }) => (
 )
 ```
 
-JSX
-
 ### Updating Form State with useFormState
 
 The hook `useFormState` let’s you update state based on the result of a form action.
 
-```
+```jsx
 const [state, formAction] = useFormState(fn, initialState, permalink?)
 ```
-
-JSX
 
 Passing useFormState an existing form action function and an initial state will return a new form action to use in the form. The latest form state gets also passed into the function that is provided on the declaration.
 
@@ -146,8 +138,8 @@ The hook returns an array of two items:
 
 2. The new **formAction** that can be passed as the **action** prop forward.
 
-```
-import { useFormState } from 'react-dom';
+```jsx
+import { useFormState } from 'react-dom'
 
 const Form = ({ action }) => {
   const [state, formAction] = useFormState(action, null)
@@ -156,10 +148,9 @@ const Form = ({ action }) => {
     <form action={formAction}>
       <Submit />
     </form>
-)}
+  )
+}
 ```
-
-JSX
 
 When the **form** is submitted, the **action** function is called. The returned **formAction** will become the **current state** of the form.
 
@@ -173,10 +164,10 @@ This hook allows us to read [context](https://react.dev/learn/passing-data-deepl
 
 As previously we have read the value of a context with the hook [useContext()](https://react.dev/reference/react/useContext) we can now read it with the `use(context)` hook.
 
-```
+```jsx
 // Old way of doing this
 
-import { useContext } from "react"
+import { useContext } from 'react'
 
 const Form = () => {
   const values = useContext(FormContext)
@@ -184,12 +175,10 @@ const Form = () => {
 }
 ```
 
-JSX
-
-```
+```jsx
 // New way of doing this
 
-import { use } from "react"
+import { use } from 'react'
 
 const Form = () => {
   const values = use(FormContext)
@@ -197,16 +186,14 @@ const Form = () => {
 }
 ```
 
-JSX
-
 Nothing special, the syntax has changed. Except that the `use(context)`, remember, can be used in loops or conditionally. It provides more flexibility. Using the new hook, React will search the component tree and find the closest context provider above the component that calls it.
 
 ### Suspending on the Client with use(promise)
 
 The new `use(promise)` allows suspending on the client. Passing a promise to the hook will suspend on it until the promise resolves.
 
-```
-import { use } from "react"
+```jsx
+import { use } from 'react'
 
 const Table = ({ tableDataPromise }) => {
   const tableContent = use(tableDataPromise)
@@ -214,21 +201,17 @@ const Table = ({ tableDataPromise }) => {
 }
 ```
 
-JSX
-
 The hook also allows for a client component to read the promise that was created by a server component.
 
-```
-"use server"
+```jsx
+'use server'
 
 const TableContainer = () => {
   const tableDataPromise = fetchTableData()
 
-  return <Table tableDataPromise={ tableDataPromise } />
+  return <Table tableDataPromise={tableDataPromise} />
 }
 ```
-
-JSX
 
 When passing a Promise from server to client, its resolved values must be serializable.
 
@@ -236,10 +219,10 @@ Why not just resolve on the server? Well, resolving Promises in server component
 
 As the component calling `use(promise)` (our `<Table />`) _suspends_ while the Promise is pending, it can be wrapped inside the React [Suspense](https://react.dev/reference/react/Suspense) element. Suspense lets you display a fallback until the children element has finished loading. For example, you could display a loading skeleton.
 
-```
-"use server"
+```jsx
+'use server'
 
-import { Suspense } from "react"
+import { Suspense } from 'react'
 
 const TableContainer = () => {
   const tableDataPromise = fetchTableData()
@@ -252,8 +235,6 @@ const TableContainer = () => {
 }
 ```
 
-JSX
-
 ### Dealing with Rejected Promises
 
 Rejected Promises can be handled in two fashions using the `use(promise)` hook:
@@ -264,11 +245,11 @@ Rejected Promises can be handled in two fashions using the `use(promise)` hook:
 
 You cannot use the hook inside try-catch block. If you wish to display an error to the users when the Promise is rejected, an [ErrorBoundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) element can be used.
 
-```
-"use server"
+```jsx
+'use server'
 
-import { Suspense } from "react"
-import { ErrorBoundary } from "react-error-boundary"
+import { Suspense } from 'react'
+import { ErrorBoundary } from 'react-error-boundary'
 
 const TableContainer = () => {
   const tableDataPromise = fetchTableData()
@@ -282,8 +263,6 @@ const TableContainer = () => {
   )
 }
 ```
-
-JSX
 
 React does not have a batteries included ErrorBoundary component, which is why a third party solution was used here.
 
