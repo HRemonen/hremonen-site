@@ -1,14 +1,14 @@
 ---
 title: 'React Reconciliation and React Fiber'
 date: '2024-03-27'
-coverImage: ''
+coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721983859/React_Reconciliation_React_Fiber_vn5o9r.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'In our article about how React re-renders we managed to peek at how React reconciliation algorithm works. However, we did not go deep into its soul and inner parts. I wanted to write a follow-up post that will go deeper into the internals of React and more specifically – the reconciler and the React Fiber.'
 author:
   name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721983859/React_Reconciliation_React_Fiber_vn5o9r.webp'
 categories:
   - 'react'
   - 'tutorials'
@@ -57,7 +57,7 @@ Suppose we have the following situation, where we are eagerly waiting for a high
 
 <figure>
 
-![Last-in-first-out stack of work units. The top most item being low priority and the bottom item being high priority.](images/Lifo-stack-220x300.png 'Lifo-stack')
+![Last-in-first-out stack of work units. The top most item being low priority and the bottom item being high priority.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721983981/Lifo_stack_ygx0hz.webp 'Lifo-stack')
 
 <figcaption>
 
@@ -71,7 +71,7 @@ To update the input field, the reconciler will first go through the three units 
 
 <figure>
 
-![Representation of the LIFO stack where the newest unit of work added to the stack is processed first.](images/Lifo-stack-update.png 'Lifo-stack-update')
+![Representation of the LIFO stack where the newest unit of work added to the stack is processed first.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_560/v1721983985/Lifo_stack_update_hcghym.webp 'Lifo-stack-update')
 
 <figcaption>
 
@@ -143,7 +143,7 @@ Which produces the following Fiber node tree in the reconciliation process:
 
 <figure>
 
-![React Fiber tree. Each element has children and sibling elements and a return data flow.](images/React-Fiber-tree.png 'React-Fiber-tree')
+![React Fiber tree. Each element has children and sibling elements and a return data flow.](https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto/v1721983983/React_Fiber_tree_luhoml.webp 'React-Fiber-tree')
 
 <figcaption>
 
