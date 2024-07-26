@@ -3,7 +3,7 @@ title: 'Nested Components are an Anti-Pattern in React'
 date: '2024-03-20'
 coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721906860/Nested_Components_are_an_Anti-Pattern_in_React_sxuuit.webp'
 coverImageAttribute: ''
-excerpt: ''
+excerpt: 'Even though declaring functions inside other functions can be a used technique to tackle problems, it is an anti-pattern in React. Using nested components in React will lead to performance issues and unexpected bugs, if you would like to know why that is, this is your chance to do so!'
 author:
   name: Henri Remonen
 featured: false
