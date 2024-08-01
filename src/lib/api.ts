@@ -96,9 +96,7 @@ export function getPostsBySearchOptions(
 
   if (!category) return allPosts
 
-  const posts = allPosts.filter((post) =>
-    post.categories.includes(category as string)
-  )
+  const posts = allPosts.filter((post) => post.categories.includes(category))
 
   return posts
 }
