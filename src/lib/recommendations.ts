@@ -48,7 +48,7 @@ export default function getRecommendedPosts(
     score: scorePost(basePost, post),
   }))
 
-  const sortedPosts = scoredPosts.sort((a, b) => b.score - a.score).slice(0, 3)
+  const sortedPosts = scoredPosts.toSorted((a, b) => b.score - a.score)
 
-  return sortedPosts.map((scoredPost) => scoredPost.post)
+  return sortedPosts.slice(0, 3).map((scoredPost) => scoredPost.post)
 }
