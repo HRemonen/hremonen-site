@@ -1,0 +1,22 @@
+name: Static analysis
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  Run-Analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install project dependencies
+        run: npm install
+
+      - name: Run eslint
+        run: npm run lint
+
+      - name: Run prettier
+        run: npm run format
