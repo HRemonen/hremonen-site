@@ -6,7 +6,7 @@ interface SubSectionTitleProps {
 }
 
 const SubSectionTitle = ({ title, subtitle }: SubSectionTitleProps) => (
-  <div className='mb-12 w-full justify-center lg:mb-16'>
+  <div className='mb-12 mt-8 w-full justify-center lg:mb-16'>
     <div className='flex flex-col items-start space-y-3 lg:space-y-5'>
       <div className='inline-flex items-center space-x-2'>
         <Interpunct />
