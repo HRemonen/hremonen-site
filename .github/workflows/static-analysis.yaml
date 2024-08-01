@@ -5,6 +5,9 @@ on:
     branches:
       - main
       - master
+  pull_request:
+    types: [opened, reopened]
+  workflow_call:
 
 jobs:
   Run-Analysis:
