@@ -53,8 +53,8 @@ pre {
   overflow-x: auto;
   border: 1px solid #353841;
   border-radius: 0.5rem;
-  padding-left: 0!important;
-  padding-right: 0!important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 code {
@@ -74,11 +74,11 @@ code > [data-line]::before {
   color: gray;
 }
 
-code[data-line-numbers-max-digits="2"] > [data-line]::before {
+code[data-line-numbers-max-digits='2'] > [data-line]::before {
   width: 2rem;
 }
 
-code[data-line-numbers-max-digits="3"] > [data-line]::before {
+code[data-line-numbers-max-digits='3'] > [data-line]::before {
   width: 3rem;
 }
 
@@ -88,7 +88,7 @@ code > [data-highlighted-line] {
 }
 
 [data-highlighted-chars] {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   background-color: #52525b80;
   box-shadow: 0 0 0 4px #52525b80;
 }
