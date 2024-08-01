@@ -1,6 +1,7 @@
 import CategoryFormatter from '@/app/_components/formatters/category-formatter'
 import DateFormatter from '@/app/_components/formatters/date-formatter'
-import { Interpunct } from '@/app/_components/ui/icons'
+import { ArrowIcon, Interpunct } from '@/app/_components/ui/icons'
+import StyledLink from '@/app/_components/ui/styled-link'
 import Image from 'next/image'
 
 type PostHeaderProps = {
@@ -16,7 +17,7 @@ const PostHeader = ({
   coverImage,
   categories,
 }: PostHeaderProps) => (
-  <header className='mx-auto mb-16 max-w-3xl px-2 xs:px-8'>
+  <header className='mx-auto mb-16 max-w-3xl border-b border-gray-600 px-2 pb-12 xs:px-8'>
     <Image
       src={coverImage}
       alt=''
@@ -38,6 +39,12 @@ const PostHeader = ({
       <div className='uppercase'>
         <CategoryFormatter categories={categories} />
       </div>
+    </div>
+
+    <div className='mt-8'>
+      <StyledLink href='/blog'>
+        <ArrowIcon /> Nah, not interested in this post
+      </StyledLink>
     </div>
   </header>
 )
