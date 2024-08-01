@@ -5,7 +5,6 @@ import clsx from 'clsx'
 import { BLOG_NAME, BLOG_URL, BLOG_LOCALE, BLOG_AUTHOR } from '@/lib/constants'
 import { getCategories, getPostsBySearchOptions } from '@/lib/api'
 
-import PageContainer from '@/app/_components/ui/page-container'
 import {
   PageMainTitle,
   PageMainSection,
@@ -66,7 +65,7 @@ const Blog = ({ searchParams }: PageProps) => {
   const posts = getPostsBySearchOptions({ category: searchCategory })
 
   return (
-    <PageContainer>
+    <>
       <PageMainSection>
         <PageMainTitle title='The blog' />
         <PageSubtitle type='custom'>
@@ -90,7 +89,7 @@ const Blog = ({ searchParams }: PageProps) => {
       </PageMainSection>
 
       <PostSection posts={posts} />
-    </PageContainer>
+    </>
   )
 }
 

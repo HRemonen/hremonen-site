@@ -8,7 +8,6 @@ import {
   BLOG_LOCALE,
 } from '@/lib/constants'
 import markdownToHtml from '@/lib/markdownToHtml'
-import PageContainer from '@/app/_components/ui/page-container'
 import PostBody from '@/app/_pages/post/post-body'
 import PostHeader from '@/app/_pages/post/post-header'
 import PostFooter from '@/app/_pages/post/post-footer'
@@ -30,18 +29,16 @@ const Post = async ({ params }: Params) => {
   const recommendations = getRelatedPosts(post)
 
   return (
-    <PageContainer>
-      <article className='mx-auto mb-32'>
-        <PostHeader
-          title={post.title}
-          date={post.date}
-          coverImage={post.coverImage}
-          categories={post.categories}
-        />
-        <PostBody content={content} />
-        <PostFooter slug={post.slug} recommendations={recommendations} />
-      </article>
-    </PageContainer>
+    <article className='mx-auto mb-32'>
+      <PostHeader
+        title={post.title}
+        date={post.date}
+        coverImage={post.coverImage}
+        categories={post.categories}
+      />
+      <PostBody content={content} />
+      <PostFooter slug={post.slug} recommendations={recommendations} />
+    </article>
   )
 }
 
