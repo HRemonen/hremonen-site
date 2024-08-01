@@ -26,8 +26,6 @@ keywords:
   - 'nextjs markdown blog'
 ---
 
-# Migrating from WordPress to Next.js
-
 When I first started this blog I was thinking about two different routes to start it:
 
 - Setup a WordPress site
