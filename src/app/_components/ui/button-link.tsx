@@ -30,13 +30,13 @@ const ButtonLink = ({ linkText, href }: ButtonLinkProps) => (
 
     <Link
       href={href}
-      className='group relative inline-flex'
+      className='group relative inline-flex outline-none'
       style={{ filter: 'url(#buttonFilter)' }}
     >
-      <div className='relative inline-flex w-auto items-center justify-center overflow-hidden rounded-full bg-cta px-5 py-2 leading-tight text-text'>
+      <div className='relative inline-flex w-auto items-center justify-center overflow-hidden rounded-full bg-cta px-5 py-2 leading-tight text-text ring-text group-hover:bg-transparent group-hover:ring-2 group-focus:bg-transparent group-focus:ring-2 dark:ring-text-dark dark:group-hover:text-text-dark dark:group-focus:text-text-dark'>
         <p className='relative top-px inline-flex flex-shrink-0'>{linkText}</p>
       </div>
-      <div className='-ml-1 flex h-9 w-9 flex-shrink-0 transform items-center justify-center overflow-hidden rounded-full bg-cta text-text transition-transform group-hover:translate-x-3 group-hover:rotate-45 group-focus:translate-x-3 group-focus:rotate-45'>
+      <div className='-ml-1 flex h-9 w-9 flex-shrink-0 transform items-center justify-center overflow-hidden rounded-full bg-cta text-text ring-text transition-transform duration-700 group-hover:translate-x-3 group-hover:rotate-45 group-hover:bg-transparent group-hover:ring-2 group-focus:translate-x-3 group-focus:rotate-45 group-focus:bg-transparent group-focus:ring-2 dark:ring-text-dark dark:group-hover:text-text-dark dark:group-focus:text-text-dark'>
         <svg
           className='h-3 w-3 fill-current'
           xmlns='http://www.w3.org/2000/svg'
