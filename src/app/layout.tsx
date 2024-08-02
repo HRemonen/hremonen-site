@@ -9,6 +9,7 @@ import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import DarkModeProvider from '@/app/_components/theme/dark-mode-provider'
 import Navbar from '@/app/_components/navbar/navbar'
+import Footer from '@/app/_components/footer/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,6 +39,7 @@ const RootLayout = ({
         <main id='main-content' className='min-h-screen'>
           {children}
         </main>
+        <Footer />
         <Analytics />
       </DarkModeProvider>
     </body>
