@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Link from 'next/link'
 import clsx from 'clsx'
 
 import { BLOG_NAME, BLOG_URL, BLOG_LOCALE, BLOG_AUTHOR } from '@/lib/constants'
@@ -11,6 +10,7 @@ import {
   PageSubtitle,
 } from '@/app/_components/ui/page-main'
 import PostSection from '../_pages/blog/posts'
+import StyledLink from '../_components/ui/styled-link'
 
 interface CategoryLinkProps {
   category: string
@@ -26,31 +26,36 @@ const CategoryLink = ({
   base = false,
 }: CategoryLinkProps) => (
   <li className='mr-4 lg:mr-8'>
-    <Link
+    <StyledLink
       href={{
         pathname: '/blog',
         query: base ? {} : { category },
       }}
-      className='group inline-flex items-end outline-none duration-200'
+      className='group inline-flex items-end after:bg-text dark:after:bg-text-dark'
     >
       <p
         className={clsx(
-          current && 'text-text dark:text-text-dark',
-          'leading-tighter text-balance font-sans text-4xl lowercase tracking-tight text-gray-500 transition group-hover:text-text group-focus:text-text dark:text-gray-200 dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
+          current
+            ? 'text-text dark:text-text-dark'
+            : 'text-gray-500 dark:text-gray-400',
+          'leading-tighter text-balance font-sans text-4xl lowercase tracking-tight transition group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
         )}
       >
         {category}
       </p>
+
       <span
         className={clsx(
-          current && 'text-text dark:text-text-dark',
-          'mb-2 ml-1 text-sm text-gray-500 dark:text-gray-200'
+          current
+            ? 'text-text dark:text-text-dark'
+            : 'text-gray-500 dark:text-gray-400',
+          'mb-2 ml-2 text-sm group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
         )}
       >
         {' '}
         {count} <span className='sr-only'>posts</span>
       </span>
-    </Link>
+    </StyledLink>
   </li>
 )
 

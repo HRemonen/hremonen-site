@@ -1,13 +1,12 @@
 import clsx from 'clsx'
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 
-interface StyledLinkProps {
-  href: string
-  className?: string
-  children: React.ReactNode
-}
-
-const StyledLink = ({ href, className, children }: StyledLinkProps) => (
+const StyledLink = ({
+  href,
+  className,
+  children,
+}: Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkProps> &
+  LinkProps) => (
   <Link
     href={href}
     className={clsx(
@@ -15,7 +14,7 @@ const StyledLink = ({ href, className, children }: StyledLinkProps) => (
       className
     )}
   >
-    <span className='flex items-center'>{children}</span>
+    {children}
   </Link>
 )
 

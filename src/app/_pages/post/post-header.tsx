@@ -43,7 +43,9 @@ const PostHeader = ({
 
     <div className='mt-8'>
       <StyledLink href='/blog'>
-        <ArrowIcon /> Nah, not interested in this post
+        <span className='flex items-center gap-2'>
+          <ArrowIcon /> Nah, not interested in this post
+        </span>
       </StyledLink>
     </div>
   </header>
