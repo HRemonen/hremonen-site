@@ -29,7 +29,7 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
       className={clsx(
         shown ? 'scale-100' : 'scale-0',
-        'fixed bottom-10 right-10 flex flex-col items-center justify-center gap-2 rounded-3xl bg-cta px-1 pt-3 text-text transition-transform duration-200'
+        'fixed bottom-10 right-10 flex flex-col items-center justify-center gap-2 rounded-3xl bg-cta px-1 pt-3 text-text outline-none ring-text transition-transform duration-700 hover:bg-transparent hover:ring-2 focus:bg-transparent focus:ring-2 dark:ring-text-dark dark:hover:text-text-dark dark:focus:text-text-dark'
       )}
     >
       <svg
