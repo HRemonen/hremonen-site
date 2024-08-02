@@ -1,6 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
+import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
 const ScrollToTopButton = () => {
@@ -23,16 +24,17 @@ const ScrollToTopButton = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
-    <button
-      type='button'
-      aria-label='scroll to top'
+    <Link
+      href='#main-content'
+      aria-label='Back to top of main content'
       onClick={scrollToTop}
       className={clsx(
         shown ? 'scale-100' : 'scale-0',
-        'fixed bottom-10 right-10 flex flex-col items-center justify-center gap-2 rounded-3xl bg-cta px-1 pt-3 text-text outline-none ring-text transition-transform duration-700 hover:bg-transparent hover:ring-2 focus:bg-transparent focus:ring-2 dark:ring-text-dark dark:hover:text-text-dark dark:focus:text-text-dark'
+        'fixed bottom-10 right-10 flex flex-col items-center justify-center gap-2 rounded-3xl bg-cta px-1 pt-3 text-text outline-none ring-text transition-transform duration-700 hover:bg-[#fcfcfc] hover:ring-2 focus:bg-[#fcfcfc] focus:ring-2 dark:ring-text-dark dark:hover:bg-[#1f2028] dark:hover:text-text-dark dark:focus:bg-[#1f2028] dark:focus:text-text-dark'
       )}
     >
       <svg
+        role='presentation'
         className='inline-flex h-3 w-3 -rotate-90 fill-current'
         width='14'
         height='16'
@@ -47,7 +49,7 @@ const ScrollToTopButton = () => {
       >
         <span>TO TOP</span>
       </div>
-    </button>
+    </Link>
   )
 }
 export default ScrollToTopButton
