@@ -99,7 +99,7 @@ const Menu = () => {
       <button
         aria-label='Open navigation menu'
         type='button'
-        className='group/menu h-10 w-10 outline-none'
+        className='group/menu h-10 w-10 rounded-full outline-none ring-link ring-offset-4 ring-offset-[#fcfcfc] transition duration-700 ease-in-out hover:ring-2 focus:ring-2 dark:ring-link-dark dark:ring-offset-[#1f2028]'
         onClick={handleMenuToggle}
       >
         <div className='relative flex h-full items-center justify-center'>
