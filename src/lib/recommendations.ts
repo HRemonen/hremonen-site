@@ -48,7 +48,8 @@ export default function getRecommendedPosts(
     score: scorePost(basePost, post),
   }))
 
-  const sortedPosts = scoredPosts.toSorted((a, b) => b.score - a.score)
+  // toSorted() function does not work in GitHub Actions for some reason -- the node version should be over 20 there
+  scoredPosts.sort((a, b) => b.score - a.score)
 
-  return sortedPosts.slice(0, 3).map((scoredPost) => scoredPost.post)
+  return scoredPosts.slice(0, 3).map((scoredPost) => scoredPost.post)
 }
