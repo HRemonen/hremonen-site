@@ -4,7 +4,7 @@ import StyledLink from '../ui/styled-link'
 
 const Footer = () => (
   <footer className='rounded-t-3xl bg-text px-8 pb-16 pt-48 text-white dark:bg-black'>
-    <div className='flex justify-between sm:container md:px-10'>
+    <div className='flex flex-col justify-between sm:container xs:flex-row md:px-10'>
       <div>
         <p className='font-sans text-xl font-medium md:text-2xl'>
           Henri Remonen
@@ -31,20 +31,20 @@ const Footer = () => (
         </div>
       </div>
       <div>
-        <div className='mb-4 inline-flex items-center space-x-2'>
+        <div className='mb-4 mt-12 inline-flex items-center space-x-2 xs:mt-0'>
           <Interpunct />
           <p className='text-sm font-light lg:text-base'>Contact</p>
         </div>
         <StyledLink
-          className='after:bg-link-dark hover:text-link-dark focus:text-link-dark'
+          className='text-sm after:bg-link-dark hover:text-link-dark focus:text-link-dark lg:text-base'
           href='mailto:henri@remonen.fi'
         >
           Email me
         </StyledLink>
       </div>
-      <div>
-        <p className='text-sm'>All rights reserved © Henri Remonen</p>
-      </div>
+    </div>
+    <div className='pt-16 md:px-10'>
+      <p className='text-sm'>All rights reserved © Henri Remonen</p>
     </div>
   </footer>
 )
