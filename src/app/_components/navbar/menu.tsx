@@ -44,7 +44,7 @@ const NavGroup = ({ children, title }: NavGroupProps) => {
       className='border-t border-gray-200 bg-[#fcfcfc] px-2 py-2 dark:border-gray-700 dark:bg-[#1f2028]'
     >
       <div className='sm:flex sm:items-start'>
-        <div className='mt-3 w-full text-center sm:mt-0 sm:text-left'>
+        <div className='mt-3 w-full text-left sm:mt-0'>
           <h3
             id={navId}
             className='px-2 text-xs font-semibold uppercase text-accent-text dark:text-accent-text-dark'
@@ -165,12 +165,12 @@ const Menu = () => {
                   return (
                     <li
                       key={item.name}
-                      className='w-full rounded-lg px-2 py-1.5 text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
+                      className='w-full rounded-lg text-base font-normal text-text focus-within:ring-2 focus-within:ring-link hover:cursor-pointer hover:bg-gray-200 hover:text-accent-text dark:text-text-dark dark:focus-within:ring-link-dark dark:hover:bg-gray-800 dark:hover:text-accent-text-dark md:text-sm'
                     >
                       <Link
                         aria-current={isActive ? 'page' : 'false'}
                         href={item.href}
-                        className='flex justify-between outline-none'
+                        className='flex items-center justify-between px-2 py-1.5 text-center outline-none'
                         onClick={handleMenuToggle}
                       >
                         {item.name}{' '}
