@@ -6,7 +6,7 @@ coverImageAttribute: 'Photo by [Declan Sun](https://unsplash.com/@declansun)'
 excerpt: 'In this article, I´ve distilled insights from my bachelor´s thesis into a concise form, focusing on the benefits of following accessibility guidelines and creating accessible content. This article aims to reveal the positive outcomes of prioritizing accessibility in digital services, drawing from thorough research conducted during my academic studies. Despite being often overlooked, the side effects of accessibility can be profound and far-reaching. I´ll explore how making digital services inclusive for all users can lead to various advantages beyond accommodating individuals with disabilities.'
 author:
   name: Henri Remonen
-featured: false
+featured: true
 ogImage:
   url: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721991849/photo-1718066236090-4fc9ffd545e6_ykojmz_k4pedf.webp'
 categories:

@@ -6,7 +6,7 @@ excerpt: 'Since I started blogging about half a year ago, I have wondered should
 date: '2024-07-14'
 author:
   name: Henri Remonen
-featured: true
+featured: false
 ogImage:
   url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
 categories:
