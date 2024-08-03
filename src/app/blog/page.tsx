@@ -38,7 +38,7 @@ const CategoryLink = ({
           current
             ? 'text-text dark:text-text-dark'
             : 'text-gray-500 dark:text-gray-400',
-          'leading-tighter text-balance font-sans text-4xl lowercase tracking-tight transition group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
+          'text-balance font-sans text-xl lowercase leading-tight tracking-tight transition group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark xs:text-2xl md:text-4xl'
         )}
       >
         {category}
@@ -49,7 +49,7 @@ const CategoryLink = ({
           current
             ? 'text-text dark:text-text-dark'
             : 'text-gray-500 dark:text-gray-400',
-          'mb-2 ml-2 text-sm group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark'
+          'mb-0 ml-2 text-sm group-hover:text-text group-focus:text-text dark:group-hover:text-text-dark dark:group-focus:text-text-dark xs:mb-1 md:mb-2'
         )}
       >
         {' '}
