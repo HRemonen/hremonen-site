@@ -7,10 +7,22 @@ interface PostSectionProps {
   posts: Post[]
 }
 
+type YearlyPostsProps = {
+  [year: string]: Post[]
+}
+
 const PostSection = ({ posts }: PostSectionProps) => {
-  const yearlyPosts = Object.groupBy(posts, ({ date }) =>
-    new Date(date).getFullYear()
-  )
+  const yearlyPosts = posts.reduce((acc, post) => {
+    const date = new Date(post.date)
+
+    const key = date.getFullYear()
+
+    if (!acc[key]) acc[key] = []
+    acc[key].push(post)
+
+    return acc
+  }, {} as YearlyPostsProps)
+
   const postsByYear = Object.entries(yearlyPosts)
     .map(([year, posts]) => ({
       year,
