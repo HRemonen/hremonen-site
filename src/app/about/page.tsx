@@ -78,11 +78,12 @@ const About = async () => (
           </p>
           <p className='xl:text-md mb-6 text-pretty text-base font-light leading-7 text-text dark:text-text-dark'>
             Luckily (and perhaps fueled by ambition) in January 2023, I landed
-            my first software development job in a startup within the University
-            of Helsinki, led by one of our esteemed computer science professors.
-            In this position I have been made the lead developer of a high
-            profile project that is also in the midst of being taken to use by
-            two other universities in Finland.
+            my first software development job in the department of computer
+            science within the University of Helsinki, in a development team led
+            by one of our esteemed computer science professors. In this position
+            I have become the lead developer of a high profile project that is
+            also in the midst of being taken to use by two other universities in
+            Finland reaching over 100 000 active users.
           </p>
           <p className='xl:text-md mb-6 text-pretty text-base font-light leading-7 text-text dark:text-text-dark'>
             I&lsquo;ve finished my BsC in Computer Science in 2024 taking 18
