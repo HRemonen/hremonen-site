@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useSelectedLayoutSegment } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 
 const NAV_LINKS = [
@@ -60,6 +60,7 @@ const NavGroup = ({ children, title }: NavGroupProps) => {
 
 const Menu = () => {
   const pathname = usePathname()
+  const segment = useSelectedLayoutSegment()
 
   const modalId = useId()
   const modalRef = useRef<HTMLDialogElement>(null)
@@ -158,7 +159,8 @@ const Menu = () => {
               {/* Modal body */}
               <NavGroup title='Main navigation'>
                 {NAV_LINKS.map((item) => {
-                  const isActive = pathname === item.href
+                  const isActive =
+                    item.href === `/${segment}` || item.href === pathname
 
                   return (
                     <li
