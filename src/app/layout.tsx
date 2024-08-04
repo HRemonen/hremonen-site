@@ -1,12 +1,13 @@
 import { Analytics } from '@vercel/analytics/react'
-import { BLOG_NAME, BLOG_DESCRIPTION } from '@/lib/constants'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import type { Metadata } from 'next'
 
 import { Inter } from 'next/font/google'
 import { GeistSans } from 'geist/font/sans'
-
 import './globals.css'
+
+import { BLOG_NAME, BLOG_DESCRIPTION } from '@/lib/constants'
 import DarkModeProvider from '@/app/_components/theme/dark-mode-provider'
 import Navbar from '@/app/_components/navbar/navbar'
 import Footer from '@/app/_components/footer/footer'
@@ -41,6 +42,7 @@ const RootLayout = ({
         </main>
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </DarkModeProvider>
     </body>
   </html>
