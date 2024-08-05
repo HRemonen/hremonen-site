@@ -15,5 +15,5 @@ export type Post = {
   keywords: string[]
   content: string
   featured: boolean
-  preview?: boolean
+  draft?: boolean
 }

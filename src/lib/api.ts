@@ -23,7 +23,10 @@ export function getPostBySlug(slug: string) {
 
 export function getAllPosts(): Post[] {
   const slugs = getPostSlugs()
-  const posts = slugs.map((slug) => getPostBySlug(slug))
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter((post) => !post.draft)
+
   return posts
 }
 
@@ -63,7 +66,9 @@ export function getFeaturedPost(): Post | undefined {
 }
 
 export function getRecentPosts(): Post[] {
-  const posts = getAllPostSortedByDate().filter((post) => !post.featured)
+  const posts = getAllPostSortedByDate().filter(
+    (post) => !post.featured && !post.draft
+  )
 
   return posts
 }
