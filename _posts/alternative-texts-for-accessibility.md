@@ -73,7 +73,7 @@ Images are used widely on web pages to display information. [The Web AIM Million
 
 ### **Alternative Text In WCAG 2.2**
 
-Like in everything related to accessibility, the WCAG provides very informative and useful criteria and different conformance levels for alternative texts. In the very first blog post, we identified [the four principles of WCAG](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
+Like in everything related to accessibility, the WCAG provides very informative and useful criteria and different conformance levels for alternative texts. In the very first blog post, we identified [the four principles of WCAG](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
 
 Looking at the WCAG guidelines, [the perceivable principle](https://www.w3.org/WAI/WCAG22/quickref/#principle1) defines the following three success criteria for alternative texts.
 

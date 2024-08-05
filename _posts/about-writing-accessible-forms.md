@@ -39,7 +39,7 @@ For us to know how to fill out a form, it has to be accessible. For most parts, 
 
 - Validating the users’ input and giving feedback.
 
-When dealing with more interactive elements it’s oftentimes also needed to give a thought to how the focus is managed, giving [ARIA](https://www.incluvate.com/blog/aria-what-every-developer-needs-to-know/) names, roles, and values, and introducing ARIA live announcements if needed.
+When dealing with more interactive elements it’s oftentimes also needed to give a thought to how the focus is managed, giving [ARIA](https://www.hremonen.com/blog/aria-what-every-developer-needs-to-know) names, roles, and values, and introducing ARIA live announcements if needed.
 
 These are the topics we are trying to cover here. Before we do I want to give you some food for thought with an example below.
 

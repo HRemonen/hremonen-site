@@ -38,7 +38,7 @@ Don’t get me wrong, divs have their time and place – but let’s talk about 
 
 ## Semantic HTML
 
-While not giving you a full semantic html lecture here. I wrote [an article about the importance of semantic html](https://www.incluvate.com/blog/what-is-semantic-html/). I suggest reading the article. It will get you going and help to understand the benefits. For a quick recap, these are special html elements that have their designated purpose. One of these is the [nav element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav). This is just what we are looking for when we want to create navbars the right way.
+While not giving you a full semantic html lecture here. I wrote [an article about the importance of semantic html](https://www.hremonen.com/blog/what-is-semantic-html). I suggest reading the article. It will get you going and help to understand the benefits. For a quick recap, these are special html elements that have their designated purpose. One of these is the [nav element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav). This is just what we are looking for when we want to create navbars the right way.
 
 ### The power of `<nav>` element
 

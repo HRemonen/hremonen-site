@@ -106,7 +106,7 @@ Now the epicenter has shifted from the DOM to the accessibility tree and the acc
 
 Accessibility tree forces to think about how the software is perceived. It removes any non-semantic elements and styling. Being aware of the accessibility tree guides us to build quality software.
 
-As we found out, the accessibility tree is the only way assistive technology can interact with our web page. We must take care that the tree is in mint condition. Thankfully, we have tools at our disposal that will help us groom and build the tree. [Semantic HTML](https://www.incluvate.com/blog/what-is-semantic-html/) and using ARIA.
+As we found out, the accessibility tree is the only way assistive technology can interact with our web page. We must take care that the tree is in mint condition. Thankfully, we have tools at our disposal that will help us groom and build the tree. [Semantic HTML](https://www.hremonen.com/blog/what-is-semantic-html) and using ARIA.
 
 ### Semantic HTML Builds Accessibility Trees
 

@@ -96,7 +96,7 @@ Demonstration of incorrect heading structure.
 
 </figure>
 
-Skipping headings was one of **[the most common WCAG errors](https://www.incluvate.com/accessibility/navigating-the-digital-landscape-a-quick-guide-to-digital-accessibility/)** with 42 percent of the top million websites failing to implement correct heading indentation. The web page should only “skip” heading ranks when closing subsections.
+Skipping headings was one of **[the most common WCAG errors](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility)** with 42 percent of the top million websites failing to implement correct heading indentation. The web page should only “skip” heading ranks when closing subsections.
 
 <figure>
 

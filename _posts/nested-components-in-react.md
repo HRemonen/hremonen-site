@@ -44,7 +44,7 @@ const UnstableComponent = () => {
 
 Okay, so this is what the headline is all about. Creating a component inside another component is indeed an anti-pattern. This will lead to nasty bugs and confusing code and we’ll see why in a second.
 
-From one of our previous articles about [React re-rendering](https://www.incluvate.com/blog/how-react-re-renders/#components-and-elements-in-react), we learned that the React JSX syntax for components is just a syntax sugar for JavaScript functions.
+From one of our previous articles about [React re-rendering](https://www.hremonen.com/blog/how-react-re-renders#components-and-elements-in-react), we learned that the React JSX syntax for components is just a syntax sugar for JavaScript functions.
 
 In our example, calling a component like `<ChildComponent/>` is just a way of saying `React.createElement(ChildComponent, null, null)` which returns an object representation of the element.
 
@@ -61,7 +61,7 @@ In our example, calling a component like `<ChildComponent/>` is just a way of sa
 }
 ```
 
-To determine if an element has changed between renders, react uses what is called _diffing and reconciliation_ algorithm. We also [scratched this comparison logic](https://www.incluvate.com/blog/how-react-re-renders/#about-the-comparison) in the mentioned article about React re-rendering. A very crude example of what happens:
+To determine if an element has changed between renders, react uses what is called _diffing and reconciliation_ algorithm. We also [scratched this comparison logic](https://www.hremonen.com/blog/how-react-re-renders#about-the-comparison) in the mentioned article about React re-rendering. A very crude example of what happens:
 
 React will do a comparison of the elements to determine if anything has changed.
 

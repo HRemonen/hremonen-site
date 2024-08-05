@@ -70,11 +70,11 @@ Why Use Descriptive Links? - Portland Community College.
 
 ## What Makes a Link Accessible
 
-Accessible links are easily perceivable and operable by individuals. By following [semantic HTML](https://www.incluvate.com/blog/what-is-semantic-html/) and [assuring keyboard accessibility](https://www.incluvate.com/blog/how-to-ensure-keyboard-accessibility/) we can make our links mostly operable, but semantic HTML does not provide us with the link text. As we found out above, undescriptive links are not accessible. We must follow a set of rules to make the links accessible.
+Accessible links are easily perceivable and operable by individuals. By following [semantic HTML](https://www.hremonen.com/blog/what-is-semantic-html) and [assuring keyboard accessibility](https://www.hremonen.com/blog/painless-keyboard-accessibility) we can make our links mostly operable, but semantic HTML does not provide us with the link text. As we found out above, undescriptive links are not accessible. We must follow a set of rules to make the links accessible.
 
 ### Link Accessibility in WCAG 2.2
 
-We have identified the [four WCAG principles](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#identifying-accessible-digital-services-a-dive-into-wcag-compliance) in our very first blog post.
+We have identified the [four WCAG principles](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility#identifying-accessible-digital-services-a-dive-into-wcag-compliance) in our very first blog post.
 
 Looking at the WCAG 2.2 for link accessibility, [the operable principle](https://www.w3.org/WAI/WCAG22/quickref/#principle2) defines the following two direct success criteria for links.
 
@@ -96,7 +96,7 @@ Descriptive link text is something that is, well, firstly descriptive but also m
 
 - **Text length.** While there is not really a minimum length for a link text, it should not be empty by any means or too short to describe the destination. The link text may be as short as a single character when used to index alphabets, for example. These are edge cases where the context should be clear enough to describe the links even when the text is short. Similarly, there is no length cap for a link, but it should be clear that the longer the text, the more tedious it is to read. Stay with the most concise text you can produce.
 
-- **Images.** When providing an image as a link, [the alternative text of the image should describe the link, not the image](https://www.incluvate.com/blog/how-to-ensure-keyboard-accessibility/#defining-alternative-texts). However, providing image links, there are also [WAI image accessibility guidelines](https://www.w3.org/WAI/tutorials/images/functional/) to consider.
+- **Images.** When providing an image as a link, [the alternative text of the image should describe the link, not the image](https://www.hremonen.com/blog/alternative-texts-for-accessibility#defining-alternative-texts). However, providing image links, there are also [WAI image accessibility guidelines](https://www.w3.org/WAI/tutorials/images/functional/) to consider.
 
 ## Conclusion
 

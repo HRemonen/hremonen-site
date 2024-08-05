@@ -31,7 +31,7 @@ Likewise, accessibility is not something you can just implement to the project o
 
 When developing web pages, especially those with custom JavaScript widgets such accessibility features must be implemented right away. If the accessibility features are omitted in the beginning thinking that they can be added later on you are making a big mistake. In many cases, it might be too late to add the accessibility features once the widget is finished. In the worst case, you might need to redesign the whole widget with the accessibility features in mind costing you at least double the time – rather than just “biting” the bullet once.
 
-If you need convincing as to why you should even consider accessibility: accessibility also bears many additional benefits, which I have described as the [side effect of accessibility](https://www.incluvate.com/blog/side-effects-of-accessibility/). Some of the side effects include improved search engine optimization (SEO), enhanced usability, better customer satisfaction, grown market reach, and strong brand reputation – these all lead to better ROI for the business.
+If you need convincing as to why you should even consider accessibility: accessibility also bears many additional benefits, which I have described as the [side effect of accessibility](https://www.hremonen.com/blog/side-effects-of-accessibility). Some of the side effects include improved search engine optimization (SEO), enhanced usability, better customer satisfaction, grown market reach, and strong brand reputation – these all lead to better ROI for the business.
 
 ## Accessibility first mindset
 

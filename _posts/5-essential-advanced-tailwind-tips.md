@@ -142,7 +142,7 @@ Luckily, Tailwind ships with a class **_sr-only_** that allows to hide element v
 </button>
 ```
 
-Now the button has an [accessible name](https://www.incluvate.com/blog/start-fostering-the-accessibility-tree/#accessible-objects-as-the-foundation) “Copy text color value” that is hidden visually, but it is still available to the screen readers.
+Now the button has an [accessible name](https://www.hremonen.com/blog/fostering-the-accessibility-tree#accessible-objects-as-the-foundation) “Copy text color value” that is hidden visually, but it is still available to the screen readers.
 
 I would use the **_sr-only_** class with caution. It should be noted that many screen reader users have some vision. It is still better to use **_sr-only_** excessively than omitting elements such as form field labels or button text completely. [Further reading: Visibility of content for screen reader users](https://webaim.org/techniques/css/invisiblecontent/#techniques).
 

@@ -25,7 +25,7 @@ keywords:
 
 WAI-ARIA is an abbreviation of the Web Accessibility Initiative’s Accessible Rich Internet Applications specification. Often, we refer to this long text as just ARIA.
 
-Today’s web pages are building advanced Web applications using [dynamic content](https://en.wikipedia.org/wiki/Dynamic_web_page). These often require custom logic to be built that is not available as a [semantic HTML](https://www.incluvate.com/blog/what-is-semantic-html/) element. Without ARIA, these custom elements are not accessible to some users with disabilities. Especially users using screen readers or only a keyboard.
+Today’s web pages are building advanced Web applications using [dynamic content](https://en.wikipedia.org/wiki/Dynamic_web_page). These often require custom logic to be built that is not available as a [semantic HTML](https://www.hremonen.com/blog/what-is-semantic-html) element. Without ARIA, these custom elements are not accessible to some users with disabilities. Especially users using screen readers or only a keyboard.
 
 ## When Do We Need ARIA?
 
@@ -116,7 +116,7 @@ The body section is labelled by some other element group, and thus it has the ar
 
 ## How ARIA is Connected to the Accessibility Tree
 
-[We peeked at the accessibility tree](https://www.incluvate.com/blog/start-fostering-the-accessibility-tree/) in the previous blog post, and it is the structure that is affected by these attributes.
+[We peeked at the accessibility tree](https://www.hremonen.com/blog/fostering-the-accessibility-tree) in the previous blog post, and it is the structure that is affected by these attributes.
 
 As the first rule of ARIA states, use semantic HTML elements when possible. However, sometimes there is a barrier as we saw with the accordion and tree widgets – there is no semantic HTML element that provides this functionality.
 

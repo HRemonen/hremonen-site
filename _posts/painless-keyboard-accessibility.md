@@ -34,7 +34,7 @@ Keyboard accessibility is the ability to navigate the web page’s functionaliti
 
 One of the key keyboard accessibility features is [keyboard focus](https://web.dev/articles/focus), which determines a visual indication of the user’s location on the web page. Web browsers indicate keyboard focus by default for semantic elements. The default indication is typically perceived as highlighted border of the current element, which may not be enough for visually impaired persons.
 
-Some HTML elements are focusable by default, and some are not. As we discovered in the first post about [semantic HTML](https://www.incluvate.com/blog/gajr-semantic-html/), sticking to semantic elements will lead to the best and most anticipated results, as semantic elements have built-in focus functionalities, tab order, and event handlers. For an extensive guide on keyboard focus, I suggest reading the following [article about focus](https://web.dev/learn/accessibility/focus).
+Some HTML elements are focusable by default, and some are not. As we discovered in the first post about [semantic HTML](https://www.hremonen.com/blog/what-is-semantic-html), sticking to semantic elements will lead to the best and most anticipated results, as semantic elements have built-in focus functionalities, tab order, and event handlers. For an extensive guide on keyboard focus, I suggest reading the following [article about focus](https://web.dev/learn/accessibility/focus).
 
 ## Why is Keyboard Accessibility Important
 
@@ -42,7 +42,7 @@ The keyboard is the most versatile and flexible user input method available. Ass
 
 ### Keyboard Accessibility in WCAG 2.2
 
-In the very first blog post, we identified [the four principles of WCAG](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#identifying-accessible-digital-services-a-dive-into-wcag-compliance)**.**
+In the very first blog post, we identified [the four principles of WCAG](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
 
 [The Operable principle](https://www.w3.org/WAI/WCAG22/quickref/#principle2) defines the following four success criteria for keyboard accessibility. For the record, [W3C defines multiple additional success criteria for keyboard accessibility](https://www.w3.org/WAI/WCAG22/quickref/?currentsidebar=%23col_overview&tags=keyboard&versions=2.2), we will cover these four most crucial ones in this article.
 
@@ -60,7 +60,7 @@ In the very first blog post, we identified [the four principles of WCAG](https:/
 
 ### Semantic HTML is Keyboard Accessible
 
-Using structural semantic HTML elements will result in a good base level of keyboard accessibility. As stated in the [previous post about semantic HTML](https://www.incluvate.com/blog/gajr-semantic-html/),  these semantic elements are packed with default functionality, such as tab functionality, on key handlers**,** on-click handlers, and other metadata that will lead to an excellent support of keyboard accessibility for these elements.
+Using structural semantic HTML elements will result in a good base level of keyboard accessibility. As stated in the [previous post about semantic HTML](https://www.hremonen.com/blog/what-is-semantic-html),  these semantic elements are packed with default functionality, such as tab functionality, on key handlers**,** on-click handlers, and other metadata that will lead to an excellent support of keyboard accessibility for these elements.
 
 ### Creating non-interactive elements keyboard accessible
 

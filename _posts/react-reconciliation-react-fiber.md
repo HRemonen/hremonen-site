@@ -33,7 +33,7 @@ The reconciler is in charge of determining what has changed between the previous
 
 ## Reconciliation Revised
 
-Re-creating the whole DOM tree would be slow on each state update. As a response, React has come up with its heuristic algorithm to decide whether to re-render or not. The algorithm operates in the time complexity of O(n) where n is the number of elements in the tree. As we learned from our previous post, [React makes two assumptions](https://www.incluvate.com/blog/how-react-re-renders/#about-the-comparison) on whether to re-render an element in the tree. As a recap, the two assumptions are:
+Re-creating the whole DOM tree would be slow on each state update. As a response, React has come up with its heuristic algorithm to decide whether to re-render or not. The algorithm operates in the time complexity of O(n) where n is the number of elements in the tree. As we learned from our previous post, [React makes two assumptions](https://www.hremonen.com/blog/how-react-re-renders/#about-the-comparison) on whether to re-render an element in the tree. As a recap, the two assumptions are:
 
 1. Two elements of different types will produce different tree
 
@@ -95,7 +95,7 @@ This allows the Fiber reconciler to be asynchronous rather than being synchronou
 
 ### React Fiber Node
 
-React Fiber is a JavaScript object that represents a unit of work to do. Like [react elements](https://www.incluvate.com/blog/how-react-re-renders/#components-and-elements-in-react) – Fiber nodes are created in the process of reconciliation and they differ a bit from the react elements. Fiber nodes are mutable objects that are not re-created on every re-render – as opposite of how react elements are.
+React Fiber is a JavaScript object that represents a unit of work to do. Like [react elements](https://www.hremonen.com/blog/how-react-re-renders/#components-and-elements-in-react) – Fiber nodes are created in the process of reconciliation and they differ a bit from the react elements. Fiber nodes are mutable objects that are not re-created on every re-render – as opposite of how react elements are.
 
 React elements are converted into Fiber nodes by calling [createFiberFromTypeAndProps()](https://github.com/facebook/react/blob/769b1f270e1251d9dbdce0fcbd9e92e502d059b8/packages/react-reconciler/src/ReactFiber.js#L414) function. After the first initiation, the existing Fiber nodes are just updated with the necessary properties rather than re-creating it. React can relocate Fiber nodes based on the `key` prop and remove it completely from the tree if the corresponding React element is also removed.
 

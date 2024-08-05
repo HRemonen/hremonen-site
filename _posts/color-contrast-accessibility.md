@@ -68,11 +68,11 @@ Web Accessibility Perspectives: Colors with Good Contrast - W3C.
 
 Having color contrast limitations does not mean that the web page should be dull. It just means that you must consider as broad a user audience as possible. This will be beneficial to the business, as there are an [estimated 300 million people with color vision deficiency](<https://clintoneye.com/services/color-blindness/#:~:text=Facts%20about%20Color%20Blindness%20and,are%20color%20blind%20(0.5%25).>). If you were asked if you would like to open the business for an additional 300 million people, I think everyone would take it
 
-Anyhow, this is not the case. [Over 80 percent of the web pages had low contrast text](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#the-shortcomings). The findings are insane as the report does not contain every web page in the world. This report was concluded of the top one million home pages. Maybe they were not asked the question.
+Anyhow, this is not the case. [Over 80 percent of the web pages had low contrast text](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility#the-shortcomings). The findings are insane as the report does not contain every web page in the world. This report was concluded of the top one million home pages. Maybe they were not asked the question.
 
 ### Color Contrast in WCAG 2.2
 
-Like in everything related to accessibility. The WCAG provides very informative and useful criteria and different conformance levels for color contrast. In the very first blog post, we identified [the four principles of WCAG](https://www.incluvate.com/blog/quick-guide-to-digital-accessibility/#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
+Like in everything related to accessibility. The WCAG provides very informative and useful criteria and different conformance levels for color contrast. In the very first blog post, we identified [the four principles of WCAG](https://www.hremonen.com/blog/quick-guide-to-digital-accessibility#identifying-accessible-digital-services-a-dive-into-wcag-compliance).
 
 [The perceivable principle](https://www.w3.org/WAI/WCAG22/quickref/#principle1) defines the following four success criteria for color contrast.
 

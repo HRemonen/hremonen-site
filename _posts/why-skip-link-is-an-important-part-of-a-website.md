@@ -45,7 +45,7 @@ In this example, the skip link takes us to the first element of the breadcrumbs 
 
 It would have been better to take the user straight to the start of the article. Now there are still the breadcrumbs, the aside (search, search button, Firefox checkbox, Version selector, OS selector, “Was this article helpful” ratings) and the Firefox logo to tab through before the title. Anyway, back to the bread (pun intended) for now.
 
-Remember that [assistive technologies mimic the usage of keyboard navigation](https://www.incluvate.com/blog/what-is-keyboard-accessibility/#why-is-keyboard-accessibility-important)? Even pressing down the tab key for 16 times hurt my hand. Imagine what’s it like for users using their head to tap on a switch or a stick in their mouth to press keys to do the same thing. That would be excruciating.
+Remember that [assistive technologies mimic the usage of keyboard navigation](https://www.hremonen.com/blog/why-skip-link-is-an-important-part-of-a-website)? Even pressing down the tab key for 16 times hurt my hand. Imagine what’s it like for users using their head to tap on a switch or a stick in their mouth to press keys to do the same thing. That would be excruciating.
 
 ## What Makes a Good Skip Link
 
