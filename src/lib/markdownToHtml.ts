@@ -13,10 +13,10 @@ export default async function markdownToHtml(markdown: string) {
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypePrettyCode, { theme: 'andromeeda' })
     .use(rehypeRaw)
     .use(rehypeSlug)
     .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
-    .use(rehypePrettyCode, { theme: 'andromeeda' })
     .use(rehypeStringify)
     .process(markdown)
 
