@@ -7,7 +7,7 @@ import {
   BLOG_POST_TYPE,
   BLOG_LOCALE,
 } from '@/lib/constants'
-import markdownToHtml from '@/lib/markdownToHtml'
+import markdownToHtml from '@/lib/markdown-to-html'
 import PostBody from '@/app/_pages/post/post-body'
 import PostHeader from '@/app/_pages/post/post-header'
 import PostFooter from '@/app/_pages/post/post-footer'
