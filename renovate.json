@@ -3,6 +3,7 @@
   "extends": ["config:recommended"],
   "reviewers": ["hremonen"],
   "prHourlyLimit": 0,
+  "bumpVersion": "patch",
   "packageRules": [
     {
       "groupName": "all non-major dependencies",
