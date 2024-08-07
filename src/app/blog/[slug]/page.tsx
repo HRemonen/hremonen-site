@@ -33,7 +33,7 @@ const Post = async ({ params }: Params) => {
       <PostHeader
         title={post.title}
         date={post.date}
-        coverImage={post.coverImage}
+        coverImageId={post.coverImageId}
         categories={post.categories}
       />
       <PostBody content={content} />
