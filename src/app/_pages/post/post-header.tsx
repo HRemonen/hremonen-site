@@ -7,19 +7,19 @@ import Image from 'next/image'
 type PostHeaderProps = {
   title: string
   date: string
-  coverImage: string
+  coverImageId: string
   categories: string[]
 }
 
 const PostHeader = ({
   title,
   date,
-  coverImage,
+  coverImageId,
   categories,
 }: PostHeaderProps) => (
   <header className='mx-auto mb-16 max-w-3xl border-b border-gray-600 px-2 pb-12 xs:px-8'>
     <Image
-      src={coverImage}
+      src={coverImageId}
       alt=''
       width={1240}
       height={640}

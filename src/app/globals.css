@@ -93,12 +93,12 @@ code > [data-highlighted-line] {
   box-shadow: 0 0 0 4px #52525b80;
 }
 
-[data-chars-id="purple"] {
+[data-chars-id='purple'] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(147 51 234 / var(--tw-border-opacity));
   background-color: #6b21a880;
   box-shadow: none;
   font-weight: 700;
   --tw-text-opacity: 1 !important;
-  color: rgb(233 213 255 / var(--tw-text-opacity))!important
+  color: rgb(233 213 255 / var(--tw-text-opacity)) !important;
 }

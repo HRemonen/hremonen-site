@@ -17,7 +17,7 @@ const PostCard = ({ post }: PostCardProps) => (
       className='group/recent-post outline-none'
     >
       <Image
-        src={post.coverImage}
+        src={post.coverImageId}
         alt='' // As the image is decorative, an empty alt attribute is appropriate
         width={580}
         height={420}

@@ -2,13 +2,14 @@ import Image from 'next/image'
 import { getFeaturedPost } from '@/lib/api'
 import ButtonLink from '@/app/_components/ui/button-link'
 import PageSection from '@/app/_components/ui/page-section'
+import cloudinaryLoader from '@/lib/image-loader'
 
 const FeaturedSection = () => {
   const featured = getFeaturedPost()
 
   if (!featured) return null
 
-  const { title, slug, coverImage } = featured
+  const { title, slug, coverImageId } = featured
 
   return (
     <PageSection>
@@ -17,10 +18,12 @@ const FeaturedSection = () => {
         className='relative flex flex-col px-4 sm:mx-auto sm:px-0'
       >
         <Image
-          src={coverImage}
+          src={coverImageId}
+          loader={cloudinaryLoader}
           alt='' // As the image is decorative, an empty alt attribute is appropriate
           width={1024}
           height={780}
+          sizes='(max-width:1023px) 80vw, (min-width:1024px) and (max-width:1620px) 67vw, 1100px'
           className='aspect-[3/4] max-h-96 rounded-2xl object-cover sm:aspect-auto sm:max-h-[780px]'
         />
         <div className='z-1 absolute left-0 top-0 h-20 w-20 bg-[#fcfcfc] dark:bg-[#1f2028] lg:w-44' />
