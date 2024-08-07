@@ -1,7 +1,7 @@
 ---
 title: 'Start Creating Accessible Navbars in Next.js 14'
 date: '2024-01-13'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721992865/Accessible_Navbar_In_Next.js_wsmure.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721992865/Accessible_Navbar_In_Next.js_wsmure.webp'
 coverImageAttribute: ''
 excerpt: 'Creating navbars is kinda easy right? Well yes, but have you considered the accessibility aspects of the navbar. This post is more of a guide on how to implement an accessible navbar in React. However, the underlying HTML can be integrated into your workflow regardless of the framework.
 '

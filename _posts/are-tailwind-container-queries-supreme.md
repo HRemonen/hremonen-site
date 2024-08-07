@@ -1,7 +1,7 @@
 ---
 title: 'Are Tailwind Container Queries Supreme?'
 date: '2024-02-21'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721741613/Are_Tailwind_Container_Queries_Supreme__-_React_Tailwind_-_Frontend_i8sykg.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721741613/Are_Tailwind_Container_Queries_Supreme__-_React_Tailwind_-_Frontend_i8sykg.webp'
 coverImageAttribute: ''
 excerpt: 'Acquiring a specific layout design using media queries can be a daunting task. Fortunately, container queries offer an excellent solution to this challenge. In this article, we will explore how to use container queries and the fundamental concepts behind them. Additionally, we will dive into a more "real-world" use case of container queries in more detail.'
 author:

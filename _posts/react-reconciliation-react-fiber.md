@@ -1,7 +1,7 @@
 ---
 title: 'React Reconciliation and React Fiber'
 date: '2024-03-27'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721983859/React_Reconciliation_React_Fiber_vn5o9r.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721983859/React_Reconciliation_React_Fiber_vn5o9r.webp'
 coverImageAttribute: ''
 excerpt: 'In our article about how React re-renders we managed to peek at how React reconciliation algorithm works. However, we did not go deep into its soul and inner parts. I wanted to write a follow-up post that will go deeper into the internals of React and more specifically – the reconciler and the React Fiber.'
 author:

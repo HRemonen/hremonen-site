@@ -1,7 +1,7 @@
 ---
 title: 'Effortless Alternative Texts for Accessibility'
 date: '2024-01-10'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721740961/Blind_person_navigating_a_website_layout_wrzwgi.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721740961/Blind_person_navigating_a_website_layout_wrzwgi.webp'
 coverImageAttribute: ''
 excerpt: 'Ah, the good old alt texts. When I first started my journey as a dev I was like what alt texts? Then a little later on my journey, I was like "Picture of..." until I had come to the conclusion: I don´t know sh*t about alt texts. In this post, I will highlight the why, how, and when of alt texts. Do not be like the earlier version of me, learn how to take the most out of the alt text attribute right now.'
 author:

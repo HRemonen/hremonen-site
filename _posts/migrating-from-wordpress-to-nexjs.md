@@ -1,6 +1,6 @@
 ---
 title: 'Migrating from WordPress to Next.js'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721217459/photo-1720121020107-ea60f907eb72_l4pvhe.jpg'
 coverImageAttribute: 'Photo by [Daniela E.](https://unsplash.com/@daniela_e_photography)'
 excerpt: 'Since I started blogging about half a year ago, I have wondered should I have just done my own blog website rather than using a WordPress to deliver content. Now I have finally made my choice and set my eyes about migrating from WordPress to Next.js. If you would be interested on knowing more I will explain some non-technical and more technical stuff in this post!'
 date: '2024-07-14'

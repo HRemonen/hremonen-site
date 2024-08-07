@@ -1,7 +1,7 @@
 ---
 title: 'Painless Keyboard Accessibility'
 date: '2024-01-03'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721907472/person_in_wheelchair_in_front_of_a_computer_btrfwq.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721907472/person_in_wheelchair_in_front_of_a_computer_btrfwq.webp'
 coverImageAttribute: ''
 excerpt: 'Have you ever tried to navigate the web using just your keyboard? You perhaps found out that it is not always an easy job to do. Depending on the webpage it may seem like the navigation has been really thought out, but sometimes not so much. Reading this post will equip you with the essential knowledge about this fine craft.'
 author:

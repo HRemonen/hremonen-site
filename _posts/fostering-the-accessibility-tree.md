@@ -1,7 +1,7 @@
 ---
 title: 'How to Start Fostering the Accessibility Tree'
 date: '2024-01-31'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721897152/Start_Fostering_the_Accessibility_Tree_ayq0ft.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721897152/Start_Fostering_the_Accessibility_Tree_ayq0ft.webp'
 coverImageAttribute: ''
 excerpt: 'When talking about trees you probably think of a forest or something like that, not so much a accessibility tree in your browser. However, if you do not foster your accessibility tree accordingly, it will start rotting and we do not like rot in our trees.'
 author:

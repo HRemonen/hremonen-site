@@ -1,7 +1,7 @@
 ---
 title: 'How React Re-renders?'
 date: '2024-02-28'
-coverImage: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721905668/How_React_Re-renders_oe0zgo.webp'
+coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721905668/How_React_Re-renders_oe0zgo.webp'
 coverImageAttribute: ''
 excerpt: 'React uses components and elements to build user interfaces. When a component is updated, React re-renders the elements. If you´re not familiar with these concepts, don´t worry. We´ll cover them briefly, and if this struct a chord you´re welcome to learn more as we can explore these concepts further!'
 author:
