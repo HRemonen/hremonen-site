@@ -8,7 +8,7 @@ interface BlurrableImageProps {
   alt: string
   width: number
   height: number
-  sizes: string
+  sizes?: string
   className: string
 }
 
