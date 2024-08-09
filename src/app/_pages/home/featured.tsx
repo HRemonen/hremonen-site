@@ -1,8 +1,7 @@
-import Image from 'next/image'
 import { getFeaturedPost } from '@/lib/api'
 import ButtonLink from '@/app/_components/ui/button-link'
 import PageSection from '@/app/_components/ui/page-section'
-import cloudinaryLoader from '@/lib/image-loader'
+import BlurrableImage from '@/app/_components/ui/blurrable-image'
 
 const FeaturedSection = () => {
   const featured = getFeaturedPost()
@@ -17,9 +16,9 @@ const FeaturedSection = () => {
         key={`featured-post-${title}`}
         className='relative flex flex-col px-4 sm:mx-auto sm:px-0'
       >
-        <Image
+        <BlurrableImage
           src={coverImageId}
-          loader={cloudinaryLoader}
+          priority
           alt='' // As the image is decorative, an empty alt attribute is appropriate
           width={1024}
           height={780}
