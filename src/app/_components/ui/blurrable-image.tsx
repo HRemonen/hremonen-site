@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image, { ImageProps } from 'next/image'
 import cloudinaryLoader from '@/lib/image-loader'
 import { use } from 'react'
 import { getBlurDataURL } from '@/lib/images'
 
 interface BlurrableImageProps {
-  coverImageId: string
+  src: string
   alt: string
   width: number
   height: number
@@ -13,18 +13,20 @@ interface BlurrableImageProps {
 }
 
 const BlurrableImage = ({
-  coverImageId,
+  src,
   alt,
   width,
   height,
   sizes,
   className,
-}: BlurrableImageProps) => {
-  const base64DataURL = use(getBlurDataURL(coverImageId))
+  ...rest
+}: BlurrableImageProps & ImageProps) => {
+  const base64DataURL = use(getBlurDataURL(src))
 
   return (
     <Image
-      src={coverImageId}
+      {...rest}
+      src={src}
       loader={cloudinaryLoader}
       alt={alt}
       placeholder='blur'
