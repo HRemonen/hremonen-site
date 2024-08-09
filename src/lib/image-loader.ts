@@ -7,6 +7,11 @@ export default function cloudinaryLoader({
   width,
   quality,
 }: ImageLoaderProps) {
-  const params = ['f_auto', 'c_limit', `w_${width}`, `q_${quality || 'auto'}`]
-  return `https://res.cloudinary.com/daty4gssm/image/upload/${params.join(',')}${src}`
+  const transformations = [
+    'f_auto',
+    'c_limit',
+    `w_${width}`,
+    `q_${quality || 'auto'}`,
+  ]
+  return `https://res.cloudinary.com/daty4gssm/image/upload/${transformations.join(',')}${src}`
 }
