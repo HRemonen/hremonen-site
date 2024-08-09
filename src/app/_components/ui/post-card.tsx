@@ -2,8 +2,8 @@ import { Post } from '@/interfaces/post'
 import CategoryFormatter from '@/app/_components/formatters/category-formatter'
 import DateFormatter from '@/app/_components/formatters/date-formatter'
 import { Interpunct } from '@/app/_components/ui/icons'
-import Image from 'next/image'
 import Link from 'next/link'
+import BlurrableImage from './blurrable-image'
 
 interface PostCardProps {
   post: Post
@@ -16,7 +16,7 @@ const PostCard = ({ post }: PostCardProps) => (
       passHref
       className='group/recent-post outline-none'
     >
-      <Image
+      <BlurrableImage
         src={post.coverImageId}
         alt='' // As the image is decorative, an empty alt attribute is appropriate
         width={580}
