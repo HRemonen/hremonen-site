@@ -1,7 +1,7 @@
 ---
 title: 'React 19 - What to Expect?'
 date: '2024-03-06'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721915240/React_19_-_What_to_Expect_ht5ryx.webp'
+coverImageId: '/v1721915240/React_19_-_What_to_Expect_ht5ryx.webp'
 coverImageAttribute: ''
 excerpt: 'The latest version of React is just around the corner and we can expect it to be released later this year. Some of the exciting features that we can look forward to are React Forget, server actions, new hooks, and error boundaries. Keep an eye out for the launch and be prepared to take advantage of these new features!'
 author:

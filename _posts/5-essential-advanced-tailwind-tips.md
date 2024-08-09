@@ -1,6 +1,6 @@
 ---
 title: '5 Essential Advanced Tailwind Tips'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721739604/5_Essential_Advanced_Tailwind_Tips_b4ptxg.webp'
+coverImageId: '/v1721739604/5_Essential_Advanced_Tailwind_Tips_b4ptxg.webp'
 coverImageAttribute: ''
 excerpt: 'Tailwind has gained a lot of popularity. Because of its utility-first approach, it is easy and intuitive to get started with. I feel like the main benefit is not having to juggle between separate CSS files speeding up the development process. This is not a tutorial on how to set up Tailwind. Nor will I cover how to center a div. I’ll showcase five Tailwind techniques which helped me on my dev journey and I’ve found out to be the most helpful.'
 date: '2024-02-14'

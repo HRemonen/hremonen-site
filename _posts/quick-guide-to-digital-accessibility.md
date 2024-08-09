@@ -1,7 +1,7 @@
 ---
 title: 'A Quick Guide to Digital Accessibility - Navigating the Digital Landscape'
 date: '2023-12-22'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721913644/Navigating_the_Digital_Landscape_yzlaef.webp'
+coverImageId: '/v1721913644/Navigating_the_Digital_Landscape_yzlaef.webp'
 coverImageAttribute: ''
 excerpt: 'Have you ever wondered what digital accessibility really means? When I first heard the term, I was somewhat unsure of what it entailed. However, as I delved deeper into the subject, I realized that accessibility is all about creating an inclusive experience for everyone, regardless of their abilities. It goes beyond just catering to those with disabilities, ensuring that all users have equal access to the same information and functionality. So why not take a closer look and learn more about how we can make the digital world more accessible for everyone?'
 author:

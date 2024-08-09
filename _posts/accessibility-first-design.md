@@ -1,7 +1,7 @@
 ---
 title: 'Accessibility First Design'
 date: '2024-05-08'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721740773/photo-1721108098296-fa001626dabb_wmyggr_cync3q.webp'
+coverImageId: '/v1721740773/photo-1721108098296-fa001626dabb_wmyggr_cync3q.webp'
 coverImageAttribute: 'Photo by [International Student Navigator Australia](https://unsplash.com/@isnaaus)'
 excerpt: 'Accessibility should not be sidelined as a mere add-on. It must be an integral part of development from the start, requiring the inclusion of disabled individuals to ensure the product meets a diverse range of needs. Integrating accessibility features late in the development process, especially for custom JavaScript widgets, leads to costly redesigns. This is avoidable by addressing accessibility from the outset using accessibility first mindset.'
 author:

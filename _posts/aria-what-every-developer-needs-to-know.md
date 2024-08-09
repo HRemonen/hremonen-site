@@ -1,7 +1,7 @@
 ---
 title: 'ARIA: What Every Developer Needs to Know'
 date: '2024-02-07'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721743198/ARIA_What_Every_Developer_Needs_to_Know_nkanfu.webp'
+coverImageId: '/v1721743198/ARIA_What_Every_Developer_Needs_to_Know_nkanfu.webp'
 coverImageAttribute: ''
 excerpt: 'We´ve referred to WAI-ARIA or ARIA in our posts before. Perhaps it has been treated like some kind of fairy dust that just magically solves all the problems regarding accessibility. Well, kind of that´s what it´s about, but if used excessively just to boast in your tech meet-ups, you probably do not know ARIA. Stop being the that person who talks about something they do not fully understand and learn when ARIA really is useful.'
 author:

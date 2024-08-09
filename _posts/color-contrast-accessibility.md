@@ -1,7 +1,7 @@
 ---
 title: 'How to Get Color Contrast Accessibility Right'
 date: '2024-01-24'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721896354/What_is_color_contrast_accessibility_lw7gf5.webp'
+coverImageId: '/v1721896354/What_is_color_contrast_accessibility_lw7gf5.webp'
 coverImageAttribute: ''
 excerpt: 'Have you ever visited a website with a color scheme that seemed really washed out and difficult to read? It´s not just a matter of orange text on a green background - sometimes the colors are so pale that even people with perfect eyesight have to squint to read the text. I´m not sure if these websites are trying to be modern or what, but it´s definitely not user-friendly. Developers and designers need to take these things into consideration to ensure that users can easily read and navigate their sites.'
 author:

@@ -1,7 +1,7 @@
 ---
 title: 'Why Skip Link is an Important Part of a Website'
 date: '2024-03-13'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721994434/Why_Skip_Link_is_an_Important_Part_of_a_Website_ph6uif.webp'
+coverImageId: '/v1721994434/Why_Skip_Link_is_an_Important_Part_of_a_Website_ph6uif.webp'
 coverImageAttribute: ''
 excerpt: 'If you have ever used your keyboard to navigate web pages, you may have noticed a new type of navigation element called a skip link. The skip link is used by some users to skip over certain parts of the web page. This is often content that is repeated on multiple pages, which would cause unnecessary navigation for users who are not using a mouse. If you´re curious to learn more about Skip Links and how they can improve your site accessibility, dive into this article.
 '

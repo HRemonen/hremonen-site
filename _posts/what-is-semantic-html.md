@@ -1,7 +1,7 @@
 ---
 title: 'Essential Semantic HTML'
 date: '2023-12-27'
-coverImageId: 'https://res.cloudinary.com/daty4gssm/image/upload/q_auto,f_auto,w_1024/v1721993818/Feature_image_rkc3hy.webp'
+coverImageId: '/v1721993818/Feature_image_rkc3hy.webp'
 coverImageAttribute: ''
 excerpt: 'Semantic HTML is a crucial part of the markup language to get the most default functionality out of HTML. Writing semantic HTML not only makes it more readable, requires less custom logic but also comes with pre-defined accessibility features. There is not a single good reason not to write semantic HTML over non-semantic HTML.'
 author:
