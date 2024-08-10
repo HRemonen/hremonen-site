@@ -19,7 +19,7 @@ keywords:
   - 'html'
   - 'semantic html'
   - 'tailwind'
-  - 'tailwind cofig'
+  - 'tailwind config'
   - 'tailwind group'
   - 'tailwind peer'
   - 'tailwind theme'
