@@ -1,18 +1,17 @@
 ---
 title: 'Optimizing Image Loading for Better UX'
-coverImageId: ''
-coverImageAttribute: ''
-excerpt: ''
-date: '2024-08-05'
+coverImageId: '/v1723278622/lizzi-sassman-x4PxDKdwNqA-unsplash_bsom4b.webp'
+coverImageAttribute: 'Photo by [Lizzi Sassman](https://unsplash.com/@okaylizzi)'
+excerpt: 'Learn how to optimize image loading for better user experience by implementing placeholders and serving correct sizes of images using Next.js and Cloudinary.'
+date: '2024-08-12'
 author:
-  name: 'Henri Remonen'
+  name: Henri Remonen
 featured: false
 ogImage:
-  url: ''
+  url: 'https://res.cloudinary.com/daty4gssm/image/upload/v1723278622/lizzi-sassman-x4PxDKdwNqA-unsplash_bsom4b.webp'
 categories:
   - 'react'
   - 'personal'
-  - 'tutorials'
 keywords:
   - 'image optimization'
   - 'react image optimization'
