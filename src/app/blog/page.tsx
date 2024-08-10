@@ -99,9 +99,9 @@ const Blog = ({ searchParams }: PageProps) => {
 }
 
 export function generateMetadata(): Metadata {
-  const title = `Blog | ${BLOG_NAME}`
+  const title = `Browse Blog Posts | ${BLOG_NAME}`
   const description =
-    'Blog posts about web development, frontend technologies, devops, and accessibility.'
+    'Browse posts by categories or just dive into the insigts around web development, user experience, and accessibility. A Web Development Blog written with passion.'
   const locale = BLOG_LOCALE
   const url = `${BLOG_URL}/blog`
   const keywords =
