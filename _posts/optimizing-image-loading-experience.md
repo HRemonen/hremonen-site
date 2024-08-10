@@ -3,7 +3,7 @@ title: 'Optimizing Image Loading for Better UX'
 coverImageId: '/v1723278622/lizzi-sassman-x4PxDKdwNqA-unsplash_bsom4b.webp'
 coverImageAttribute: 'Photo by [Lizzi Sassman](https://unsplash.com/@okaylizzi)'
 excerpt: 'Learn how to optimize image loading for better user experience by implementing placeholders and serving correct sizes of images using Next.js and Cloudinary.'
-date: '2024-08-12'
+date: '2024-08-10'
 author:
   name: Henri Remonen
 featured: false
