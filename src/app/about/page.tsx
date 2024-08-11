@@ -101,10 +101,12 @@ const About = async () => (
 
 export function generateMetadata(): Metadata {
   const title = `About | ${BLOG_NAME}`
-  const description = 'Get to know me'
+  const description =
+    'Get to know me. Discover my journey, expertise in web development, and the passion that drives me.'
   const locale = BLOG_LOCALE
   const url = `${BLOG_URL}/about`
-  const keywords = 'about, hremonen, henri, remonen, henri remonen'
+  const keywords =
+    'about, about me, web developer, user experience, accessibility expert, developer journey, web desing, personal story, blog creator, coding expertise, hremonen, henri, remonen, henri remonen'
 
   return {
     title,

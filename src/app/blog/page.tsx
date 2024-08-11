@@ -101,11 +101,11 @@ const Blog = ({ searchParams }: PageProps) => {
 export function generateMetadata(): Metadata {
   const title = `Browse Blog Posts | ${BLOG_NAME}`
   const description =
-    'Browse posts by categories or just dive into the insigts around web development, user experience, and accessibility. A Web Development Blog written with passion.'
+    'Explore posts by category or dive into insights on web development, user experience, and accessibility. A Web Development Blog written with passion.'
   const locale = BLOG_LOCALE
   const url = `${BLOG_URL}/blog`
   const keywords =
-    'blog, hremonen, henri, remonen, henri remonen, web development, frontend, accessibility, UI design, UX, DevOps'
+    'hremonen, remonen, henri remonen, web development, frontend technologies, react blog, accessibility, accessibility blog, UX, devops, devops blog, user experience, coding tutorials, programming tips, web design, development blog, tech insights'
 
   return {
     title,

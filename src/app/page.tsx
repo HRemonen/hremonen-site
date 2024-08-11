@@ -18,11 +18,12 @@ const Index = () => (
 
 export function generateMetadata(): Metadata {
   const title = `A Web Development Blog | ${BLOG_NAME}`
-  const description = 'A web development blog written with passion by Hremonen.'
+  const description =
+    'Discover the latest in web development, user experience, and accessibility. Explore featured content and stay updated with our newest posts, all crafted with passion.'
   const locale = BLOG_LOCALE
   const url = BLOG_URL
   const keywords =
-    'web development, blog, web dev, web dev blog, ux blog, accessibility blog, js blog, hremonen, henri, remonen, henri remonen'
+    'web development, user experience, UX, accessibility, web dev, web dev blog, ux blog, accessibility blog, coding, programming, blog, hremonen, henri, remonen, henri remonen'
 
   return {
     title,
