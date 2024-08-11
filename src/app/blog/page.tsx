@@ -125,6 +125,14 @@ export function generateMetadata(): Metadata {
       url,
       siteName: BLOG_NAME,
     },
+    robots: {
+      follow: true,
+      index: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+      googleBot: 'index, follow',
+    },
   }
 }
 

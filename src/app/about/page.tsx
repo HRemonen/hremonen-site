@@ -128,6 +128,14 @@ export function generateMetadata(): Metadata {
       username: 'hremonen',
       gender: 'male',
     },
+    robots: {
+      follow: true,
+      index: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+      googleBot: 'index, follow',
+    },
   }
 }
 

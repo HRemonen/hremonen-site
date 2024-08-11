@@ -82,6 +82,14 @@ export function generateMetadata({ params }: Params): Metadata {
         },
       ],
     },
+    robots: {
+      follow: true,
+      index: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+      googleBot: 'index, follow',
+    },
   }
 }
 
