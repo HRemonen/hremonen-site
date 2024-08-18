@@ -30,7 +30,7 @@ const FeaturedSection = () => {
           <div className='hidden h-20 w-20 translate-y-1/2 transform rounded-full shadow-[0_0_0_500px_#fcfcfc] dark:shadow-[0_0_0_500px_#1f2028] sm:block' />
         </div>
         <div className='z-1 absolute left-0 top-0 w-auto pb-8 sm:-left-4 lg:left-20'>
-          <div className='w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
+          <div className='after:inner-corner-after w-full bg-[#fcfcfc] dark:bg-[#1f2028]'>
             <h2 className='relative mb-2 inline-flex space-x-2 px-4 font-display text-xl font-light text-accent-text dark:text-accent-text-dark xs:mb-4 xs:text-[2rem] sm:text-2xl lg:px-6'>
               Featured
             </h2>
@@ -74,7 +74,8 @@ const FeaturedSection = () => {
             </svg>
           </div>
         </div>
-        <div className='mx-auto bg-[#fcfcfc] px-2 pt-4 dark:bg-[#1f2028] sm:absolute sm:bottom-0 sm:right-0 sm:rounded-tl-2xl sm:pt-2 lg:rounded-tl-3xl'>
+        <div className='absolute bottom-11 right-0 hidden h-16 w-16 rounded-br-2xl shadow-[0_20px_0_0_#fcfcfc] dark:shadow-[0_20px_0_0_#1f2028] sm:block' />
+        <div className='sm:before:inner-corner-bottom-before mx-auto bg-[#fcfcfc] px-2 pt-4 dark:bg-[#1f2028] sm:absolute sm:bottom-0 sm:right-0 sm:rounded-tl-2xl sm:pt-2 lg:rounded-tl-3xl'>
           <ButtonLink linkText='Read featured post' href={`blog/${slug}`} />
         </div>
       </article>

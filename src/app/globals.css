@@ -36,7 +36,20 @@
     -ms-filter: url(#goo);
     -o-filter: url(#goo);
   }
+
+  .inner-corner-after {
+    @apply absolute top-0 h-8 w-4 right-[-16px] rounded-tl-2xl;
+    content: '';
+    box-shadow: 0 -16px 0 0 var(--foreground-color);
+  }
+
+  .inner-corner-bottom-before {
+    @apply absolute bottom-0 h-8 w-4 left-[-16px] rounded-br-2xl;
+    content: '';
+    box-shadow: 0 16px 0 0 var(--foreground-color);
+  }
 }
+
 
 body {
   color: var(--text-color);
