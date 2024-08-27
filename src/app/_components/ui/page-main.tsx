@@ -42,7 +42,7 @@ export const PageMainSection = ({ children }: PageMainSectionProps) => {
   return (
     <>
       <PageSection>
-        <div className='w-auto px-4 pb-8'>
+        <div className='w-auto px-4 pb-8 xs:pb-0'>
           <div className='mb-2 flex w-full items-center space-x-2 bg-[#fcfcfc] px-3 dark:bg-[#1f2028] xs:mb-4 lg:space-x-0'>
             <Interpunct />
             {mainTitleContent}
