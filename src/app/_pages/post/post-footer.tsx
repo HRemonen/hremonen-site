@@ -1,5 +1,3 @@
-'use client'
-
 import { ArrowIcon } from '@/app/_components/ui/icons'
 import SubSectionTitle from '@/app/_components/ui/page-sub-section-title'
 import PostCard from '@/app/_components/ui/post-card'
