@@ -30,7 +30,7 @@ export const PageSubtitle = ({
   if (type === 'custom') return children
 
   return (
-    <h2 className='bg-[#fcfcfc] pb-3 font-sans text-4xl leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+    <h2 className='bg-[#fcfcfc] pb-3 font-sans text-[2rem] leading-none tracking-tight text-text dark:bg-[#1f2028] dark:text-text-dark xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
       {children}
     </h2>
   )
