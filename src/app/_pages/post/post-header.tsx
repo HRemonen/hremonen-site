@@ -20,6 +20,7 @@ const PostHeader = ({
   <header className='mx-auto mb-16 max-w-3xl border-b border-gray-600 px-2 pb-12 xs:px-8'>
     <BlurrableImage
       src={coverImageId}
+      priority
       alt=''
       width={1240}
       height={640}
