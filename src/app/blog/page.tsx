@@ -98,8 +98,20 @@ const Blog = ({ searchParams }: PageProps) => {
   )
 }
 
-export function generateMetadata(): Metadata {
-  const title = `Browse Blog Posts | ${BLOG_NAME}`
+function isEmpty(obj: object) {
+  // eslint-disable-next-line no-restricted-syntax
+  for (const x in obj) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (obj.hasOwnProperty(x)) return false
+  }
+  return true
+}
+
+export function generateMetadata({ searchParams }: PageProps): Metadata {
+  const title = isEmpty(searchParams)
+    ? `Browse Blog Posts | ${BLOG_NAME}`
+    : `Browse Blog Posts in '${searchParams.category}' category | ${BLOG_NAME}`
+
   const description =
     'Explore posts by category or dive into insights on web development, user experience, and accessibility. A Web Development Blog written with passion.'
   const locale = BLOG_LOCALE
