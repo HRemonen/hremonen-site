@@ -29,11 +29,16 @@ keywords:
 
 When building stateful applications on Kubernetes at somepoint the following decision has to be made: to use Database as a service or to "Do it yourself". The DIY method includes running the database, such as PostgreSQL in a pod (container) and handling the data integrity on yourself.
 
-Here I will investigate the pros and cons of both of the methods and let you decide what you want to do. There seems to atleast _have_ been an ideology that it would not be that wise to run databases on the Kubernetes cluster because of it's stateless design or as others would say it's made for [Cattles](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) and it happens to be, that a database is a Pet.
+Here I will investigate the pros and cons of both of the methods and let you decide what you want to do. There seems to atleast _have_ been an ideology that it would not be that wise to run databases on the Kubernetes cluster because of it's stateless design or as others would say it's made for Cattles and it happens to be, that a database is a Pet.
 
-> Kubernetes is all about treating resources as disposable. If a pod is not healthy it gets killed, if it uses too much memory, it gets killed, it it uses too much CPU, it gets throttled, etc.
+> [!NOTE]
+> A Cattle is an array of more than two servers, which are designed for failure. Not a single server is irreplaceable. During failure human intervention is not needed as the failed servers should restart automatically or another server takes it's place.
+>
+> A Pet on the otherhand is a server or server pairs that can never fail eg. their uptime is important. Pets are manually managed and they can't survive without proper care and management.
 
-This sounds as something we really would not like to happen to our database, which holds business critical data. But I don't think it's actually this black and white - atleast anymore. This mantra sounds more like some tech blogger influencer copy pasta than anything else.
+Kubernetes is all about treating resources as disposable. If a pod is not healthy it gets killed, if it uses too much memory, it gets killed, it it uses too much CPU, it gets throttled, etc.
+
+This sounds as something we really would not like to happen to our database, which holds business critical data. But I don't think it's actually this black and white - atleast anymore.
 
 ## Benefits of DBaaS Solutions
 
@@ -41,7 +46,7 @@ Database as a service or DBaaS is a database solution offered by some third part
 
 Also it makes scalability of the databases easy - give more money, get more storage and computing capacity. The scalability is one reason why it might be good choice for smaller teams, start-ups, or just to get a quick proof-of-concept running. However, for larger organisations this might come with a hefty price tag, which is why they might want to reconsider another option.
 
-Some organisations might also be subjective to regulations, which can limit the options using DBaaS solutions. While it's true there are also some private solutions and open source database operators, such as [Zalando's](https://github.com/zalando/postgres-operator) or [CloudNativePG](https://cloudnative-pg.io/), I think the overhead of setting one up is similar to running your own database container. But this post isn't about comparing the private DBaaS solutions and running your own pods.
+Some organisations might also be subjective to regulations, which can limit the options using DBaaS solutions. While it's true there are also some private solutions, I think the overhead of setting one up is similar to running your own database container. But this post isn't about comparing the private DBaaS solutions and running your own pods.
 
 If you opt for a DBaaS solution you also are going to drive towards vendor locking yourself to that specific cloud vendor - affecting the ease of migration to another vendor at a later point. Although riding with the same vendor also gives cost benefits as you get volume discounts.
 
@@ -51,7 +56,7 @@ If you opt for a DBaaS solution you also are going to drive towards vendor locki
 
 Contrary to cloud vendors providing the database, you could run it yourself on the Kubernetes cluster, on it's own Kubernets cluster or heck, even on a [VM](https://www.redhat.com/en/topics/virtualization/what-is-a-virtual-machine). The idea behind self-hosting a database is that you have full control of the version, how you're going to backup the data, how and where it's running on, and you are not dependent on any third party vendor.
 
-Self-hosted database should provide better performance and lower latency, at least in theory, because you are skipping a trip to the cloud vendors location and back each time. The most prominent benefit would be the cost compared to the managed solution. Though, it does not come easy, you will have to have more skilled employees, to pull this off. You have to be able to update the database, care for it's security, scale it as needed, create and store backups, etc. all the things that would be managed by the third party cloud vendor is now on you.
+Self-hosted database should provide better performance and lower latency, at least in theory, because you are skipping a trip to the cloud vendors location and back each time. The most prominent benefit would be the cost compared to the managed solution. Though, it does not come easy, you will have to have more skilled employees, to pull this off. You have to be able to update the database, care for it's security, scale it as needed, create and store backups, etc. all the things that would be managed by the third party cloud vendor is now on you. There are open source database operators available, such as [Zalando's](https://github.com/zalando/postgres-operator) or [CloudNativePG](https://cloudnative-pg.io/), which might make some of the things easier, but still requires skills and time to manage.
 
 Hosting a database solution on Kubernetes requires a volume mount to a shared persistent volume, which does not die between deployments. Using a stateful set, we can quarantee, that there is always one identical pod of the resource, which should take care of data loss between deployments. There are also times when your database service might have downtime, such as the pod crashing and taking time to reboot, or version updates to the database or cluster.
 
