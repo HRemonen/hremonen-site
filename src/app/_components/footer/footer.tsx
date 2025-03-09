@@ -1,6 +1,5 @@
 import Link from 'next/link'
-import { GithubIcon, Interpunct, LinkedInIcon, RSSIcon } from '../ui/icons'
-import StyledLink from '../ui/styled-link'
+import { GithubIcon, LinkedInIcon, RSSIcon } from '../ui/icons'
 
 const Footer = () => (
   <footer className='rounded-t-3xl bg-text px-8 pb-16 pt-48 text-white dark:bg-black'>
@@ -29,18 +28,6 @@ const Footer = () => (
             <RSSIcon /> <span className='sr-only'>RSS feed</span>
           </Link>
         </div>
-      </div>
-      <div>
-        <div className='mb-4 mt-12 inline-flex items-center space-x-2 xs:mt-0'>
-          <Interpunct />
-          <p className='text-sm font-light lg:text-base'>Contact</p>
-        </div>
-        <StyledLink
-          className='text-sm after:bg-link-dark hover:text-link-dark focus:text-link-dark lg:text-base'
-          href='mailto:henri@remonen.fi'
-        >
-          Email me
-        </StyledLink>
       </div>
     </div>
     <div className='pt-16 md:px-10'>
